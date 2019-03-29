@@ -12,7 +12,7 @@ module.exports = {
     title: config.siteTitle,
     twitterHandle: config.twitterHandle,
     description: config.siteDescription,
-    keywords: ['Video Blogger'],
+    keywords: ['Blogger'],
     canonicalUrl: config.siteUrl,
     image: config.siteLogo,
     author: {
@@ -89,7 +89,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `GOOGLE_ID`,
+        trackingId: process.env.GOOGLE_A_ID,
       },
     },
     {
