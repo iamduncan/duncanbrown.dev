@@ -6,6 +6,8 @@ description: 'this post has all of the right fields'
 categories: ['test']
 keywords: ['test']
 banner: './images/banner.jpg'
+bannerCredit: 'Duncan Brown'
+author: 'Duncan Brown'
 published: false
 redirects:
   - '/invisible-post-423123'
