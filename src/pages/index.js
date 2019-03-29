@@ -71,7 +71,7 @@ export default function Index({ data: { site, allMdx } }) {
       <Hero />
       <Container
         css={css`
-          padding-bottom: 0;
+          padding-bottom: 20px;
         `}
       >
         {allMdx.edges.map(({ node: post }) => (
