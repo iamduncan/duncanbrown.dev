@@ -23,7 +23,11 @@ export default function Post({
   const bannerCredit = mdx.frontmatter.bannerCredit
 
   return (
-    <Layout site={site} frontmatter={mdx.frontmatter}>
+    <Layout
+      site={site}
+      frontmatter={mdx.frontmatter}
+      noSubscribeForm={config.noSubscribeForm}
+    >
       <SEO
         frontmatter={mdx.frontmatter}
         postImage={mdx.frontmatter.banner.childImageSharp.fluid.src}

@@ -7,6 +7,7 @@ import Link from '../components/Link'
 import Container from 'components/Container'
 import { rhythm } from '../lib/typography'
 import theme from '../../config/theme'
+import config from '../../config/website'
 
 const Hero = () => (
   <section
@@ -67,6 +68,7 @@ export default function Index({ data: { site, allMdx } }) {
       site={site}
       headerColor={theme.colors.white}
       headerBg={theme.brand.primary}
+      noSubscribeForm={config.noSubscribeForm}
     >
       <Hero />
       <Container
