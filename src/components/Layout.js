@@ -111,7 +111,7 @@ export default ({
   headerBg,
   headerColor,
   noFooter,
-  noSubscribeForm,
+  subscribeForm,
 }) => {
   const {
     description: siteDescription,
@@ -157,10 +157,11 @@ export default ({
           <MDXProvider components={mdxComponents}>
             <Fragment>{children}</Fragment>
           </MDXProvider>
+          {subscribeForm}
           {!noFooter && (
             <Footer
               author={site.siteMetadata.author.name}
-              noSubscribeForm={noSubscribeForm}
+              subscribeForm={subscribeForm}
             />
           )}
         </div>
