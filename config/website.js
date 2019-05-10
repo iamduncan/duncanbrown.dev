@@ -9,7 +9,7 @@ module.exports = {
   siteDescription: 'This is where they post things!',
   author: 'Duncan Brown', // Author for schemaORGJSONLD
   organization: 'duncanbrown.dev',
-  noSubscribeForm: true,
+  subscribeForm: false,
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional
   userTwitter: '@iamduncanbrown', // Twitter Username

@@ -5,7 +5,7 @@ import SubscribeForm from './Forms/Subscribe'
 import { Twitter, GitHub } from './Social'
 import Container from './Container'
 
-const Footer = ({ author, noSubscribeForm }) => (
+const Footer = ({ author, subscribeForm }) => (
   <footer>
     <Container
       css={css`
@@ -15,7 +15,7 @@ const Footer = ({ author, noSubscribeForm }) => (
         }
       `}
     >
-      {!noSubscribeForm && (
+      {subscribeForm && (
         <div>
           <SubscribeForm />
           <br />
