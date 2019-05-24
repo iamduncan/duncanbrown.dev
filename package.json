@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-egghead-blog",
-  "description": "This is a starter for egghead content creator blogs",
+  "name": "duncanbrown-dev",
+  "description": "This is the blog of Duncan Brown, Digital Solutions Developer.",
   "version": "1.0.0",
-  "author": "egghead.io <support@egghead.io> (https://egghead.io)",
-  "repository": "https://github.com/eggheadio/gatsby-starter-egghead-blog",
+  "author": "Duncan Brown <info@wessexdigitalsolutions.co.uk>",
+  "repository": "https://github.com/iamduncan/duncanbrown.dev/",
   "dependencies": {
     "@emotion/core": "^10.0.5",
     "@emotion/styled": "^10.0.5",
