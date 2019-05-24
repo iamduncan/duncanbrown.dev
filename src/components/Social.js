@@ -10,6 +10,7 @@ export const Twitter = ({
 }) => (
   <Link
     to={url}
+    target="_blank"
     css={css`
       color: ${color};
       margin-left: 10px;
@@ -40,6 +41,7 @@ export const LinkedIn = ({
 }) => (
   <Link
     to={url}
+    target="_blank"
     css={css`
       margin-left: 10px;
       color: ${color};
@@ -69,6 +71,7 @@ export const GitHub = ({
 }) => (
   <Link
     to={url}
+    target="_blank"
     css={css`
       margin-left: 10px;
       color: ${color};
