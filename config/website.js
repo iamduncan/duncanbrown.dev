@@ -6,7 +6,7 @@ module.exports = {
   siteUrl: 'https://duncanbrown.dev', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: 'images/logo.png', // Used for SEO and manifest, path to your image you placed in the 'static' folder
-  siteDescription: 'This is where they post things!',
+  siteDescription: 'This is a place to hold my thoughts and ideas!',
   author: 'Duncan Brown', // Author for schemaORGJSONLD
   organization: 'duncanbrown.dev',
   subscribeForm: false,
@@ -25,5 +25,5 @@ module.exports = {
   twitter: 'https://twitter.com/iamduncanbrown/',
   twitterHandle: '@iamduncanbrown',
   github: 'https://github.com/iamduncan/',
-  linkedin: '',
+  linkedin: 'https://www.linkedin.com/in/duncanjbrown/',
 }
