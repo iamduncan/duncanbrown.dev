@@ -1,6 +1,6 @@
 ---
 slug: from-zero-to-app
-date: 2019-07-01
+date: 2019-06-26
 title: 'From Zero to App'
 description: 'Come along for the ride while I build a single page web app and a RESTful api backend.'
 published: true
