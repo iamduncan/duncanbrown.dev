@@ -26,18 +26,27 @@ const Comment = ({slug}) => {
 
   const handleSubmit = async (values) => {
     const staticmanUrl =
-      'https://dev.staticman.net/v3/entry/github/iamduncan/duncanbrown.dev/site-and-layout-updates'
+      'https://dev.staticman.net/v3/entry/github/iamduncan/duncanbrown.dev/site-and-layout-updates/comments'
     setSubmitted(true)
-    const data = JSON.stringify({slug: slug, ...values}, null, 2);
+
+    const formData = new FormData();
+    formData.set('fields[name]', values['name']);
+    formData.set('fields[email]', values['email']);
+    formData.set('fields[url]', values['url']);
+    formData.set('fields[message]', values['message']);
+    formData.set('options[slug]', slug);
+
+    const json = {}
+    formData.forEach((value, prop) => (json[prop] = value))
+    const formBody = Object.keys(json)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(json[key]))
+      .join('&')
 
     try {
       const response = await fetch(staticmanUrl, {
         method: 'post',
-        body: data,
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formBody,
       })
 
       const responseJson = await response.json()
