@@ -7,6 +7,7 @@ import { css } from '@emotion/core'
 import Container from 'components/Container'
 import Layout from '../components/Layout'
 import { fonts } from '../lib/typography'
+import CommentForm from '../components/Forms/Comment'
 import Share from '../components/Share'
 import config from '../../config/website'
 import { bpMaxSM } from '../lib/breakpoints'
@@ -87,6 +88,7 @@ export default function Post({
           )}
           <br />
           <MDXRenderer>{mdx.code.body}</MDXRenderer>
+          <CommentForm slug={mdx.frontmatter.slug} />
         </Container>
         {/* <SubscribeForm /> */}
       </article>
