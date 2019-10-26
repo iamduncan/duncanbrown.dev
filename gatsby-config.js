@@ -18,9 +18,7 @@ module.exports = {
     author: {
       name: config.author,
       minibio: `
-        <strong>egghead</strong> is the premier place on the internet for 
-        experienced developers to enhance their skills and stay current
-        in the fast-faced field of web development.
+        I am Duncan, I make things for the web and sometimes write about it here.
       `,
     },
     organization: {
@@ -115,8 +113,8 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.fields.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  url: site.siteMetadata.siteUrl + '/' + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + '/' + edge.node.fields.slug,
                 })
               })
             },
@@ -130,7 +128,7 @@ module.exports = {
                   edges {
                     node {
                       excerpt(pruneLength: 250)
-                      fields { 
+                      fields {
                         slug
                         date
                       }
