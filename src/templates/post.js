@@ -88,7 +88,7 @@ export default function Post({
           )}
           <br />
           <MDXRenderer>{mdx.code.body}</MDXRenderer>
-          <CommentForm slug={mdx.frontmatter.slug} />
+          {config.commentForm && <CommentForm slug={mdx.frontmatter.slug} />}
         </Container>
         {/* <SubscribeForm /> */}
       </article>
