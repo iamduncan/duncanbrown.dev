@@ -10,6 +10,7 @@ module.exports = {
   author: 'Duncan Brown', // Author for schemaORGJSONLD
   organization: 'duncanbrown.dev',
   subscribeForm: false,
+  commentForm: false,
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional
   userTwitter: '@iamduncanbrown', // Twitter Username
