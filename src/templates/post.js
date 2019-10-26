@@ -114,6 +114,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         author
+        description
         banner {
           childImageSharp {
             fluid(maxWidth: 900) {
