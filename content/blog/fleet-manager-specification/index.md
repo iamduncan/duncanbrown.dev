@@ -9,7 +9,11 @@ banner: './banner.png'
 
 This will be an indepth look at how the app will be built. Including endpoints, user flow and essential user needs.
 
-## High level app requirements
+## Problem Statement
+
+Too much paper and not enough coordination
+
+## Scope
 
 - Users
 - Vehicles

@@ -1,3 +1,5 @@
+// https://github.com/maxpou/gatsby-starter-morning-dew
+
 const config = require('./config/website')
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
@@ -41,7 +43,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-mdx`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: ['.mdx', '.md', '.markdown'],
         gatsbyRemarkPlugins: [
@@ -54,6 +56,7 @@ module.exports = {
             },
           },
         ],
+        remarkPlugins: [require('remark-slug')],
       },
     },
     'gatsby-plugin-sharp',
