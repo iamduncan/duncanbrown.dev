@@ -7,6 +7,9 @@ module.exports = {
   defaultLang: 'en',
   authorDescription: '',
   siteUrl: 'https://duncanbrown.dev',
+  // Prefixes all links.
+  pathPrefix: '', // Note: it must *not* have a trailing slash.
+  siteCover: 'cover-baymax.jpeg', // file in content/images
   googleAnalyticsId: '',
   background_color: '#2B2E3C',
   theme_color: '#5348FF',
@@ -15,6 +18,7 @@ module.exports = {
   postsPerPage: 6,
   headerTitle: 'duncanbrown.dev',
   headerLinksTitle: 'icon.png',
+  headerLinksIcon: '',
   headerLinks: [
     {
       label: 'Blog',
@@ -31,7 +35,7 @@ module.exports = {
     },
   ],
   websiteHost: {
-    name: 'Netlify',
+    label: 'Netlify',
     url: 'https://www.netlify.com/',
   },
   footerLinks: [

@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 const useSiteImages = imageName => {
   const result = useStaticQuery(graphql`
     {
-      allFile(filter: { sourceInstanceName: { ep: "images" } }) {
+      allFile(filter: { sourceInstanceName: { eq: "images" } }) {
         edges {
           node {
             relativePath

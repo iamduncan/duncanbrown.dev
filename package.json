@@ -58,6 +58,7 @@
     "react-typography": "^0.16.18",
     "remark-slug": "^6.0.0",
     "serve": "^10.1.1",
+    "styled-components": "^5.1.0",
     "typography": "^0.16.18",
     "yup": "^0.26.7"
   },

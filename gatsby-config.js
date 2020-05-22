@@ -1,6 +1,7 @@
 // https://github.com/maxpou/gatsby-starter-morning-dew
 
-const config = require('./config/website')
+const path = require('path')
+const config = require('./data/siteConfig')
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
 require('dotenv').config({
@@ -10,36 +11,38 @@ require('dotenv').config({
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteUrl: config.siteUrl + pathPrefix,
     title: config.siteTitle,
-    twitterHandle: config.twitterHandle,
+    author: config.authorName,
     description: config.siteDescription,
-    keywords: ['Blogger'],
-    canonicalUrl: config.siteUrl,
-    image: config.siteLogo,
-    author: {
-      name: config.author,
-      minibio: `
-        I am Duncan, I make things for the web and sometimes write about it here.
-      `,
-    },
-    organization: {
-      name: config.organization,
-      url: config.siteUrl,
-      logo: config.siteLogo,
-    },
-    social: {
-      twitter: config.twitterHandle,
-      fbAppID: '',
-    },
+    ...config,
   },
   plugins: [
     `gatsby-plugin-netlify`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/blog`,
-        name: 'blog',
+        name: 'posts',
+        path: `${__dirname}/content/posts`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: `${__dirname}/content/pages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'images',
+        path: 'content/images',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-page-creator',
+      options: {
+        path: path.join(__dirname, 'src', 'pages'),
       },
     },
     {
@@ -56,13 +59,26 @@ module.exports = {
             },
           },
         ],
-        remarkPlugins: [require('remark-slug')],
+        remarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 590,
+              linkImagesToOriginal: false,
+              withWebp: true,
+            },
+          },
+          { resolve: 'gatsby-remark-prismjs' },
+          { resolve: 'gatsby-remark-copy-linked-files' },
+          { resolve: 'gatsby-remark-autolink-headers' },
+        ],
       },
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-emotion',
     'gatsby-plugin-catch-links',
+    'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-manifest',
