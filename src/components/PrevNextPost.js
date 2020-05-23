@@ -76,7 +76,7 @@ const PrevNextPost = ({ previous, next }) => {
   return (
     <>
       <PreviewContainer>
-        {articles.map((article, i) {
+        {articles.map((article, i) => {
           const { excerpt, timeToRead } = article.node
           const {
             tags,
@@ -90,12 +90,12 @@ const PrevNextPost = ({ previous, next }) => {
           return (
             <Preview key={`prev-next-${i}`}>
               <Link to={`/${slug}`} aria-label={`View ${title} article`}>
-                <PreviewCover style={{ backgroundImage: `url("${heroImg}")`}} />
+                <PreviewCover
+                  style={{ backgroundImage: `url("${heroImg}")` }}
+                />
                 <PreviewContent>
                   <header>
-                    <h2>
-                      { title }
-                    </h2>
+                    <h2>{title}</h2>
                   </header>
                   <section>
                     <p>{excerpt}</p>

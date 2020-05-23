@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Text } from './Commons'
 import useSiteMetadata from '../hooks/use-site-config'
-import useSiteImages from '../hooks/use-site-config'
+import useSiteImages from '../hooks/use-site-images'
 import { colors } from '../tokens'
 
 const BioWrapper = styled.div`
@@ -61,7 +61,7 @@ const Bio = () => {
 
   return (
     <BioWrapper>
-      <figure className="author-img">
+      <figure className="author-image">
         <div
           alt={authorName}
           style={{ backgroundImage: `url("${fixed.src}")` }}

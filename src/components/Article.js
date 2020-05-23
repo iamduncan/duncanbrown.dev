@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Content from './Content'
+import Bio from './Bio'
+
 const ArticleWrapper = styled.article`
   padding: 0 30px 30px;
 
@@ -18,7 +21,16 @@ const ArticleFooter = styled.footer`
 const Article = ({ post }) => {
   return (
     <ArticleWrapper>
-      <ArticleFooter />
+      <Content
+        content={post.body}
+        date={post.frontmatter.date}
+        tags={post.frontmatter.tags}
+      />
+      <ArticleFooter>
+        <Bio />
+      </ArticleFooter>
     </ArticleWrapper>
   )
 }
+
+export default Article

@@ -36,7 +36,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'images',
-        path: 'content/images',
+        path: `${__dirname}/content/images`,
       },
     },
     {
@@ -72,6 +72,13 @@ module.exports = {
           { resolve: 'gatsby-remark-copy-linked-files' },
           { resolve: 'gatsby-remark-autolink-headers' },
         ],
+      },
+    },
+    // Reminder (https://github.com/gatsbyjs/gatsby/issues/15486#issuecomment-509405867)
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-images`],
       },
     },
     'gatsby-plugin-sharp',

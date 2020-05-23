@@ -16,7 +16,7 @@ module.exports = {
   display: 'standalone',
   icon: 'content/iamges/icon.png',
   postsPerPage: 6,
-  headerTitle: 'duncanbrown.dev',
+  headerTitle: 'DuncanBrown',
   headerLinksTitle: 'icon.png',
   headerLinksIcon: '',
   headerLinks: [
