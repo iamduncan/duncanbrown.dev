@@ -19,12 +19,15 @@ export default ({ data, location }) => {
         cover={page.frontmatter.cover && page.frontmatter.cover.publicURL}
       />
 
-      <Hero
-        heroImg={page.frontmatter.cover && page.frontmatter.cover.publicURL}
-        title={page.frontmatter.title}
-      />
-
       <Wrapper>
+        <Hero
+          heroImg={
+            page.frontmatter.cover &&
+            page.frontmatter.cover.childImageSharp.fluid
+          }
+          title={page.frontmatter.title}
+        />
+
         <article>
           <Content content={page.body} date={page.frontmatter.date} />
         </article>
@@ -44,6 +47,11 @@ export const pageQuery = graphql`
         slug
         cover {
           publicURL
+          childImageSharp {
+            fluid(maxWidth: 900) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
         }
       }
     }
