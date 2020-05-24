@@ -49,6 +49,7 @@
     "prism-react-renderer": "^0.1.5",
     "prism-themes": "^1.0.1",
     "prismjs": "^1.15.0",
+    "puppeteer": "^3.1.0",
     "react": "^16.8.0-alpha.0",
     "react-dom": "^16.8.0-alpha.0",
     "react-helmet": "~5.2.0",
@@ -75,6 +76,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "serve public/",
-    "now-build": "npm run build"
+    "now-build": "npm run build",
+    "generatePostPreviewImages": "node ./scripts/generatePostPreviewImages.js"
   }
 }

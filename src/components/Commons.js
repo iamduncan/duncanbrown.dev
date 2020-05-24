@@ -12,7 +12,8 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   color: ${colors.text};
   background-color: ${colors.background};
 }

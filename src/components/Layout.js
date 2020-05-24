@@ -22,6 +22,7 @@ const Template = ({ children }) => (
         href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
         rel="stylesheet"
       />
+      <link rel="stylesheet" href="https://use.typekit.net/rqj2vyu.css" />
     </Helmet>
     <GlobalStyle />
     <Header />

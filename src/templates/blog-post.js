@@ -16,19 +16,24 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.excerpt}
-        cover={post.frontmatter.cover && post.frontmatter.publicUrl}
-        imageShare={post.frontmatter.imageShare && post.frontmatter.publicUrl}
+        cover={post.frontmatter.cover && post.frontmatter.publicURL}
+        imageShare={
+          post.frontmatter.imageShare && post.frontmatter.imageShare.publicURL
+        }
         lang={post.frontmatter.language}
         path={post.frontmatter.slug}
         isBlogPost
       />
-
-      <Hero
-        heroImg={post.frontmatter.cover && post.frontmatter.publicUrl}
-        title={post.frontmatter.title}
-      />
-
       <Wrapper>
+        <Hero
+          heroImg={
+            post.frontmatter.cover &&
+            post.frontmatter.cover.childImageSharp.fluid
+          }
+          title={post.frontmatter.title}
+          tags={post.frontmatter.tags}
+        />
+
         <Article post={post} />
       </Wrapper>
 
@@ -51,6 +56,14 @@ export const pageQuery = graphql`
         language
         tags
         cover {
+          publicURL
+          childImageSharp {
+            fluid(maxWidth: 900) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+        imageShare {
           publicURL
         }
         translations {

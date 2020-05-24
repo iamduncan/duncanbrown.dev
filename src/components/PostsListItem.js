@@ -31,6 +31,9 @@ const ReadPost = styled(Link)`
 
 const PostHeader = styled.header`
   padding: 1em 0;
+  font-family: bree, sans-serif;
+  font-weight: 600;
+  font-style: normal;
 `
 
 const Excerpt = styled.p`
@@ -48,6 +51,9 @@ const PostTitleLink = styled(Link)`
 const FooterLine = styled.div`
   color: ${colors.textLight};
   font-size: 0.8em;
+  font-family: basic-sans, sans-serif;
+  font-weight: 600;
+  font-style: normal;
 `
 
 const PostsListItem = ({ title, excerpt, slug, tags, timeToRead }) => (

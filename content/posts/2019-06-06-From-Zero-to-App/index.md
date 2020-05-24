@@ -5,6 +5,8 @@ title: 'From Zero to App'
 description: 'Come along for the ride while I build a single page web app and a RESTful api backend.'
 published: true
 cover: './banner.png'
+imageShare: './from-zero-to-app-share.png'
+tags: ['thoughts']
 ---
 
 Having had a very extended hiatus and a change of circumstances it is now time to resume blogging.

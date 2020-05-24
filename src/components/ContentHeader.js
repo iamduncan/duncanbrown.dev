@@ -10,6 +10,9 @@ const Header = styled.header`
   margin-bottom: 2rem;
   color: ${colors.textLight};
   font-size: 0.9em;
+  font-family: basic-sans, sans-serif;
+  font-weight: 600;
+  font-style: normal;
 `
 
 const ContentIntro = ({ date, tags, translations }) => (

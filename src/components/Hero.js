@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
+
 import useSiteMetadata from '../hooks/use-site-config'
 import useSiteImages from '../hooks/use-site-images'
 import { colors } from '../tokens'
@@ -23,17 +25,19 @@ const TitleContainer = styled.div`
 `
 
 const HeroTitle = styled.h1`
-  font-weight: 700;
+  font-family: bree, sans-serif;
+  font-weight: 600;
+  font-style: normal;
   font-size: 3rem;
   margin: 10px 50px;
-  color: ${colors.white};
-  text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.85);
+  color: ${colors.text};
+  /* text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.85); */
 `
 
 const HeroSubTitle = styled.h2`
   margin: 10px 50px;
-  color: ${colors.white};
-  text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.85);
+  color: ${colors.textLight};
+  /* text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.85); */
 `
 
 const Hero = props => {
@@ -42,10 +46,14 @@ const Hero = props => {
   const heroImg = props.heroImg || fluid.src
 
   return (
-    <HeroContainer style={{ backgroundImage: `url("${heroImg}")` }}>
+    <HeroContainer>
       <TitleContainer>
         <HeroTitle>{props.title}</HeroTitle>
         {props.subTitle && <HeroSubTitle>{props.subTitle}</HeroSubTitle>}
+        <Img
+          sizes={heroImg}
+          alt={props.tags ? props.tags.join(', ') : 'Header Image'}
+        />
       </TitleContainer>
     </HeroContainer>
   )

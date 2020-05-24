@@ -3,17 +3,13 @@ import styled, { createGlobalStyle } from 'styled-components'
 import { graphql, withPrefix } from 'gatsby'
 import useSiteMetadata from '../hooks/use-site-config'
 import useSiteImages from '../hooks/use-site-images'
-import colors from '../tokens'
+import { colors } from '../tokens'
 
 const GlobalPageStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0
-  }
-
-  body {
-    font-family: 'Rubik', sans-serif;
   }
 `
 
@@ -80,6 +76,7 @@ const AuthorImg = styled.img`
   border-radius: 40px;
   display: inline-block;
   vertical-align: middle;
+  margin-bottom: 0;
 `
 
 const SubTitle = styled.div`
@@ -106,10 +103,7 @@ const BlogPostShareImage = ({ data, pageContext }) => {
 
   return (
     <Wrapper width={width} height={height}>
-      <link
-        href="https://fonts.googleapis.com/css?family=Rubik&display=swap"
-        rel="stylesheet"
-      />
+      <link rel="stylesheet" href="https://use.typekit.net/rqj2vyu.css" />
       <GlobalPageStyle />
 
       <SiteTitle>{headerTitle}</SiteTitle>

@@ -20,8 +20,8 @@ export default {
   textLightest: colors.white,
   textLightestHover: colors.grey200,
   textLight: '#57595d',
-  primary: colors.grey500,
-  primaryAlpha: `rgba(32, 35, 42, 0.85)`,
+  // primary: colors.grey500,
+  // primaryAlpha: `rgba(32, 35, 42, 0.85)`,
   text: colors.grey500,
   background: '#f4f8fb',
   backgroundArticle: colors.white,
@@ -35,6 +35,6 @@ export default {
   socialMediaCardFilter: '#437abf', // #8f43bf
   postMetadata: colors.lightBlue,
   // testing
-  // primary: `#6556B3`,
-  // primaryAlpha: `#6556B3cc`,
+  primary: `#0078CC`,
+  primaryAlpha: `#0078CCcc`,
 }
