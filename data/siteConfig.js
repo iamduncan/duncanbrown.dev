@@ -5,7 +5,14 @@ module.exports = {
   twitterUsername: 'iamDuncanBrown',
   authorAvatar: 'avatar.jpeg',
   defaultLang: 'en',
-  authorDescription: '',
+  authorDescription: `<p>For over 10 years Duncan Brown has been working on the
+    design, build and maintenance of marketing websites and building web
+    applications to streamline business processes.</p>
+    <p>He is passionate about modern web technologies, developing progressive web
+    apps and creating amazing experiences for WordPress websites.</p>
+    <p>Do you want to know more?
+    <a href="/about-duncan-brown">Read my about page</a>.
+    </p>`,
   siteUrl: 'https://duncanbrown.dev',
   // Prefixes all links.
   pathPrefix: '', // Note: it must *not* have a trailing slash.

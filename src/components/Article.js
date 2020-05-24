@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Content from './Content'
+import DiscussArticle from './DiscussArticle'
 import Bio from './Bio'
 
 const ArticleWrapper = styled.article`
@@ -27,6 +28,7 @@ const Article = ({ post }) => {
         date={post.frontmatter.date}
         tags={post.frontmatter.tags}
       />
+      <DiscussArticle post={post} />
       <ArticleFooter>
         <Bio />
       </ArticleFooter>
