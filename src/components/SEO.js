@@ -4,7 +4,7 @@ import { withPrefix } from 'gatsby'
 import useSiteMetadata from '../hooks/use-site-config'
 
 const SEO = props => {
-  const { isBlogPost, path = '', lang = 'en' } = props
+  const { isBlogPost, path = '', lang } = props
   const {
     siteTitle,
     siteUrl,
@@ -26,7 +26,7 @@ const SEO = props => {
   return (
     <Helmet title={title}>
       {/* General tags */}
-      <html lang={lang} />
+      <html lang={lang || 'en'} />
       <meta name="description" content={description} />
       <link rel="canonical" href={formatedSiteUrl + withPrefix(path)} />
 

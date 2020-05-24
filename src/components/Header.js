@@ -61,6 +61,21 @@ const HeaderLink = styled(Link)`
   }
 `
 
+const HeaderLinkExternal = styled.a`
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: ${colors.textLightest};
+  border: 0;
+  margin: 0;
+  padding: 8px 10px;
+  min-width: 42px;
+  z-index: 10;
+  & + & {
+    margin-left: 0.7rem;
+  }
+`
+
 const HeaderLinkTitle = styled(HeaderLink)`
   padding-left: 0;
 `
@@ -105,15 +120,26 @@ const MobileNav = styled.nav`
 `
 
 const HeaderLinks = ({ headerLinks }) => {
-  return headerLinks.map((headerLink, i) => (
-    <HeaderLink
-      to={headerLink.url}
-      key={`header-link-${i}`}
-      aria-label={`View ${headerLink.label} page`}
-    >
-      {headerLink.label}
-    </HeaderLink>
-  ))
+  return headerLinks.map(
+    (headerLink, i) =>
+      headerLink.url.startsWith('http') ? (
+        <HeaderLinkExternal
+          href={headerLink.url}
+          key={`header-link-${i}`}
+          target="_blank"
+        >
+          {headerLink.label}
+        </HeaderLinkExternal>
+      ) : (
+        <HeaderLink
+          to={headerLink.url}
+          key={`header-link-${i}`}
+          aria-label={`View ${headerLink.label} page`}
+        >
+          {headerLink.label}
+        </HeaderLink>
+      ),
+  )
 }
 
 const BurgerButton = styled.button`
