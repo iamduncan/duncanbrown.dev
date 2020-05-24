@@ -9,7 +9,7 @@ require('dotenv').config({
 })
 
 module.exports = {
-  pathPrefix: config.pathPrefix,
+  pathPrefix: pathPrefix,
   siteMetadata: {
     title: config.siteTitle,
     author: config.authorName,
@@ -49,6 +49,9 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: ['.mdx', '.md', '.markdown'],
+        defaultLayouts: {
+          default: require.resolve('./src/templates/page.js'),
+        },
         gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-images',
@@ -58,19 +61,9 @@ module.exports = {
               sizeByPixelDensity: true,
             },
           },
-        ],
-        remarkPlugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 590,
-              linkImagesToOriginal: false,
-              withWebp: true,
-            },
-          },
+          { resolve: 'gatsby-remark-autolink-headers' },
           { resolve: 'gatsby-remark-prismjs' },
           { resolve: 'gatsby-remark-copy-linked-files' },
-          { resolve: 'gatsby-remark-autolink-headers' },
         ],
       },
     },

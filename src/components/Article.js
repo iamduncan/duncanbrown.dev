@@ -18,6 +18,7 @@ const ArticleFooter = styled.footer`
   padding: 3rem 0 0;
   border-top: 1px solid #ececec;
 `
+
 const Article = ({ post }) => {
   return (
     <ArticleWrapper>
