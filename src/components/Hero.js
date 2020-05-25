@@ -10,7 +10,7 @@ const HeroContainer = styled.div`
   position: relative;
   display: table;
   width: 100%;
-  height: 400px;
+  height: 200px;
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;

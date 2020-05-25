@@ -16,7 +16,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.excerpt}
-        cover={post.frontmatter.cover && post.frontmatter.publicURL}
+        cover={post.frontmatter.cover && post.frontmatter.cover.publicURL}
         imageShare={
           post.frontmatter.imageShare && post.frontmatter.imageShare.publicURL
         }
@@ -33,7 +33,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           title={post.frontmatter.title}
           tags={post.frontmatter.tags}
         />
-
         <Article post={post} />
       </Wrapper>
 

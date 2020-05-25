@@ -50,7 +50,7 @@ const PreviewCover = styled.div`
   width: auto;
   height: 200px;
   background: #c5d2d9 no-repeat 50%;
-  background-size: cover;
+  background-size: contain;
   border-radius: 5px 5px 0 0;
 `
 
@@ -78,14 +78,8 @@ const PrevNextPost = ({ previous, next }) => {
       <PreviewContainer>
         {articles.map((article, i) => {
           const { excerpt, timeToRead } = article.node
-          const {
-            tags,
-            cover,
-            title,
-            slug,
-            language,
-          } = article.node.frontmatter
-          const heroImg = (cover && cover.publicUrl) || fluid.src
+          const { tags, cover, title, slug } = article.node.frontmatter
+          const heroImg = (cover && cover.publicURL) || fluid.src
 
           return (
             <Preview key={`prev-next-${i}`}>
