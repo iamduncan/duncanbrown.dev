@@ -6,7 +6,7 @@ description: 'An indepth look at what will be included in our app'
 published: true
 tags: ['planning', 'ideas', 'web app']
 cover: './cover.png'
-shareImage: './fleet-manager-specification-share.png'
+imageShare: './fleet-manager-specification-share.png'
 ---
 
 This will be a high level look at the requirments for the the app. Including
