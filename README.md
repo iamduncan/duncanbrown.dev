@@ -38,3 +38,17 @@ A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://g
 - `npm install`
 - `gatsby develop`
 - visit http://localhost:8000
+
+## Fonts Reminder
+
+### Headings
+
+[Bree](https://fonts.adobe.com/fonts/bree)
+
+## Body text
+
+[Yrsa](https://fonts.adobe.com/fonts/yrsa)
+
+### Post metadata
+
+[Basic Sans](https://fonts.adobe.com/fonts/basic-sans)
