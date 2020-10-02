@@ -51,7 +51,7 @@ const Hero = props => {
         <HeroTitle>{props.title}</HeroTitle>
         {props.subTitle && <HeroSubTitle>{props.subTitle}</HeroSubTitle>}
         <Img
-          sizes={heroImg}
+          fluid={heroImg}
           alt={props.tags ? props.tags.join(', ') : 'Header Image'}
         />
       </TitleContainer>
