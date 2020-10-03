@@ -6,12 +6,11 @@ import Hero from '../components/Hero'
 import Article from '../components/Article'
 import PrevNextPost from '../components/PrevNextPost'
 import SEO from '../components/SEO'
-import CommentForm from '../components/CommentForm'
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.post
   const { previous, next } = pageContext
-  const commentsEnabled = process.env.COMMENTS_ENABLED
+  // const commentsEnabled = process.env.COMMENTS_ENABLED
 
   return (
     <Layout location={location}>
@@ -36,7 +35,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           tags={post.frontmatter.tags}
         />
         <Article post={post} />
-        {commentsEnabled && <CommentForm post={post} />}
       </Wrapper>
 
       <PrevNextPost previous={previous} next={next} />

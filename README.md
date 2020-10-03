@@ -45,7 +45,7 @@ A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://g
 
 [Bree](https://fonts.adobe.com/fonts/bree)
 
-## Body text
+### Body text
 
 [Yrsa](https://fonts.adobe.com/fonts/yrsa)
 

@@ -2,44 +2,42 @@ import React, { Component, useState } from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import { css } from '@emotion/core'
-import theme from '../../../config/theme'
 import { rhythm } from '../../lib/typography'
 import { bpMaxSM } from '../../lib/breakpoints'
 import Message from '../ConfirmMessage/Message'
 import { PleaseConfirmIllustration } from '../ConfirmMessage/Illustrations'
 
 const CommentSchema = Yup.object().shape({
-  email: Yup.string()
-    .email('Invalid email address')
-    .required('Required'),
+  email: Yup.string().email('Invalid email address').required('Required'),
   name: Yup.string().required('Required'),
   message: Yup.string().required('Required'),
   url: Yup.string().url('Invalid url'),
 })
 
-const Comment = ({slug}) => {
-  const [submitted, setSubmitted] = useState(false);
-  const [response, setResponse] = useState();
-  const [errorMessage, setErrorMessage] = useState();
+const Comment = ({ slug }) => {
+  const [submitted, setSubmitted] = useState(false)
+  const [response, setResponse] = useState()
+  const [errorMessage, setErrorMessage] = useState()
 
   const successful = response && response.status === 'success'
 
   const handleSubmit = async (values) => {
-    const staticmanUrl =
-      'https://dev.staticman.net/v3/entry/github/iamduncan/duncanbrown.dev/site-and-layout-updates/comments'
+    const staticmanUrl = 'https://scm.duncanbrown.dev/api/comment'
     setSubmitted(true)
 
-    const formData = new FormData();
-    formData.set('fields[name]', values['name']);
-    formData.set('fields[email]', values['email']);
-    formData.set('fields[url]', values['url']);
-    formData.set('fields[message]', values['message']);
-    formData.set('options[slug]', slug);
+    const formData = new FormData()
+    formData.set('fields[name]', values['name'])
+    formData.set('fields[email]', values['email'])
+    formData.set('fields[url]', values['url'])
+    formData.set('fields[message]', values['message'])
+    formData.set('options[slug]', slug)
 
     const json = {}
     formData.forEach((value, prop) => (json[prop] = value))
     const formBody = Object.keys(json)
-      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(json[key]))
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(json[key]),
+      )
       .join('&')
 
     try {
@@ -63,26 +61,26 @@ const Comment = ({slug}) => {
 
   return (
     <div>
-    {!successful && (
-      <h2
-        css={css`
+      {!successful && (
+        <h2
+          css={css`
             margin-bottom: ${rhythm(1)};
-            margin-top: 0
-        `}
-      >
-        Comment
-      </h2>
-    )}
+            margin-top: 0;
+          `}
+        >
+          Comment
+        </h2>
+      )}
 
-    <Formik
-      initialValues={{ email: '', name: '', message: '', url: '' }}
-      validationSchema={CommentSchema}
-      onSubmit={values => handleSubmit(values)}
-      render={({ errors, touched, isSubmitting }) => (
-        <>
-          {!successful && (
-            <Form
-              css={css`
+      <Formik
+        initialValues={{ email: '', name: '', message: '', url: '' }}
+        validationSchema={CommentSchema}
+        onSubmit={(values) => handleSubmit(values)}
+        render={({ errors, touched, isSubmitting }) => (
+          <>
+            {!successful && (
+              <Form
+                css={css`
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -95,7 +93,7 @@ const Comment = ({slug}) => {
                 }
                 .field-error {
                   display: block;
-                  color: ${theme.colors.red};
+                  color: "#E86C60"
                   font-size: 80%;
                 }
                 input, textarea {
@@ -124,112 +122,113 @@ const Comment = ({slug}) => {
                   }
                 }
               `}
-            >
-              <label htmlFor="name">
-                <div
-                  css={css`
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-end;
-                  `}
-                >
-                  Name
-                  <ErrorMessage
-                    name="name"
-                    component="span"
-                    className="field-error"
-                  />
-                </div>
-                <Field
-                  aria-label="your name"
-                  aria-required="true"
-                  name="name"
-                  type="text"
-                />
-              </label>
-              <label htmlFor="email">
-                <div
-                  css={css`
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-end;
-                  `}
-                >
-                  Email Address
-                  <ErrorMessage
-                    name="email"
-                    component="span"
-                    className="field-error"
-                  />
-                </div>
-                <Field
-                  aria-label="your email address"
-                  aria-required="true"
-                  name="email"
-                  type="email"
-                />
-              </label>
-              <label htmlFor="url">
-                <div
-                  css={css`
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-end;
-                  `}
-                >
-                  Website URL
-                  <ErrorMessage
-                    name="url"
-                    component="span"
-                    className="field-error"
-                  />
-                </div>
-                <Field
-                  aria-label="your website url"
-                  aria-required="false"
-                  name="url"
-                  type="text"
-                />
-              </label>
-              <label htmlFor="message">
-                <div
-                  css={css`
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-end;
-                  `}
-                >
-                  Message
-                  <ErrorMessage
-                    name="message"
-                    component="span"
-                    className="field-error"
-                  />
-                </div>
-                <Field
-                  aria-label="your message"
-                  aria-required="true"
-                  name="message"
-                  component="textarea"
-                />
-              </label>
-              <button
-                data-element="submit"
-                type="submit"
-                disabled={isSubmitting}
               >
-                {!isSubmitting && 'Submit'}
-                {isSubmitting && 'Submitting...'}
-              </button>
-            </Form>
-          )}
-          {submitted &&
-            !isSubmitting && <PostSubmissionMessage response={response} />}
-          {errorMessage && <div>{errorMessage}</div>}
-        </>
-      )}
-    />
-  </div>
+                <label htmlFor="name">
+                  <div
+                    css={css`
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: flex-end;
+                    `}
+                  >
+                    Name
+                    <ErrorMessage
+                      name="name"
+                      component="span"
+                      className="field-error"
+                    />
+                  </div>
+                  <Field
+                    aria-label="your name"
+                    aria-required="true"
+                    name="name"
+                    type="text"
+                  />
+                </label>
+                <label htmlFor="email">
+                  <div
+                    css={css`
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: flex-end;
+                    `}
+                  >
+                    Email Address
+                    <ErrorMessage
+                      name="email"
+                      component="span"
+                      className="field-error"
+                    />
+                  </div>
+                  <Field
+                    aria-label="your email address"
+                    aria-required="true"
+                    name="email"
+                    type="email"
+                  />
+                </label>
+                <label htmlFor="url">
+                  <div
+                    css={css`
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: flex-end;
+                    `}
+                  >
+                    Website URL
+                    <ErrorMessage
+                      name="url"
+                      component="span"
+                      className="field-error"
+                    />
+                  </div>
+                  <Field
+                    aria-label="your website url"
+                    aria-required="false"
+                    name="url"
+                    type="text"
+                  />
+                </label>
+                <label htmlFor="message">
+                  <div
+                    css={css`
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: flex-end;
+                    `}
+                  >
+                    Message
+                    <ErrorMessage
+                      name="message"
+                      component="span"
+                      className="field-error"
+                    />
+                  </div>
+                  <Field
+                    aria-label="your message"
+                    aria-required="true"
+                    name="message"
+                    component="textarea"
+                  />
+                </label>
+                <button
+                  data-element="submit"
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  {!isSubmitting && 'Submit'}
+                  {isSubmitting && 'Submitting...'}
+                </button>
+              </Form>
+            )}
+            {submitted && !isSubmitting && (
+              <PostSubmissionMessage response={response} />
+            )}
+            {errorMessage && <div>{errorMessage}</div>}
+          </>
+        )}
+      />
+    </div>
   )
 }
 
