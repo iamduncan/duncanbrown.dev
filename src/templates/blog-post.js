@@ -10,7 +10,6 @@ import SEO from '../components/SEO'
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.post
   const { previous, next } = pageContext
-  // const commentsEnabled = process.env.COMMENTS_ENABLED
 
   return (
     <Layout location={location}>
