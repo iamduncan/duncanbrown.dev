@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Content from './Content'
 import DiscussArticle from './DiscussArticle'
+import CommentForm from '../components/CommentForm'
 import Bio from './Bio'
 
 const ArticleWrapper = styled.article`
@@ -29,6 +30,7 @@ const Article = ({ post }) => {
         tags={post.frontmatter.tags}
       />
       <DiscussArticle post={post} />
+      {process.env.COMMENTS_ENABLED && <CommentForm post={post} />}
       <ArticleFooter>
         <Bio />
       </ArticleFooter>
