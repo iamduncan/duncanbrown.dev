@@ -8,11 +8,11 @@ const Header = () => {
   const router = useRouter();
   console.log(router.pathname);
   return (
-    <nav className='p-4 nav-section w-full sticky'>
+    <nav className='p-4 nav-section w-full max-w-screen-xl mx-auto'>
       <div className='container mx-auto'>
         <div className='flex justify-between flex- flex-wrap content-center items-center py-2 lg:py-0 px-0 lg:px-0'>
           <Link href='/'>
-            <a className={`${menuOpen && 'hidden'}`}>{CMS_NAME}</a>
+            <a className='text-xl font-bold'>{CMS_NAME}</a>
           </Link>
 
           <div className={`${!menuOpen && 'hidden'} md:block`}>
@@ -85,8 +85,8 @@ const Header = () => {
               !menuOpen && 'hidden'
             } md:hidden fixed top-0 left-0 w-full bg-white h-screen fixed z-50 p-3`}
           >
-            <div className='flex flex- justify-between px-3 py-2'>
-              {CMS_NAME}
+            <div className='flex flex- justify-between px-8 py-4'>
+              <div className='text-xl font-bold'>{CMS_NAME}</div>
               <div
                 className='close-menu flex items-center content-center justify-center px-2 py-1 bg-black rounded px-x py-1 text-white uppercase'
                 onClick={() => setMenuOpen(false)}
