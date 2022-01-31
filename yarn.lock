@@ -214,14 +214,6 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/remark-prism@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@types/remark-prism/-/remark-prism-1.3.0.tgz#391028329b86001c9b541f551433d3d4afaa6add"
-  integrity sha512-lFJuZuBH8wjZGDk8nE7eXKYgjP9Z2aLUYK3obXngErVsvg0L751sQbO55jwOanSfG8U9aF6063TVJBaK7Nk7Nw==
-  dependencies:
-    remark "^12.0.0"
-    unified "^9.2.1"
-
 "@types/scheduler@*":
   version "0.16.2"
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
@@ -2224,7 +2216,7 @@ remark-stringify@^8.0.0:
     unherit "^1.0.4"
     xtend "^4.0.1"
 
-remark@12.0.1, remark@^12.0.0:
+remark@12.0.1:
   version "12.0.1"
   resolved "https://registry.yarnpkg.com/remark/-/remark-12.0.1.tgz#f1ddf68db7be71ca2bad0a33cd3678b86b9c709f"
   integrity sha512-gS7HDonkdIaHmmP/+shCPejCEEW+liMp/t/QwmF0Xt47Rpuhl32lLtDV1uKWvGoq+kxr5jSgg5oAIpGuyULjUw==
@@ -2563,7 +2555,7 @@ unified@^10.0.0, unified@^10.1.1:
     trough "^2.0.0"
     vfile "^5.0.0"
 
-unified@^9.0.0, unified@^9.2.1:
+unified@^9.0.0:
   version "9.2.2"
   resolved "https://registry.yarnpkg.com/unified/-/unified-9.2.2.tgz#67649a1abfc3ab85d2969502902775eb03146975"
   integrity sha512-Sg7j110mtefBD+qunSLO1lqOEKdrwBFBrR6Qd8f4uwkhWNlbkaqwHse6e7QvD3AP/MNoJdEDLaf8OxYyoWgorQ==
