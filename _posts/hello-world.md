@@ -31,6 +31,29 @@ diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc
 sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut
 morbi tincidunt augue interdum velit euismod.
 
+```treeview
+root_folder/
+|-- apps/
+|   |-- api/
+|   |   |-- index.js
+|   |   `-- routes.js
+|   `-- web-app/
+|       |-- index.js
+|       `-- routes.js
+|-- packages/
+|   |-- database/
+|   |   `-- prisma.schema
+|   `-- ui/
+|       `-- index.js
+|-- .gitignore
+|-- .htaccess
+|-- .npmignore
+|-- archive 1.zip
+|-- archive 2.tar.gz
+|-- logo.svg
+`-- README.md
+```
+
 ## Lorem Ipsum
 
 Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris

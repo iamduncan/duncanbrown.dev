@@ -52,9 +52,9 @@ morbi tincidunt augue interdum velit euismod.
 ```treeview
 root-folder/
 |-- a-first-folder/
-|   |-- a-first-folder-file.txt
-|-- a-second-folder/
-|   |-- a-second-folder-file.txt
+|   `-- a-first-folder-file.txt
+`-- a-second-folder/
+    `-- a-second-folder-file.txt
 ```
 
 ## Lorem Ipsum

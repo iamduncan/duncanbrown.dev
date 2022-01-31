@@ -1,23 +1,24 @@
-import remark from 'remark';
+import { unified } from 'unified';
 import html from 'remark-html';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import rehypeDocument from 'rehype-document';
+import rehypeFormat from 'rehype-format';
+import rehypeSlug from 'rehype-slug';
+import rehypeStringify from 'rehype-stringify';
 import prism from 'remark-prism';
 
 export default async function markdownToHtml(markdown: string) {
-  const result = await remark()
-    .use(html)
+  const result = await unified()
+    .use(remarkParse)
     .use(prism, {
-      plugins: [
-        'autolinker',
-        'command-line',
-        'data-uri-highlight',
-        'diff-highlight',
-        'inline-color',
-        'keep-markup',
-        'line-numbers',
-        'show-invisibles',
-        'treeview',
-      ],
+      plugins: ['line-numbers', 'treeview'],
     })
+    .use(remarkRehype)
+    .use(rehypeSlug)
+    .use(rehypeDocument)
+    .use(rehypeFormat)
+    .use(rehypeStringify)
     .process(markdown);
   return result.toString();
 }
