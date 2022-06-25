@@ -1,6 +1,10 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
+import { postFilePaths, POSTS_PATH } from './mdxUtils';
+import { serialize } from 'next-mdx-remote/serialize';
+import remarkPrism from 'remark-prism';
+import rehypeSlug from 'rehype-slug';
 
 const postsDirectory = join(process.cwd(), '_posts');
 
@@ -8,40 +12,34 @@ export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
-export function getPostBySlug(slug: string, fields: string[] = []) {
-  const realSlug = slug.replace(/\.md$/, '');
-  const fullPath = join(postsDirectory, `${realSlug}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const { data, content } = matter(fileContents);
+export async function getPostBySlug(slug: string) {
+  const postFilePath = join(POSTS_PATH, `${slug}.mdx`);
+  const source = fs.readFileSync(postFilePath, 'utf8');
 
-  type Items = {
-    [key: string]: string;
-  };
+  const { content, data } = matter(source);
 
-  const items: Items = {};
-
-  // Ensure only the minimal needed data is exposed
-  fields.forEach((field) => {
-    if (field === 'slug') {
-      items[field] = realSlug;
-    }
-    if (field === 'content') {
-      items[field] = content;
-    }
-
-    if (typeof data[field] !== 'undefined') {
-      items[field] = data[field];
-    }
+  const mdxSource = await serialize(content, {
+    mdxOptions: {
+      remarkPlugins: [
+        {
+          plugins: [remarkPrism],
+          settings: { plugins: ['line-numbers', 'treeview'] },
+        },
+      ],
+      rehypePlugins: [rehypeSlug],
+    },
+    scope: data,
   });
 
-  return items;
+  return {
+    source: mdxSource,
+    data,
+  };
 }
 
-export function getAllPosts(fields: string[] = []) {
-  const slugs = getPostSlugs();
-  const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
-    // sort posts by date in descending order
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-  return posts.filter((post) => post.published);
-}
+export const getAllPosts = async () =>
+  postFilePaths
+    // Remove file extensions for page paths
+    .map((path) => path.replace(/\.(md|mdx)?$/, ''))
+    // Map the path into the static paths object required by Next.js
+    .map((slug) => ({ params: { slug } }));

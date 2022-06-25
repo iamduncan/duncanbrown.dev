@@ -17,7 +17,7 @@ const Layout = ({ preview, children }: Props) => {
         <Alert preview={preview} />
         <Container>
           <Header />
-          <main>{children}</main>
+          <main className='container mx-auto max-w-screen-xl'>{children}</main>
         </Container>
       </div>
       <Footer />

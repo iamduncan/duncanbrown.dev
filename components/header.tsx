@@ -6,7 +6,6 @@ import { useState } from 'react';
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
-  console.log(router.pathname);
   return (
     <nav className='p-4 nav-section w-full max-w-screen-xl mx-auto'>
       <div className='container mx-auto'>

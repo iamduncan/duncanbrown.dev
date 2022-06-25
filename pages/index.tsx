@@ -6,14 +6,19 @@ import { getAllPosts } from '../lib/api';
 import Head from 'next/head';
 import { CMS_NAME } from '../lib/constants';
 import Post from '../types/post';
+import { postFilePaths, POSTS_PATH } from '@libs/mdxUtils';
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 
 type Props = {
-  allPosts: Post[];
+  posts: Post[];
 };
 
-const Index = ({ allPosts }: Props) => {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
+const Index = ({ posts }: Props) => {
+  const heroPost = posts[0];
+  const morePosts = posts.slice(1);
+
   return (
     <>
       <Layout>
@@ -23,12 +28,14 @@ const Index = ({ allPosts }: Props) => {
         <Intro />
         {heroPost && (
           <HeroPost
-            title={heroPost.title}
-            coverImage={heroPost.coverImage}
-            date={heroPost.date}
-            author={heroPost.author}
-            slug={heroPost.slug}
-            excerpt={heroPost.excerpt}
+            title={heroPost.data.title}
+            subTitle=''
+            caption=''
+            coverImage={heroPost.data.coverImage}
+            date={heroPost.data.date}
+            author={heroPost.data.author}
+            slug={heroPost.filePath.replace(/\.(md|mdx)?$/, '')}
+            excerpt={heroPost.data.excerpt}
           />
         )}
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
@@ -40,17 +47,19 @@ const Index = ({ allPosts }: Props) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-    'published',
-  ]);
+  const posts = postFilePaths
+    .map((filePath) => {
+      const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
+      const { content, data } = matter(source);
 
-  return {
-    props: { allPosts },
-  };
+      return {
+        content,
+        data,
+        filePath,
+      };
+    })
+    .filter((post) => post.data.published)
+    .sort((post1, post2) => (post1.data.date > post2.data.date ? -1 : 1));
+
+  return { props: { posts } };
 };

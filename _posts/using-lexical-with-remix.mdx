@@ -1,0 +1,53 @@
+---
+title: 'Using Lexical with Remix'
+excerpt:
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Praesent elementum
+  facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan
+  sit amet nulla facilities morbi tempus.'
+coverImage: '/assets/blog/using-lexical-with-remix/cover.png'
+date: '2022-06-25T09:00:00.000Z'
+published: true
+author:
+  name: Duncan Brown
+  picture: '/assets/blog/authors/duncan-bw.jpeg'
+ogImage:
+  url: '/assets/blog/using-lexical-with-remix/cover.png'
+---
+
+:::caution
+
+This is a draft post. It is not yet ready to be published.
+
+:::
+
+## Converting Lexical editor State to HTML
+
+```typescript
+export const generateHTML = (editorState: string) => {
+  // the generate HTML function needs access to a DOM on the global namespace
+  const dom = new JSDOM();
+  global.window = dom.window as any;
+  global.document = dom.window.document;
+  global.HTMLElement = dom.window.HTMLElement;
+  global.DocumentFragment = dom.window.DocumentFragment;
+
+  const editor = createHeadlessEditor({
+    onError: (error) => {
+      console.error(error);
+    },
+    nodes: [],
+    namespace: 'editor',
+  });
+
+  editor.setEditorState(editor.parseEditorState(editorState));
+
+  let html = '';
+
+  editor.update(() => {
+    html = $generateHtmlFromNodes(editor, null);
+  });
+
+  return html;
+};
+```

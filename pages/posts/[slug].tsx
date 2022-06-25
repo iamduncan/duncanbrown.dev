@@ -9,16 +9,28 @@ import Head from 'next/head';
 import { CMS_NAME } from '@libs/constants';
 import markdownToHtml from '@libs/markdownToHtml';
 import PostType from '@my-types/post';
+import { MDXRemoteSerializeResult } from 'next-mdx-remote';
+import Author from '@my-types/author';
 
 type Props = {
-  post: PostType;
-  morePosts: PostType[];
+  source: MDXRemoteSerializeResult;
+  frontMatter: {
+    title: string;
+    date: string;
+    coverImage: string;
+    author: Author;
+    excerpt: string;
+    ogImage: {
+      url: string;
+    };
+  };
+  slug?: string;
   preview?: boolean;
 };
 
-const Post = ({ post, morePosts, preview }: Props) => {
+const Post = ({ source, frontMatter, slug, preview }: Props) => {
   const router = useRouter();
-  if (!router.isFallback && !post?.slug) {
+  if (!router.isFallback && !slug) {
     return <ErrorPage statusCode={404} />;
   }
   return (
@@ -27,20 +39,20 @@ const Post = ({ post, morePosts, preview }: Props) => {
         <PostTitle>Loading…</PostTitle>
       ) : (
         <>
-          <article className='prose lg:prose-xl px-8 max-w-7xl m-auto my-4 sm:my-16 mb-32'>
+          <article className='prose lg:prose-lg px-8 max-w-7xl m-auto my-4 sm:my-16 mb-32'>
             <Head>
               <title>
-                {post.title} | {CMS_NAME}
+                {frontMatter.title} | {CMS_NAME}
               </title>
-              <meta property='og:image' content={post.ogImage.url} />
+              <meta property='og:image' content={frontMatter.ogImage.url} />
             </Head>
             <PostHeader
-              title={post.title}
-              coverImage={post.coverImage}
-              date={post.date}
-              author={post.author}
+              title={frontMatter.title}
+              coverImage={frontMatter.coverImage}
+              date={frontMatter.date}
+              author={frontMatter.author}
             />
-            <PostBody content={post.content} />
+            <PostBody source={source} />
           </article>
         </>
       )}
@@ -57,39 +69,22 @@ type Params = {
 };
 
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
-    'title',
-    'date',
-    'slug',
-    'author',
-    'content',
-    'ogImage',
-    'coverImage',
-    'published',
-  ]);
-  const content = await markdownToHtml(post.content || '');
+  const post = await getPostBySlug(params.slug);
 
   return {
     props: {
-      post: {
-        ...post,
-        content,
-      },
+      source: post.source,
+      frontMatter: post.data,
+      slug: params.slug,
     },
   };
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug', 'published']);
+  const paths = await getAllPosts();
 
   return {
-    paths: posts.map((post) => {
-      return {
-        params: {
-          slug: post.slug,
-        },
-      };
-    }),
+    paths: paths,
     fallback: false,
   };
 }
