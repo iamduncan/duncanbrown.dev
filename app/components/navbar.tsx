@@ -3,7 +3,7 @@ import { SunIcon, MoonIcon, MenuIcon } from "@heroicons/react/outline";
 
 export const Navbar = () => {
   return (
-    <div className="sticky top-0 w-full px-10 py-8 text-2xl mx-auto flex justify-between bg-white dark:text-white dark:bg-gray-900">
+    <div className="sticky top-0 w-full px-10 py-8 text-2xl mx-auto flex z-50 justify-between bg-white dark:text-white dark:bg-gray-900">
       <Link to="/" className="text-center">
         <h1>Duncan Brown</h1>
       </Link>
