@@ -1,54 +1,62 @@
-# egghead.io creator MDX Blog Starter Project
+# Welcome to Remix!
 
-This is based on Robin Wieruch's https://github.com/rwieruch/gatsby-mdx-blog-starter-project
+- [Remix Docs](https://remix.run/docs)
+- [Netlify Functions](https://www.netlify.com/products/functions/)
 
-Lot's of nice pieces are also borrowed from Jason Lengstorf https://github.com/jlengstorf/lengstorf.com
+## Netlify Setup
 
-A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://github.com/mdx-js/mdx).
+1. Install the [Netlify CLI](https://www.netlify.com/products/dev/):
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/eggheadio/gatsby-starter-egghead-blog)
+```sh
+npm i -g netlify-cli
+```
 
-## Features
+If you have previously installed the Netlify CLI, you should update it to the latest version:
 
-- MDX: JavaScript/React in Markdown
-- Prism.js: Syntax Highlighting
-- Pagination
-- Emotion
-- Typography.js
-- Self-hosted fonts ([Inter UI](https://rsms.me/inter/))
-- Social media share buttons
-- Site & Theme config files
-- ConvertKit subscribe form (Formik and Yup)
-- Placeholder illustrations by [Katerina Limpitsouni](https://twitter.com/ninalimpi) from [undraw.co](https://undraw.co/)
+```sh
+npm i -g netlify-cli@latest
+```
 
-## [➞ Demo](https://egghead-gatsby-starter.netlify.com/)
+2. Sign up and log in to Netlify:
 
-## Setup
+```sh
+netlify login
+```
 
-- `git clone git@github.com:eggheadio/gatsby-starter-egghead-blog.git`
-- `cd gatsby-starter-egghead-blog`
-- `yarn`
-- `gatsby develop`
-- visit http://localhost:8000
+3. Create a new site:
 
-## Setup via Gatsby CLI
+```sh
+netlify init
+```
 
-- `gatsby new gatsby-starter-egghead-blog git@github.com:eggheadio/gatsby-starter-egghead-blog.git`
-- `cd gatsby-starter-egghead-blog`
-- `npm install`
-- `gatsby develop`
-- visit http://localhost:8000
+## Development
 
-## Fonts Reminder
+The Remix dev server starts your app in development mode, rebuilding assets on file changes. To start the Remix dev server:
 
-### Headings
+```sh
+npm run dev
+```
 
-[Bree](https://fonts.adobe.com/fonts/bree)
+Open up [http://localhost:3000](http://localhost:3000), and you should be ready to go!
 
-## Body text
+The Netlify CLI builds a production version of your Remix App Server and splits it into Netlify Functions that run locally. This includes any custom Netlify functions you've developed. The Netlify CLI runs all of this in its development mode.
 
-[Yrsa](https://fonts.adobe.com/fonts/yrsa)
+```sh
+netlify dev
+```
 
-### Post metadata
+Open up [http://localhost:3000](http://localhost:3000), and you should be ready to go!
 
-[Basic Sans](https://fonts.adobe.com/fonts/basic-sans)
+Note: When running the Netlify CLI, file changes will rebuild assets, but you will not see the changes to the page you are on unless you do a browser refresh of the page. Due to how the Netlify CLI builds the Remix App Server, it does not support hot module reloading.
+
+## Deployment
+
+There are two ways to deploy your app to Netlify, you can either link your app to your git repo and have it auto deploy changes to Netlify, or you can deploy your app manually. If you've followed the setup instructions already, all you need to do is run this:
+
+```sh
+# preview deployment
+netlify deploy --build
+
+# production deployment
+netlify deploy --build --prod
+```
