@@ -1,25 +1,36 @@
 ---
-title: 'Using Lexical with Remix'
+title: "Using Lexical with Remix"
 excerpt:
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Praesent elementum
   facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan
-  sit amet nulla facilities morbi tempus.'
-coverImage: '/assets/blog/using-lexical-with-remix/cover.png'
-date: '2022-06-25T09:00:00.000Z'
+  sit amet nulla facilities morbi tempus."
+coverImage: "/assets/blog/using-lexical-with-remix/cover.png"
+date: "2022-06-25T09:00:00.000Z"
 published: true
 author:
   name: Duncan Brown
-  picture: '/assets/blog/authors/duncan-bw.jpeg'
+  picture: "/assets/blog/authors/duncan-bw.jpeg"
 ogImage:
-  url: '/assets/blog/using-lexical-with-remix/cover.png'
+  url: "/assets/blog/using-lexical-with-remix/cover.png"
 ---
 
-:::caution
+Lexical is a new text editor for the web. It's a simple, beautiful, and
+powerful text editor that's easy to use, and is built on top of the web
+components of the React ecosystem.
 
-This is a draft post. It is not yet ready to be published.
+## Using Lexical with Remix
 
-:::
+Remix is a web app that allows you to create and share web apps. It's
+built on top of the web components of the React ecosystem.
+
+### The Basics
+
+Install dependencies:
+
+```bash
+npm install --save-dev lexical-editor @lexical/react
+```
 
 ## Converting Lexical editor State to HTML
 
@@ -36,10 +47,10 @@ export const generateHTML = (editorState: string) => {
       console.error(error);
     },
     nodes: [],
-    namespace: 'editor',
+    namespace: "editor",
   });
   editor.setEditorState(editor.parseEditorState(editorState));
-  let html = '';
+  let html = "";
   editor.update(() => {
     html = $generateHtmlFromNodes(editor, null);
   });

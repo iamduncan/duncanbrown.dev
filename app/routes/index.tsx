@@ -74,7 +74,6 @@ export default function Index() {
             </p>
           </div>
         ))}
-        <pre>{JSON.stringify(posts, null, 2)}</pre>
       </div>
     </div>
   );
