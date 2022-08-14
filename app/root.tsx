@@ -30,7 +30,7 @@ export default function App() {
       <body className='h-screen bg-white transition duration-500 dark:bg-gray-900'>
         <div className='flex h-full'>
           <Sidebar />
-          <div className='flex-grow'>
+          <div className='flex-grow overflow-y-auto'>
             <Navbar />
             <Outlet />
           </div>

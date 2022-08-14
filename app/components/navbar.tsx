@@ -9,7 +9,7 @@ export const Navbar = () => {
       </div>
       <div>
         <SunIcon className='h-8 w-8' />
-        <MoonIcon className='h-8 w-8' />
+        {/* <MoonIcon className='h-8 w-8' /> */}
       </div>
     </div>
   );
