@@ -28,15 +28,14 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="h-screen bg-white transition duration-500 dark:bg-gray-900 dark:text-gray-50">
-        <div className="flex flex-col-reverse xl:flex-row xl:h-full">
-          <Sidebar />
-          <div className="flex-grow overflow-y-auto scrollbar:!h-1.5 scrollbar:!w-1 scrollbar:bg-transparent scrollbar-track:!rounded scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded scrollbar-thumb:!bg-slate-400">
+      <body className="bg-slate-100 scrollbar:!h-1.5  scrollbar:!w-1 scrollbar:bg-transparent scrollbar-track:!rounded scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded scrollbar-thumb:!bg-slate-400 dark:bg-slate-900">
+        <div className="">
+          <div className="">
             <Navbar />
             <Outlet />
-            <Footer />
           </div>
         </div>
+        <Footer />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

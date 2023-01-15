@@ -41,6 +41,7 @@ export const getPostBySlug = async (slug: string) => {
 export const markdownToHtml = async (mdxSource: string) => {
   const { default: remarkPrism } = await import("remark-prism");
   const { default: rehypeSlug } = await import("rehype-slug");
+  const { default: rehypeAddClasses } = await import("rehype-add-classes");
   const { default: rehypeAutoLink } = await import("rehype-autolink-headings");
   const { h, s } = await import("hastscript");
 
@@ -55,6 +56,12 @@ export const markdownToHtml = async (mdxSource: string) => {
         ...(options.rehypePlugins ?? []),
         rehypeSlug,
         [
+          rehypeAddClasses,
+          {
+            "h1,h2,h3": "group",
+          },
+        ],
+        [
           rehypeAutoLink,
           {
             behavior: "append",
@@ -66,7 +73,7 @@ export const markdownToHtml = async (mdxSource: string) => {
             content: [
               h("span.hidden", " permalink"),
               s(
-                "svg.inline.ml-4",
+                "svg.inline.ml-4.hidden.group-hover:inline-block",
                 {
                   xmlns: "http://www.w3.org/2000/svg",
                   width: 24,

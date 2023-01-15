@@ -1,0 +1,81 @@
+Arguments: 
+  /home/duncan/.nvm/versions/node/v16.16.0/bin/node /home/duncan/.yarn/bin/yarn.js
+
+PATH: 
+  /home/duncan/.deno/bin:/home/duncan/.config/composer/vendor/bin:/home/duncan/.local/share/pnpm:/home/duncan/.fly/bin:/home/duncan/.nvm/versions/node/v16.16.0/bin:/home/duncan/.yarn/bin:/home/duncan/.config/yarn/global/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Oculus/Support/oculus-runtime:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/iamdu/scoop/apps/gpg4win/3.1.16/GnuPG/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Program Files (x86)/Touch Portal/plugins/adb/platform-tools:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Users/iamdu/scoop/apps/nvm/current/nodejs/nodejs:/mnt/c/Users/iamdu/scoop/apps/gpg4win/current/GnuPG/bin:/mnt/c/Users/iamdu/scoop/apps/gpg4win/current/Gpg4win/bin:/mnt/c/Users/iamdu/scoop/apps/yarn/current/global/node_modules/.bin:/mnt/c/Users/iamdu/scoop/apps/yarn/current/Yarn/bin:/mnt/c/Users/iamdu/scoop/shims:/mnt/c/Users/iamdu/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/iamdu/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/iamdu/AppData/Local/Keybase/:/mnt/c/Users/iamdu/AppData/Local/Microsoft/WindowsApps:/snap/bin:/usr/local/go/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.16.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/home/duncan/.cache/yarn/v6/npm-globals-13.17.0-902eb1e680a41da93945adbdcb5a9f361ba69bd4-integrity/node_modules/globals/globals.json' -> '/home/duncan/projects/personal/duncanbrown.dev/node_modules/@eslint/eslintrc/node_modules/globals/globals.json'
+
+npm manifest: 
+  {
+    "private": true,
+    "sideEffects": false,
+    "scripts": {
+      "build": "run-s \"build:*\"",
+      "build:css": "npm run generate:css -- --minify",
+      "build:remix": "remix build",
+      "dev": "run-p \"dev:*\"",
+      "dev:css": "npm run generate:css -- --watch",
+      "dev:remix": "remix dev",
+      "generate:css": "npx tailwindcss -i ./styles/tailwind.css -o ./app/styles/tailwind.css",
+      "start": "cross-env NODE_ENV=production netlify dev"
+    },
+    "dependencies": {
+      "@heroicons/react": "^2.0.12",
+      "@netlify/functions": "^1.3.0",
+      "@remix-run/netlify": "^1.7.3",
+      "@remix-run/node": "^1.7.3",
+      "@remix-run/react": "^1.7.3",
+      "cross-env": "^7.0.3",
+      "gray-matter": "^4.0.3",
+      "hastscript": "^7.1.0",
+      "isbot": "^3.6.1",
+      "mdx-bundler": "^9.0.1",
+      "prismjs": "^1.29.0",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "rehype-autolink-headings": "^6.1.1",
+      "rehype-slug": "^5.0.1",
+      "rehype-stringify": "^9.0.3",
+      "remark-parse": "^10.0.1",
+      "remark-prism": "^1.3.6",
+      "remark-rehype": "^10.1.0",
+      "unified": "^10.1.2"
+    },
+    "devDependencies": {
+      "@remix-run/dev": "^1.7.3",
+      "@remix-run/eslint-config": "^1.7.3",
+      "@remix-run/serve": "^1.7.3",
+      "@tailwindcss/typography": "^0.5.7",
+      "@types/react": "^18.0.21",
+      "@types/react-dom": "^18.0.6",
+      "@types/remark-prism": "^1.3.3",
+      "eslint": "^8.26.0",
+      "eslint-config-prettier": "^8.5.0",
+      "npm-run-all": "^4.1.5",
+      "prettier": "^2.7.1",
+      "prettier-plugin-tailwindcss": "^0.1.13",
+      "tailwindcss": "^3.2.1",
+      "typescript": "^4.8.4"
+    },
+    "prettier": {},
+    "engines": {
+      "node": ">=14"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
