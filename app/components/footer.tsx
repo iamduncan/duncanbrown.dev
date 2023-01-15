@@ -3,8 +3,8 @@ import { InstagramIcon, LinkedInIcon, TwitterIcon } from "./icons";
 
 export function Footer() {
   return (
-    <footer className="m-12 flex flex-col rounded-3xl border-2 p-20 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-400">
-      <div className="flex pb-12 text-lg">
+    <footer className="content-container my-8 flex flex-col border-2 dark:border-slate-700 dark:text-slate-400 md:mx-auto md:my-16 md:rounded-3xl md:p-20 lg:max-w-7xl">
+      <div className="pb-3 text-lg md:flex md:pb-8">
         <div className="w-full md:w-1/3">
           <h3 className="mb-4 text-2xl font-medium">DuncanBrown.dev</h3>
         </div>
@@ -39,11 +39,11 @@ export function Footer() {
           </Form>
         </div>
       </div>
-      <div className="flex flex-1 border-t pt-8 text-sm dark:border-slate-700">
+      <div className="flex flex-1 flex-col-reverse gap-2 border-t pt-3 text-sm dark:border-slate-700 md:flex-row md:pt-8">
         <div className="w-full md:w-1/2">
           Copyright &copy; {new Date().getFullYear()} Duncan Brown
         </div>
-        <div className="flex w-full items-center justify-end gap-4 text-lg text-slate-500 md:w-1/2">
+        <div className="w-full items-center justify-end gap-4 text-lg text-slate-500 md:flex md:w-1/2">
           <a
             href="https://twitter.com/iamDuncanBrown"
             target="_blank"

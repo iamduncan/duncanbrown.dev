@@ -29,9 +29,9 @@ export default function App() {
         <Links />
       </head>
       <body className="bg-slate-100 scrollbar:!h-1.5  scrollbar:!w-1 scrollbar:bg-transparent scrollbar-track:!rounded scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded scrollbar-thumb:!bg-slate-400 dark:bg-slate-900">
-        <div className="">
-          <div className="">
-            <Navbar />
+        <div>
+          <Navbar />
+          <div className="mx-auto max-w-6xl">
             <Outlet />
           </div>
         </div>

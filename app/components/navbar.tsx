@@ -24,22 +24,22 @@ export const Navbar = () => {
 
   return (
     <div
-      className={`top-0 z-50 mx-auto mb-8 flex w-full border-zinc-700 bg-white px-10 text-2xl shadow-zinc-800 transition-colors duration-200 ease-in-out dark:text-white ${
+      className={`top-0 z-50 mx-auto mb-4 flex w-full border-zinc-700 bg-white px-4 text-2xl shadow-zinc-800 transition-colors duration-200 ease-in-out dark:text-white md:mb-8 md:px-10 ${
         isSticky
           ? "sticky border-b py-6 shadow-md dark:bg-zinc-900"
           : "top-auto border-b-0 py-8 dark:bg-slate-800"
       }`}
     >
-      <div className="w-full md:w-1/3">
-        <Link to="/" className="">
+      <div className="flex-grow md:w-1/3">
+        <Link to="/" className="whitespace-nowrap">
           <h1>Duncan Brown</h1>
         </Link>
       </div>
-      <div className="w-full text-center md:w-1/3">
+      <div className="hidden w-full text-center md:block md:w-1/3">
         <NavLink to="/">Home</NavLink>
       </div>
       <div className="flex w-full justify-end gap-2 md:w-1/3">
-        <SunIcon className="h-8 w-8" />
+        <SunIcon className="hidden h-8 w-8 lg:block" />
         {/* <MoonIcon className='h-8 w-8' /> */}
         <Bars3Icon className="h-8 w-8 xl:hidden" />
       </div>

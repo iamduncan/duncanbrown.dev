@@ -1,5 +1,5 @@
 import { json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 import { getAllPosts } from "~/utils/blog.server";
 
 export const loader = async () => {
@@ -12,7 +12,7 @@ export default function Index() {
   const { posts } = useLoaderData<typeof loader>();
   return (
     <div className="dark:text-slate-50">
-      <div className="mx-10 rounded-xl bg-slate-300 p-6 dark:bg-slate-800">
+      <div className="content-container">
         <h1 className="text-4xl">Hi, I'm Duncan 👋</h1>
         <div className="mt-8">
           <h2 className="text-2xl">About Me</h2>
@@ -30,7 +30,7 @@ export default function Index() {
             with others.
           </p>
         </div>
-        <div className="mt-8 flex w-full">
+        <div className="mt-8 w-full lg:flex">
           <div className="w-full md:w-1/2">
             <h2 className="text-2xl">What I&apos;ve done</h2>
             <ul className="py-6 pl-4 text-lg">
@@ -51,7 +51,7 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="mx-10 mt-10 rounded-xl bg-slate-300 p-6 dark:bg-slate-800">
+      <div className="content-container mt-4 md:mt-10">
         <h2 className="text-2xl">Recent blog posts</h2>
         {posts.map((post) => (
           <div key={post.slug} className="mt-8">
@@ -74,6 +74,14 @@ export default function Index() {
             </p>
           </div>
         ))}
+        <div className="flex justify-end">
+          <Link
+            to="/blog"
+            className="mt-8 text-lg text-blue-400 hover:underline"
+          >
+            View all posts
+          </Link>
+        </div>
       </div>
     </div>
   );

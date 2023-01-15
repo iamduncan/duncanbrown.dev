@@ -33,9 +33,9 @@ export default function BlogPost() {
 
   return (
     <>
-      <div className="mx-10 rounded-xl bg-slate-300 p-6 dark:bg-slate-800 dark:text-slate-200">
+      <div className="content-container">
         <h1 className="text-4xl">{post.data.title}</h1>
-        <div className="prose-lg mx-auto mt-4">
+        <div className="prose-xl mx-auto mt-2 md:mt-4">
           <Component />
         </div>
       </div>
