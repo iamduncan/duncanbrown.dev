@@ -12,9 +12,8 @@ export const loader = async ({ request }: LoaderArgs) => {
       <channel>
         <title>Kent C. Dodds Blog</title>
         <link>${blogUrl}</link>
-        <description>The Kent C. Dodds Blog</description>
-        <language>en-us</language>
-        <generator>Kody the Koala</generator>
+        <description>The Blog of Duncan Brown</description>
+        <language>en-gb</language>
         <ttl>40</ttl>
         ${posts
           .map((post) =>

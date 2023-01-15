@@ -7,7 +7,7 @@
     "build:remix": "remix build",
     "dev": "run-p \"dev:*\"",
     "dev:css": "pnpm generate:css --watch",
-    "dev:remix": "remix dev",
+    "dev:remix": "netlify dev",
     "generate:css": "pnpm tailwindcss -i ./styles/tailwind.css -o ./app/styles/tailwind.css",
     "start": "cross-env NODE_ENV=production netlify dev"
   },

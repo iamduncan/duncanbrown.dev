@@ -44,7 +44,7 @@ export function Footer({ categories }: { categories?: string[] }) {
             <input
               type="text"
               name="name"
-              placeholder="Name"
+              placeholder="First Name"
               className="mt-4 w-full border-b-2 border-slate-400 bg-transparent px-4 py-2 focus-visible:outline-0"
             />
             <input
