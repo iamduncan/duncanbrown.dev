@@ -1,17 +1,40 @@
-import { Form } from "@remix-run/react";
+import { Form, Link } from "@remix-run/react";
 import { InstagramIcon, LinkedInIcon, TwitterIcon } from "./icons";
 
-export function Footer() {
+export function Footer({ categories }: { categories?: string[] }) {
   return (
-    <footer className="content-container my-8 flex flex-col border-2 dark:border-slate-700 dark:text-slate-400 md:mx-auto md:my-16 md:rounded-3xl md:p-20 lg:max-w-7xl">
+    <footer className="content-container my-8 flex flex-col border-2 dark:border-slate-700 dark:text-slate-400 lg:mx-auto lg:my-16 lg:max-w-7xl lg:rounded-3xl lg:p-20">
       <div className="pb-3 text-lg md:flex md:pb-8">
-        <div className="w-full md:w-1/3">
-          <h3 className="mb-4 text-2xl font-medium">DuncanBrown.dev</h3>
+        <div className="w-full gap-4 md:w-1/2 lg:flex lg:w-2/3">
+          <div className="w-full gap-4 lg:w-1/2">
+            <h3 className="mb-4 text-2xl font-medium">DuncanBrown.dev</h3>
+            <p>
+              I'm a software engineer and designer based in Wiltshire, UK. I'm
+              currently working at{" "}
+              <a
+                href="https://www.wessexdigitalsolutions.co.uk/"
+                className="underline"
+              >
+                Wessex Digital Solutions
+              </a>
+              .
+            </p>
+          </div>
+          <div className="w-full lg:w-1/2">
+            <h3 className="mb-4 text-2xl font-semibold">Categories</h3>
+            <ul className="flex flex-col gap-2">
+              {categories &&
+                categories.map((category) => (
+                  <li key={category}>
+                    <Link to={`/category/${category}`} className="capitalize">
+                      {category}
+                    </Link>
+                  </li>
+                ))}
+            </ul>
+          </div>
         </div>
-        <div className="w-full md:w-1/3">
-          <h3 className="mb-4 text-2xl font-semibold">Categories</h3>
-        </div>
-        <div className="w-full md:w-1/3">
+        <div className="w-full md:w-1/2 lg:w-1/3">
           <h3 className="mb-4 text-2xl font-semibold">Newsletter</h3>
           <p>
             Sign up to be first to receive the latest stories inspiring us, case

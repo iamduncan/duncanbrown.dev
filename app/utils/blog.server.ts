@@ -2,6 +2,7 @@ import fs from "fs";
 import { bundleMDX } from "mdx-bundler";
 import matter from "gray-matter";
 import { join } from "path";
+import calculateReadingTime from "reading-time";
 
 const postsDirectory = join(process.cwd(), "content/blog");
 
@@ -17,10 +18,11 @@ export const getAllPosts = async () =>
   postFilePaths
     .map((filePath) => {
       const source = fs.readFileSync(join(postsDirectory, filePath));
-      const { data } = matter(source);
+      const { data, content } = matter(source);
 
       return {
         data,
+        readingTime: calculateReadingTime(content),
         slug: filePath.replace(/\.(md|mdx)?$/, ""),
       };
     })
@@ -29,13 +31,27 @@ export const getAllPosts = async () =>
 
 export const getPostBySlug = async (slug: string) => {
   const source = fs.readFileSync(join(postsDirectory, `${slug}.mdx`));
-  const { content, data } = matter(source);
+  const { code, frontmatter, matter } = await markdownToHtml(source.toString());
 
   return {
-    content,
-    data,
     slug,
+    code,
+    frontmatter,
+    readingTime: calculateReadingTime(matter.content),
   };
+};
+
+// get all categories from post frontmatter
+export const getAllCategories = async () => {
+  const posts = await getAllPosts();
+  const categories = posts.map((post) => post.data.category);
+  return [...new Set(categories)];
+};
+
+// get all posts for a category
+export const getPostsByCategory = async (category: string) => {
+  const posts = await getAllPosts();
+  return posts.filter((post) => post.data.category === category);
 };
 
 export const markdownToHtml = async (mdxSource: string) => {

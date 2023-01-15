@@ -30,7 +30,7 @@ export default function Index() {
             with others.
           </p>
         </div>
-        <div className="mt-8 w-full lg:flex">
+        <div className="mt-8 w-full md:flex">
           <div className="w-full md:w-1/2">
             <h2 className="text-2xl">What I&apos;ve done</h2>
             <ul className="py-6 pl-4 text-lg">
