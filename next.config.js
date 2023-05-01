@@ -1,10 +1,11 @@
-const withMDX = require('@next/mdx')({
-  extension: /\.(md|mdx)?$/,
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: ['cdn.sanity.io'],
   },
-});
-module.exports = withMDX({
-  pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
-});
+  experimental: {
+    appDir: true,
+  },
+};
+
+module.exports = nextConfig;
