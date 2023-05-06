@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Container from '@/components/container';
 import PostList from '@/components/postlist';
-import { Inter } from '@next/font/google';
+import { Inter } from "next/font/google";
 import styles from './page.module.css';
 import SocialLinks from '@/components/ui/SocialLinks';
 import SubscribeForm from '@/components/SubscribeForm';

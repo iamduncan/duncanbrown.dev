@@ -1,5 +1,5 @@
 import styles from '@/styles/card.module.css';
-import { Inter } from '@next/font/google';
+import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ['latin'] });
 
 type Props = {
