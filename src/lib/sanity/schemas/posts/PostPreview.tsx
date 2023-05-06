@@ -7,6 +7,7 @@ import { suspend } from 'suspend-react';
 
 import { apiVersion, previewSecretDocumentId } from '../../env';
 import { getSecret } from '../../lib/secret';
+import { usePreview } from '../../preview';
 
 const FETCH_SECRET = Symbol('preview.secret');
 
@@ -38,42 +39,12 @@ export function PostPreview(props: ComponentProps<UserViewComponent>) {
     );
   }
 
-  return (
-    <Suspense fallback={null}>
-      <PagePreviewWithSecret id={id} slug={slug} type={type} />
-    </Suspense>
-  );
+  return <Suspense fallback={null}></Suspense>;
 }
 
-function PagePreviewWithSecret(props: {
-  id: string;
-  slug: string;
-  type: string;
-}) {
-  const { id, slug, type } = props;
+function PagePreviewWithSecret({ token }: { token: string }) {
+  const query = '';
+  const data = usePreview(token, query);
 
-  const client = useClient({ apiVersion });
-
-  // Use `suspend` to fetch the secret with a TTL of 1 minute, just to check if it's necessary to
-  // recreate the secret which has a TTL of 60 minutes.
-  const secret = suspend(
-    () =>
-      getSecret({
-        client,
-        id: previewSecretDocumentId,
-        createIfNotExists: true,
-      }),
-    ['getSecret', previewSecretDocumentId, FETCH_SECRET],
-    { lifespan: 60000 },
-  );
-
-  if (!secret) {
-    return <div>No secret</div>;
-  }
-
-  return (
-    <StyledIframe
-      src={`/api/sanity/preview?type=${type}&id=${id}&slug=${slug}&secret=${secret}`}
-    />
-  );
+  return <StyledIframe src={`/api/sanity/preview`} />;
 }

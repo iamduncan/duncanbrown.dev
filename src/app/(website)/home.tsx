@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Container from '@/components/container';
 import PostList from '@/components/postlist';
-import { Inter } from "next/font/google";
+import { Inter } from 'next/font/google';
 import styles from './page.module.css';
 import SocialLinks from '@/components/ui/SocialLinks';
 import SubscribeForm from '@/components/SubscribeForm';
@@ -65,18 +65,6 @@ export default function Post({ posts, settings }: any) {
           </div>
           <div className="w-full md:w-1/2">
             <h2>Newsletter</h2>
-            <iframe
-              src="https://embeds.beehiiv.com/2420490c-5bc8-4b51-8626-46db3d568f63?slim=true"
-              data-test-id="beehiiv-embed"
-              height="52"
-              frameBorder={0}
-              scrolling="no"
-              style={{
-                margin: 0,
-                borderRadius: '0px !important',
-                backgroundColor: 'transparent',
-              }}
-            ></iframe>
           </div>
         </div>
         <div className="mx-auto my-10 grid max-w-screen-md auto-cols-fr gap-2 md:grid-cols-3">

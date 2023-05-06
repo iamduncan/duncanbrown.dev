@@ -1,17 +1,17 @@
-import Image from "next/image";
-import Link from "next/link";
-import { PortableText as PortableTextComponent } from "@portabletext/react";
-import { urlForImage } from "@/lib/sanity/image";
-import Iframe from "react-iframe";
-import getVideoId from "get-video-id";
-import { cx } from "@/utils/all";
+import Image from 'next/image';
+import Link from 'next/link';
+import { PortableText as PortableTextComponent } from '@portabletext/react';
+import { urlForImage } from '@/lib/sanity/image';
+import Iframe from 'react-iframe';
+import getVideoId from 'get-video-id';
+import { cx } from '@/utils/all';
 
-import Refractor from "react-refractor";
-import js from "refractor/lang/javascript";
-import jsx from "refractor/lang/jsx";
-import html from "refractor/lang/markup";
-import css from "refractor/lang/css";
-import bash from "refractor/lang/bash";
+import Refractor from 'react-refractor';
+import js from 'refractor/lang/javascript';
+import jsx from 'refractor/lang/jsx';
+import html from 'refractor/lang/markup';
+import css from 'refractor/lang/css';
+import bash from 'refractor/lang/bash';
 
 Refractor.registerLanguage(js);
 Refractor.registerLanguage(jsx);
@@ -25,7 +25,7 @@ const ImageComponent = ({ value }: any) => {
   return (
     <Image
       src={urlForImage(value) as any}
-      alt={value.alt || "Image"}
+      alt={value.alt || 'Image'}
       loading="lazy"
       className="object-cover"
       sizes="(max-width: 800px) 100vw, 800px"
@@ -64,7 +64,7 @@ const Code = ({ value }: any) => {
   return (
     <Refractor
       // In this example, `props` is the value of a `code` field
-      language={value.language || "bash"}
+      language={value.language || 'bash'}
       value={value.code}
       markers={value.highlightedLines}
     />
@@ -78,18 +78,16 @@ const IframePreview = ({ value }: any) => {
   }
   const { id, service } = getVideoId(url);
 
-  const isYoutubeVideo = id && service === "youtube";
+  const isYoutubeVideo = id && service === 'youtube';
 
-  const finalURL = isYoutubeVideo
-    ? `https://www.youtube-nocookie.com/embed/${id}`
-    : url;
+  const finalURL = isYoutubeVideo ? `https://www.youtube-nocookie.com/embed/${id}` : url;
 
   return (
     <Iframe
       url={finalURL}
       width="100%"
-      height={height || "350"}
-      className={cx(!height ? "aspect-video":"", "rounded-md")}
+      height={height || '350'}
+      className={cx(!height ? 'aspect-video' : '', 'rounded-md')}
       display="block"
       position="relative"
       frameBorder={0}
@@ -105,24 +103,16 @@ const components = {
     image: ImageComponent,
     code: Code,
     embed: IframePreview,
-    tables: PortableTextTable
+    tables: PortableTextTable,
   },
   marks: {
-    center: (props: any) => (
-      <div className="text-center">{props.children}</div>
-    ),
+    center: (props: any) => <div className="text-center">{props.children}</div>,
     highlight: (props: any) => (
-      <span className="font-bold text-blue-500">
-        {props.children}
-      </span>
+      <span className="font-bold text-blue-500">{props.children}</span>
     ),
     link: ({ children, value }: any) => {
-      const rel = !value.href.startsWith("/")
-        ? "noopener"
-        : undefined;
-      const target = !value.href.startsWith("/")
-        ? "_blank"
-        : undefined;
+      const rel = !value.href.startsWith('/') ? 'noopener' : undefined;
+      const target = !value.href.startsWith('/') ? '_blank' : undefined;
       return (
         <a href={value.href} rel={rel} target={target}>
           {children}
@@ -130,11 +120,9 @@ const components = {
       );
     },
     internalLink: ({ children, value }: any) => {
-      return (
-        <Link href={`/docs/${value.slug.current}`}>{children}</Link>
-      );
-    }
-  }
+      return <Link href={`/docs/${value.slug.current}`}>{children}</Link>;
+    },
+  },
 };
 // Set up Portable Text serialization
 export const PortableText = (props: any) => (
