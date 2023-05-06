@@ -1,7 +1,5 @@
 import Container from '@/components/container';
 import SocialLinks from '@/components/ui/SocialLinks';
-import { urlForImage } from '@/lib/sanity/image';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function About({ settings }: any) {
@@ -10,43 +8,35 @@ export default function About({ settings }: any) {
       <h1 className="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
         About
       </h1>
-      <div className="text-center">
-        <p className="text-lg">We are a small passionate team.</p>
-      </div>
 
-      <div className="mb-16 mt-6 grid grid-cols-3 gap-5 md:mb-32 md:mt-16 md:gap-16">
-        {/*authors.slice(0, 3).map((author) => {
-          const imageProps = urlForImage(author?.image) || null;
-          return (
-            <div
-              key={author._id}
-              className="relative aspect-square overflow-hidden rounded-md odd:translate-y-10 odd:md:translate-y-16"
-            >
-              <Link href={`/author/${author.slug}`}>
-                <Image
-                  src={imageProps.src}
-                  alt={author.name || ' '}
-                  fill
-                  sizes="(max-width: 320px) 100vw, 320px"
-                  className="object-cover"
-                />
-              </Link>
-            </div>
-          );
-        })*/}
-      </div>
-
-      <div className="prose dark:prose-invert mx-auto mt-14 text-center">
+      <div className="prose prose-xl mx-auto mt-14 text-left dark:prose-invert md:text-justify">
         <p>
-          We provide real-time connectivity to enable software providers and financial
-          institutions to build integrated products for their small business customers.
+          For over 10 years I have been working on the in house design, build and
+          maintenance of marketing websites. These have been mostly built using WordPress.
         </p>
         <p>
-          Our API infrastructure is leveraged by clients ranging from lenders to corporate
-          card providers and business forecasting tools, with use cases including
-          automatic reconciliation, business dashboarding, and loan decisioning.
+          I am also passionate about streamlining workflows and implementing automation to
+          avoid repetitive tasks. Therefore, I created several applications to make
+          business processes faster and reduce repetition. I used this to further my
+          knowledge of many technologies.
         </p>
         <p>
+          Whilst in the past I have used cakePHP for a basic web application, python for
+          data processing and JQuery for user interface applications. I am now using
+          Symfony for creating RESTful api back ends, React JS for creating progressive
+          web apps. I use Gatsby for creating fast and simple static websites and
+          WordPress for creating full featured blog, marketing and ecommerce websites.
+        </p>
+        <p>
+          As with many other developers, I am always on the lookout for the latest shiny
+          technology stack.
+        </p>
+        <p>
+          On this blog I intend to write posts about the technologies I am using and
+          learning, primarily for self documentation. I will also use it as a place to try
+          out fresh ideas and to work on some best practices.
+        </p>
+        <p className="text-center">
           <Link href="/contact">Get in touch</Link>
         </p>
       </div>

@@ -1,7 +1,6 @@
 'use client';
 import { ReactNode, useState } from 'react';
 import { useForm } from 'react-hook-form';
-
 export default function SubscribeForm() {
   const {
     register,
@@ -17,22 +16,38 @@ export default function SubscribeForm() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [message, setMessage] = useState(false);
 
+  const onSubmit = async (data: any) => {
+    const res = await fetch('/api/subscribe', {
+      body: JSON.stringify({
+        email: data.email,
+        name: data.name,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+    });
+    const { error, message } = await res.json();
+    if (error) {
+      setIsSuccess(false);
+      setMessage(message);
+    } else {
+      setIsSuccess(true);
+      setMessage(message);
+    }
+    reset();
+  };
+
   return (
-    <div className="mx-20">
-      <form
-        onSubmit={(e) => {
-          e.preventDefault;
-          handleSubmit(() => {});
-        }}
-        className="my-10"
-      >
+    <div className="mx-10">
+      <form onSubmit={handleSubmit(onSubmit)} className="my-10">
         <input
           type="checkbox"
           id=""
           className="hidden"
           style={{ display: 'none' }}
           {...register('botcheck')}
-        ></input>
+        />
 
         <div className="mb-5">
           <input
@@ -87,7 +102,7 @@ export default function SubscribeForm() {
 
         <button
           type="submit"
-          className="w-full rounded-md bg-gray-900 px-7 py-4 font-semibold text-white transition-colors hover:bg-gray-800 focus:outline-none focus:ring focus:ring-gray-200 focus:ring-offset-2 dark:bg-white dark:text-black "
+          className="mx-auto rounded-md bg-gray-900 px-5 py-3 font-semibold text-white transition-colors hover:bg-gray-800 focus:outline-none focus:ring focus:ring-gray-200 focus:ring-offset-2 dark:bg-white dark:text-black "
         >
           {isSubmitting ? (
             <svg

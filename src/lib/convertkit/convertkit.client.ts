@@ -3,6 +3,10 @@ const addSubscriber = async (email: string, name: string) => {
   const apiKey = process.env.CONVERTKIT_KEY;
   const url = `https://api.convertkit.com/v3/forms/${formId}/subscribe`;
 
+  if (!formId || !apiKey) {
+    throw new Error('Form ID or API key not found');
+  }
+
   const response = await fetch(url, {
     method: 'post',
     headers: {

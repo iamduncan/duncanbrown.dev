@@ -4,7 +4,7 @@ const nextConfig = {
     domains: ['cdn.sanity.io'],
   },
   experimental: {
-    appDir: true,
+    serverActions: true,
   },
 };
 

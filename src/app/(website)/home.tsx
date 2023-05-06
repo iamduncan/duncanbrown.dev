@@ -39,8 +39,8 @@ export default function Post({ posts, settings }: any) {
         </>
       )}
       <>
-        <div className="gap-4 md:flex">
-          <div className="prose prose-invert w-full md:w-1/2">
+        <div className="gap-12 md:flex">
+          <div className="prose prose-xl prose-invert w-full md:w-2/3">
             <h2 className={inter.className}>Welcome to my website!</h2>
             <p>
               Hi, thanks for dropping by. I am a web developer currently living in the
@@ -55,16 +55,22 @@ export default function Post({ posts, settings }: any) {
               for more details.
             </p>
             <p>
-              You can go to <a href="https://duncanbrown.dev">duncanbrown.dev</a> to read
-              my blog.
-            </p>
-            <p>
               If you&apos;d like to get in touch, feel free to say hello through any of
               the social links.
             </p>
           </div>
-          <div className="w-full md:w-1/2">
-            <h2>Newsletter</h2>
+          <div className="mt-8 w-full md:mt-0 md:w-1/3">
+            <h2 className="mb-8 text-2xl font-bold text-gray-900 dark:text-gray-100">
+              Newsletter
+            </h2>
+            <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+              Subscribe to my newsletter to get notified when I publish new blog posts,
+              tutorials and other content.
+            </p>
+            <p className="text-md mt-3 leading-relaxed text-gray-700 dark:text-gray-300">
+              I won&apos;t send you spam. Unsubscribe at any time. No hard feelings.
+            </p>
+            <SubscribeForm />
           </div>
         </div>
         <div className="mx-auto my-10 grid max-w-screen-md auto-cols-fr gap-2 md:grid-cols-3">
