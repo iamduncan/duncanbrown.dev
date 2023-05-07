@@ -1,6 +1,6 @@
 <mjml>
   <mj-head>
-    <mj-title>Hello world</mj-title>
+    <mj-title>duncanbrown.dev contact form message received</mj-title>
     <mj-font
       name="Roboto"
       href="https://fonts.googleapis.com/css?family=Roboto:300,500"
@@ -17,89 +17,16 @@
     </mj-attributes>
   </mj-head>
   <mj-body>
-    <mj-section padding="20px 0">
-      <mj-column width="60%">
-        <mj-text font-size="10px"
-          >Your bimonthly intake of AI, machine learning and bots is here!</mj-text
-        >
-      </mj-column>
-      <mj-column width="40%">
-        <mj-text align="right">[[PERMALINK]]</mj-text>
-      </mj-column>
-    </mj-section>
     <mj-section>
       <mj-column width="100%">
-        <mj-image
-          href="https://recast.ai?ref=newsletter"
-          src="https://cdn.recast.ai/newsletter/city-01.png"
-        ></mj-image>
-      </mj-column>
-    </mj-section>
-    <mj-section>
-      <mj-column width="100%">
-        <mj-text align="center"
-          >Your bimonthly intake of AI, machine learning and bots is here!</mj-text
-        >
-      </mj-column>
-    </mj-section>
-    <mj-section>
-      <mj-column width="45%">
-        <mj-text align="center" font-weight="500" padding="0px" font-size="18px"
-          >ISSUE #18 - DECEMBER</mj-text
-        >
-        <mj-divider border-width="2px" border-color="#616161"></mj-divider>
-        <mj-divider border-width="2px" border-color="#616161" width="45%"></mj-divider>
+        <mj-text align="center">
+          New message received from {{ name }} ({{ email }}) on {{ date }}
+        </mj-text>
       </mj-column>
     </mj-section>
     <mj-section padding-top="30px">
       <mj-column width="100%">
-        <mj-text> {{ $message }} </mj-text>
-      </mj-column>
-    </mj-section>
-    <mj-section>
-      <mj-column width="100%">
-        <mj-divider border-width="1px" border-color="#E0E0E0"></mj-divider>
-      </mj-column>
-    </mj-section>
-    <mj-section>
-      <mj-column width="65%">
-        <mj-image
-          align="left"
-          width="150px"
-          href="https://recast.ai?ref=newsletter"
-          src="https://cdn.recast.ai/newsletter/recast-ai-01.png"
-        ></mj-image>
-      </mj-column>
-      <mj-column width="35%">
-        <mj-table>
-          <tr style="list-style: none; line-height: 1">
-            <td>
-              <a href="https://twitter.com/RecastAI">
-                <img width="25" src="https://cdn.recast.ai/newsletter/twitter.png" />
-              </a>
-            </td>
-            <td>
-              <a href="https://www.facebook.com/recastAI">
-                <img width="25" src="https://cdn.recast.ai/newsletter/facebook.png" />
-              </a>
-            </td>
-            <td>
-              <a href="https://medium.com/@RecastAI">
-                <img width="25" src="https://cdn.recast.ai/newsletter/medium.png" />
-              </a>
-            </td>
-            <td>
-              <a href="https://www.youtube.com/channel/UCA0UZlR8crpgwFiVaSTbVWw">
-                <img width="25" src="https://cdn.recast.ai/newsletter/youtube.png" />
-              </a>
-            </td>
-            <td>
-              <a href="https://plus.google.com/u/0/+RecastAi">
-                <img width="25" src="https://cdn.recast.ai/newsletter/google%2B.png" />
-              </a>
-            </td>
-          </tr>
-        </mj-table>
+        <mj-text> {{ message }} </mj-text>
       </mj-column>
     </mj-section>
   </mj-body>

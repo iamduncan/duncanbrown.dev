@@ -4,20 +4,42 @@ import Container from '@/components/container';
 import { ReactNode, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
+import { ReCAPTCHA } from 'react-recaptcha-component';
+
 export default function Contact({ settings }: any) {
   const {
     register,
     handleSubmit,
     reset,
-    watch,
-    control,
-    setValue,
     formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm({
     mode: 'onTouched',
   });
   const [isSuccess, setIsSuccess] = useState(false);
   const [message, setMessage] = useState(false);
+  const recaptchaClientId = process.env.NEXT_PUBLIC_RECAPTCHA_CLIENT_ID;
+
+  const onSubmit = async (data: any) => {
+    if (window.grecaptcha) {
+      const token = await window.grecaptcha.execute(recaptchaClientId);
+      data.recaptcha_token = token;
+    }
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    const json = await res.json();
+
+    if (json.status === 'success') {
+      setIsSuccess(true);
+      setMessage(json.message);
+      reset();
+    }
+  };
 
   return (
     <Container>
@@ -51,7 +73,7 @@ export default function Contact({ settings }: any) {
           </div>
         </div>
         <div>
-          <form onSubmit={handleSubmit(() => {})} className="my-10">
+          <form onSubmit={handleSubmit(onSubmit)} className="my-10">
             <input
               type="checkbox"
               id=""
@@ -130,6 +152,11 @@ export default function Contact({ settings }: any) {
                 </div>
               )}
             </div>
+
+            <ReCAPTCHA
+              sitekey="6LdUUuwlAAAAAK3NVC1GmGzRjyaVw_Er_4hFWbC_"
+              version={'v3'}
+            />
 
             <button
               type="submit"
