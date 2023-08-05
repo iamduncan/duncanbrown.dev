@@ -1939,7 +1939,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/incompatible-plugin@npm:^1, @sanity/incompatible-plugin@npm:^1.0.4":
+"@sanity/incompatible-plugin@npm:^1.0.0, @sanity/incompatible-plugin@npm:^1.0.4":
   version: 1.0.4
   resolution: "@sanity/incompatible-plugin@npm:1.0.4"
   dependencies:
@@ -2079,7 +2079,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/ui@npm:^1, @sanity/ui@npm:^1.0.0, @sanity/ui@npm:^1.7.2":
+"@sanity/ui@npm:^1.0.0, @sanity/ui@npm:^1.7.2":
   version: 1.7.4
   resolution: "@sanity/ui@npm:1.7.4"
   dependencies:
@@ -4817,7 +4817,7 @@ __metadata:
     react-recaptcha-component: ^1.0.2
     refractor: 4.8.1
     sanity: 3.14.5
-    sanity-plugin-asset-source-unsplash: 1.0.6
+    sanity-plugin-asset-source-unsplash: 1.1.0
     satori: 0.7.4
     styled-components: 5.3.11
     swr: 2.1.5
@@ -9889,7 +9889,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-infinite-scroll-component@npm:^6.1.0":
+"react-infinite-scroll-component@npm:6.1.0":
   version: 6.1.0
   resolution: "react-infinite-scroll-component@npm:6.1.0"
   dependencies:
@@ -9921,7 +9921,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-photo-album@npm:^2.0.0":
+"react-photo-album@npm:2.2.2":
   version: 2.2.2
   resolution: "react-photo-album@npm:2.2.2"
   peerDependencies:
@@ -10373,7 +10373,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rxjs@npm:^7, rxjs@npm:^7.0.0, rxjs@npm:^7.5.1, rxjs@npm:^7.8.0":
+"rxjs@npm:^7.0.0, rxjs@npm:^7.5.1, rxjs@npm:^7.8.0":
   version: 7.8.1
   resolution: "rxjs@npm:7.8.1"
   dependencies:
@@ -10435,21 +10435,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sanity-plugin-asset-source-unsplash@npm:1.0.6":
-  version: 1.0.6
-  resolution: "sanity-plugin-asset-source-unsplash@npm:1.0.6"
+"sanity-plugin-asset-source-unsplash@npm:1.1.0":
+  version: 1.1.0
+  resolution: "sanity-plugin-asset-source-unsplash@npm:1.1.0"
   dependencies:
-    "@sanity/incompatible-plugin": ^1
-    "@sanity/ui": ^1
-    react-infinite-scroll-component: ^6.1.0
-    react-photo-album: ^2.0.0
-    rxjs: ^7
+    "@sanity/incompatible-plugin": ^1.0.0
+    "@sanity/ui": ^1.0.0
+    react-infinite-scroll-component: 6.1.0
+    react-photo-album: 2.2.2
+    rxjs: ^7.0.0
   peerDependencies:
     react: ^18
-    react-dom: ^18
     sanity: ^3
     styled-components: ^5.2
-  checksum: 5df1303adca53958c17f1645ae2c5dde09a82c639531eb2b67e83b490025845438c6778eff14f2996b6973defbe9b0ab9eef2f2a50ac4bfe63f31bea98fc03cf
+  checksum: 1478c4ad2aefaab35b47493ae362e87306a85c3e31ecfca9a0de4989bb92f25b77ec6ba03970c5de1a72a56f58c82a35c08808bb0674d9fb18f65012d91a7e5b
   languageName: node
   linkType: hard
 
