@@ -4,6 +4,6 @@ describe('sample test', () => {
   });
 
   it('displays the resources text', () => {
-    cy.get('h1').contains('Duncan Brown');
+    cy.get('h1').contains('Welcome to my website!');
   });
 });

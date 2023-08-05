@@ -41,7 +41,7 @@ export default function Post({ posts, settings }: any) {
       <>
         <div className="gap-12 md:flex">
           <div className="prose prose-xl prose-invert w-full md:w-2/3">
-            <h2 className={inter.className}>Welcome to my website!</h2>
+            <h1 className={inter.className}>Welcome to my website!</h1>
             <p>
               Hi, thanks for dropping by. I am a web developer currently living in the
               South West of England. My interests range from technology to programming. I
