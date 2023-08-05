@@ -31,7 +31,7 @@
     "sanity": "3.10.0",
     "sanity-plugin-asset-source-unsplash": "1.0.6",
     "satori": "0.7.4",
-    "styled-components": "5.3.10",
+    "styled-components": "5.3.11",
     "swr": "2.1.5",
     "typescript": "5.0.4"
   },
