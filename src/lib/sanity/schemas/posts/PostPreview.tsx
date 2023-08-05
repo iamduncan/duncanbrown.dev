@@ -3,11 +3,10 @@ import { ComponentProps, Suspense } from 'react';
 import { isRecord, isString, useClient } from 'sanity';
 import { UserViewComponent } from 'sanity/desk';
 import styled from 'styled-components';
-import { suspend } from 'suspend-react';
 
 import { apiVersion, previewSecretDocumentId } from '../../env';
 import { getSecret } from '../../lib/secret';
-import { usePreview } from '../../preview';
+// import { usePreview } from '../../preview';
 
 const FETCH_SECRET = Symbol('preview.secret');
 
@@ -44,7 +43,7 @@ export function PostPreview(props: ComponentProps<UserViewComponent>) {
 
 function PagePreviewWithSecret({ token }: { token: string }) {
   const query = '';
-  const data = usePreview(token, query);
+  // const data = usePreview(token, query);
 
   return <StyledIframe src={`/api/sanity/preview`} />;
 }
