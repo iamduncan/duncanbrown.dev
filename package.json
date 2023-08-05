@@ -39,7 +39,7 @@
     "@netlify/plugin-emails": "1.0.3",
     "@netlify/plugin-nextjs": "4.39.3",
     "@tailwindcss/typography": "0.5.9",
-    "@types/node": "20.4.7",
+    "@types/node": "20.4.8",
     "@types/react": "18.2.18",
     "@types/react-dom": "18.2.7",
     "@types/styled-components": "5.1.26",
