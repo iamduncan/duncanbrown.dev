@@ -2386,10 +2386,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:20.1.0":
+"@types/node@npm:*":
   version: 20.1.0
   resolution: "@types/node@npm:20.1.0"
   checksum: c6d9afa9aa78b4b4348c69ece94975be70346b144c278f1395694a10ef919d7db300018101b6f9245e6bdd76674a5327d2d14829092f3d5295e858cff5f22a66
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:20.4.7":
+  version: 20.4.7
+  resolution: "@types/node@npm:20.4.7"
+  checksum: a40d7003f66b56220a2028179e49f950b46fa6dbf860a4a6ecbd6ba7976f05b2f0b31ced39689ec88a7d9e32d07e088c6a06d270b99d5bc13a28291ac2f30ca7
   languageName: node
   linkType: hard
 
@@ -4662,7 +4669,7 @@ __metadata:
     "@sanity/table": 1.0.1
     "@sanity/vision": 3.14.5
     "@tailwindcss/typography": 0.5.9
-    "@types/node": 20.1.0
+    "@types/node": 20.4.7
     "@types/react": 18.2.6
     "@types/react-dom": 18.2.4
     "@types/styled-components": 5.1.26
