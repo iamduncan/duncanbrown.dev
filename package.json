@@ -36,7 +36,7 @@
     "satori": "0.10.2",
     "styled-components": "5.3.11",
     "swr": "2.2.4",
-    "typescript": "5.0.4"
+    "typescript": "5.2.2"
   },
   "devDependencies": {
     "@netlify/plugin-emails": "1.0.3",
