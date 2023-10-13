@@ -3278,7 +3278,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/client@npm:^6.4.9":
+"@sanity/client@npm:^6.4.9, @sanity/client@npm:^6.6.0":
   version: 6.6.0
   resolution: "@sanity/client@npm:6.6.0"
   dependencies:
@@ -3381,20 +3381,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/groq-store@npm:4.0.2":
-  version: 4.0.2
-  resolution: "@sanity/groq-store@npm:4.0.2"
+"@sanity/groq-store@npm:4.1.2":
+  version: 4.1.2
+  resolution: "@sanity/groq-store@npm:4.1.2"
   dependencies:
     "@sanity/eventsource": ^5.0.0
     "@sanity/types": ^3.14.5
     fast-deep-equal: 3.1.3
     groq: ^3.14.5
-    groq-js: 1.1.10
+    groq-js: 1.3.0
     mendoza: 3.0.3
     simple-get: 4.0.1
     split2: 4.2.0
     throttle-debounce: 5.0.0
-  checksum: 71a4ffc8bb1e0ef4a85c11d47cc0d17eba3af9c54f004e81c8fbef201a89a8300f5b27389fc25d4a8bd937fefcb3e1f58de5e450ecb7147e3e439ea69c2ab244
+  checksum: 13062e758c278f6d2317c70cd159417150174c5a230a1f9afed70d8601cff2635ef702e9ac7fe7c674bc12f68c8b412685039386140bf47843a0d14eb41750f9
   languageName: node
   linkType: hard
 
@@ -3505,26 +3505,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/preview-kit@npm:2.4.7":
-  version: 2.4.7
-  resolution: "@sanity/preview-kit@npm:2.4.7"
+"@sanity/preview-kit@npm:3.2.0":
+  version: 3.2.0
+  resolution: "@sanity/preview-kit@npm:3.2.0"
   dependencies:
     "@sanity/eventsource": 5.0.0
-    "@sanity/groq-store": 4.0.2
+    "@sanity/groq-store": 4.1.2
     "@vercel/stega": 0.1.0
     lodash.get: 4.4.2
     lodash.isplainobject: 4.0.6
-    lru-cache: 10.0.0
+    lru-cache: 10.0.1
     mendoza: 3.0.3
     react-fast-compare: 3.2.2
     use-sync-external-store: 1.2.0
   peerDependencies:
-    "@sanity/client": ^6.4.0
+    "@sanity/client": ^6.6.0
     react: ^18.0.0
   peerDependenciesMeta:
     react:
       optional: true
-  checksum: 46d4938d777578aa2ce4cd80ac568eb5e9be35f6c379a14837d47142644dc2df6402d51751f3bce82898d264023bb343dc36126b41eb9a827eb23e4e7901beaa
+  checksum: 89920f37fe4149d1b8644b0a39c471e77c5f2701b986aaaf97f8de1f85e54d6fd098f212943ae0e2d28dd55770b93f97d456cb1a7d8f9b728274759b0004ba00
   languageName: node
   linkType: hard
 
@@ -3647,13 +3647,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/webhook@npm:2.0.0":
-  version: 2.0.0
-  resolution: "@sanity/webhook@npm:2.0.0"
+"@sanity/webhook@npm:3.0.1":
+  version: 3.0.1
+  resolution: "@sanity/webhook@npm:3.0.1"
   dependencies:
     base64url: ^3.0.1
-    tslib: ^2.3.1
-  checksum: 172ea6a886e3a07e4f1fddf0b82b64c9b4da1c7f024d5bff0e5a51fe7a2f727882dbb1e49e6e68451e18fbb1f3ddda3bc335faa2abf1f31519b3cf22902c03fd
+  checksum: 269fd8139c423c86981e690071d5dd6ed855f6323147ef93f6e86daa8155bca9ec85db68084c36471f2e5be116b4b46d1c00b0527a81c59e2c3507b7bf489530
   languageName: node
   linkType: hard
 
@@ -6400,7 +6399,7 @@ __metadata:
     get-video-id: 3.6.5
     intl-segmenter-polyfill: 0.4.4
     next: 13.5.4
-    next-sanity: 5.1.6
+    next-sanity: 5.5.8
     next-themes: 0.2.1
     postcss: 8.4.31
     prettier: 3.0.3
@@ -8212,14 +8211,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"groq-js@npm:1.1.10":
-  version: 1.1.10
-  resolution: "groq-js@npm:1.1.10"
-  checksum: 028a13be90e7ac6df896871d80aa84b2d73c569c1882cab36acf77ebbac4d927d700955384fa77f6e694ce97df5e58cbba8cdb184ae042a1a5bceb3bb5f27fb3
-  languageName: node
-  linkType: hard
-
-"groq-js@npm:^1.1.12":
+"groq-js@npm:1.3.0, groq-js@npm:^1.1.12":
   version: 1.3.0
   resolution: "groq-js@npm:1.3.0"
   checksum: 5eea49975847cdc14d0f7a8563f392328ab98a2668cf81f53040d4778ee4ec6ed3cc0f1082b91bf5375a9019276b497e950590e1c8a26b75081f6d883c7fce25
@@ -9813,7 +9805,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lru-cache@npm:10.0.0, lru-cache@npm:^10.0.0, lru-cache@npm:^9.1.1 || ^10.0.0":
+"lru-cache@npm:10.0.1":
+  version: 10.0.1
+  resolution: "lru-cache@npm:10.0.1"
+  checksum: 06f8d0e1ceabd76bb6f644a26dbb0b4c471b79c7b514c13c6856113879b3bf369eb7b497dad4ff2b7e2636db202412394865b33c332100876d838ad1372f0181
+  languageName: node
+  linkType: hard
+
+"lru-cache@npm:^10.0.0, lru-cache@npm:^9.1.1 || ^10.0.0":
   version: 10.0.0
   resolution: "lru-cache@npm:10.0.0"
   checksum: 18f101675fe283bc09cda0ef1e3cc83781aeb8373b439f086f758d1d91b28730950db785999cd060d3c825a8571c03073e8c14512b6655af2188d623031baf50
@@ -10306,24 +10305,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-sanity@npm:5.1.6":
-  version: 5.1.6
-  resolution: "next-sanity@npm:5.1.6"
+"next-sanity@npm:5.5.8":
+  version: 5.5.8
+  resolution: "next-sanity@npm:5.5.8"
   dependencies:
-    "@sanity/preview-kit": 2.4.7
-    "@sanity/webhook": 2.0.0
+    "@sanity/client": ^6.6.0
+    "@sanity/preview-kit": 3.2.0
+    "@sanity/webhook": 3.0.1
     groq: ^3.0.0
   peerDependencies:
-    "@sanity/client": ^6.1.4
+    "@sanity/client": ^6.4.9
     "@sanity/icons": ^2.0.0
     "@sanity/types": ^3.0.0
     "@sanity/ui": ^1.0.0
-    "@types/styled-components": ^5.1.0
     next: ^13.0.0
     react: ^18.0.0
     sanity: ^3.0.0
-    styled-components: ^5.2.0
-  checksum: 12b9bc3cc72f2d52b5e5eb97ae701ad7c0cb94f55729da90b761a4e15154399ebba3838cb874aeb9519fce97a6f1fa4c2339758999994cd76181bbca2b3ae1f7
+    styled-components: ^5.2.0 || ^6.0.0
+  checksum: a0ced36ed77a4ccab7aaa164f4224f33f688008938d727c626927b43540d14365e89176c2818a0f1929c296c884ce8170edeaf491d4eb97de2cb01fe3cfec1fa
   languageName: node
   linkType: hard
 
@@ -13603,7 +13602,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0, tslib@npm:^2.4.1 || ^1.9.3, tslib@npm:^2.5.0, tslib@npm:^2.6.0":
+"tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.4.0, tslib@npm:^2.4.1 || ^1.9.3, tslib@npm:^2.5.0, tslib@npm:^2.6.0":
   version: 2.6.1
   resolution: "tslib@npm:2.6.1"
   checksum: b0d176d176487905b66ae4d5856647df50e37beea7571c53b8d10ba9222c074b81f1410fb91da13debaf2cbc970663609068bdebafa844ea9d69b146527c38fe
@@ -13756,11 +13755,11 @@ __metadata:
 
 "typescript@patch:typescript@5.2.2#~builtin<compat/typescript>":
   version: 5.2.2
-  resolution: "typescript@patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=14eedb"
+  resolution: "typescript@patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=f3b441"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 07106822b4305de3f22835cbba949a2b35451cad50888759b6818421290ff95d522b38ef7919e70fb381c5fe9c1c643d7dea22c8b31652a717ddbd57b7f4d554
+  checksum: 0f4da2f15e6f1245e49db15801dbee52f2bbfb267e1c39225afdab5afee1a72839cd86000e65ee9d7e4dfaff12239d28beaf5ee431357fcced15fb08583d72ca
   languageName: node
   linkType: hard
 
