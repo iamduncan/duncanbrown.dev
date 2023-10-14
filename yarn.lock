@@ -4022,12 +4022,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.2.7":
-  version: 18.2.7
-  resolution: "@types/react-dom@npm:18.2.7"
+"@types/react-dom@npm:18.2.13":
+  version: 18.2.13
+  resolution: "@types/react-dom@npm:18.2.13"
   dependencies:
     "@types/react": "*"
-  checksum: e02ea908289a7ad26053308248d2b87f6aeafd73d0e2de2a3d435947bcea0422599016ffd1c3e38ff36c42f5e1c87c7417f05b0a157e48649e4a02f21727d54f
+  checksum: 22ba066b141dca5a5a9227fae0afc7c94b470fff8e8a38ade72649da57a8ea04d0cb2ba3e22005e7d8e772d49bddd28855b1dd98e6defd033bba6afb6edff883
   languageName: node
   linkType: hard
 
@@ -4040,7 +4040,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:18.2.18, @types/react@npm:^18.0.25":
+"@types/react@npm:*, @types/react@npm:^18.0.25":
   version: 18.2.18
   resolution: "@types/react@npm:18.2.18"
   dependencies:
@@ -4048,6 +4048,17 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: 2e0d75de2b618e76780019e52478b1bec2b015a9187aea30f84518c0c3ddc639055bdfea50864aece937bad0cb0544d0100b80d30f5461e72fbc1c3c0be8b140
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:18.2.28":
+  version: 18.2.28
+  resolution: "@types/react@npm:18.2.28"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: 81381bedeba83278f4c9febb0b83e0bd3f42a25897a50b9cb36ef53651d34b3d50f87ebf11211ea57ea575131f85d31e93e496ce46478a00b0f9bf7b26b5917a
   languageName: node
   linkType: hard
 
@@ -6390,8 +6401,8 @@ __metadata:
     "@sentry/nextjs": latest
     "@tailwindcss/typography": 0.5.10
     "@types/node": 20.8.6
-    "@types/react": 18.2.18
-    "@types/react-dom": 18.2.7
+    "@types/react": 18.2.28
+    "@types/react-dom": 18.2.13
     "@types/styled-components": 5.1.28
     autoprefixer: 10.4.16
     cypress: 12.17.4
