@@ -5202,7 +5202,7 @@ __metadata:
     refractor: 4.8.1
     sanity: 3.18.0
     sanity-plugin-asset-source-unsplash: 1.1.1
-    satori: 0.10.2
+    satori: 0.10.9
     styled-components: 6.1.0
     swr: 2.2.4
     tailwindcss: 3.3.3
@@ -11305,9 +11305,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"satori@npm:0.10.2":
-  version: 0.10.2
-  resolution: "satori@npm:0.10.2"
+"satori@npm:0.10.9":
+  version: 0.10.9
+  resolution: "satori@npm:0.10.9"
   dependencies:
     "@shuding/opentype.js": 1.4.0-beta.0
     css-background-parser: ^0.1.0
@@ -11319,7 +11319,7 @@ __metadata:
     parse-css-color: ^0.2.1
     postcss-value-parser: ^4.2.0
     yoga-wasm-web: ^0.3.3
-  checksum: e834b2616cccc2b644d7131b9450ced0a225e482640da4786731ef7781df3163fbc9e2b572a59f66806fa7ed365cb45504cdcc3a5f945209c0e9f64c28a4a08a
+  checksum: 56cb35e553cf8a65ee08ec29357e441a10adcc7c0cd68977c4e24c613f8999b0862ae05fe3c648498c4bda8dfc5a1c15d883cfbc30c815a9117fd99531ee4355
   languageName: node
   linkType: hard
 
