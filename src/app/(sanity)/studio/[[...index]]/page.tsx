@@ -13,6 +13,7 @@ import { NextStudio } from 'next-sanity/studio';
 import config from 'sanity.config';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
+import { ErrorInfo } from 'react';
 
 function Fallback({ error, resetErrorBoundary }: FallbackProps) {
   // Call resetErrorBoundary() to reset the error boundary and retry the render.
@@ -25,7 +26,7 @@ function Fallback({ error, resetErrorBoundary }: FallbackProps) {
   );
 }
 
-const logError = (error: Error, info: { componentStack: string }) => {
+const logError = (error: Error, info: ErrorInfo) => {
   // Do something with the error, e.g. log to an external API
   Sentry.captureException(error);
 };

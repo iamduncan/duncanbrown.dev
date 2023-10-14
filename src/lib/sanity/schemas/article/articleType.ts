@@ -5,7 +5,7 @@ export const articleType = defineType({
   type: 'document',
   name: 'article',
   title: 'Article',
-  icon: DocumentTextIcon,
+  // icon: DocumentTextIcon,
 
   fields: [
     defineField({

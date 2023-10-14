@@ -5,7 +5,7 @@ export default defineType({
   name: 'settings',
   type: 'document',
   title: 'Settings',
-  icon: CogIcon,
+  // icon: CogIcon,
   fieldsets: [
     {
       title: 'SEO & metadata',
@@ -88,7 +88,7 @@ export default defineType({
           {
             name: 'email', // Error message is "Does not match email-pattern"
             invert: false, // Boolean to allow any value that does NOT match pattern
-          }
+          },
         ),
     }),
 

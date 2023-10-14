@@ -15,7 +15,7 @@ import { defineField, defineType } from 'sanity';
 export const postType = defineType({
   name: 'post',
   title: 'Post',
-  icon: BookIcon,
+  // icon: BookIcon,
   type: 'document',
   fields: [
     defineField({
@@ -92,7 +92,7 @@ export const postType = defineType({
     },
     prepare({ title, media, date }) {
       const subtitles = [date && `on ${format(parseISO(date), 'LLL d, yyyy')}`].filter(
-        Boolean
+        Boolean,
       );
 
       return { title, media, subtitle: subtitles.join(' ') };
