@@ -6412,7 +6412,7 @@ __metadata:
     react-recaptcha-component: ^1.0.2
     refractor: 4.8.1
     sanity: 3.18.0
-    sanity-plugin-asset-source-unsplash: 1.1.0
+    sanity-plugin-asset-source-unsplash: 1.1.1
     satori: 0.10.2
     styled-components: 6.0.9
     swr: 2.2.4
@@ -11689,12 +11689,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-photo-album@npm:2.2.2":
-  version: 2.2.2
-  resolution: "react-photo-album@npm:2.2.2"
+"react-photo-album@npm:2.3.0":
+  version: 2.3.0
+  resolution: "react-photo-album@npm:2.3.0"
   peerDependencies:
     react: ">=16.8.0"
-  checksum: 7fbaaf7870003b0e93eca2850932c903fec429c8e23c27237de2ade20fbb5556d80a98cffb3c5b2bef1e985cc1da7ee238ad8028901640e75fd3b44f7dcf10d4
+  checksum: 0a9044f5051d66516ffc606a1f95c3f6e07ceff97c778d3f2aaff86591ceba01b3cd3623a6734b2a9dea4e861c6ab6ab3125029cca7c2d759b3ffe0b94bda9c1
   languageName: node
   linkType: hard
 
@@ -12323,20 +12323,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sanity-plugin-asset-source-unsplash@npm:1.1.0":
-  version: 1.1.0
-  resolution: "sanity-plugin-asset-source-unsplash@npm:1.1.0"
+"sanity-plugin-asset-source-unsplash@npm:1.1.1":
+  version: 1.1.1
+  resolution: "sanity-plugin-asset-source-unsplash@npm:1.1.1"
   dependencies:
     "@sanity/incompatible-plugin": ^1.0.0
     "@sanity/ui": ^1.0.0
     react-infinite-scroll-component: 6.1.0
-    react-photo-album: 2.2.2
+    react-photo-album: 2.3.0
     rxjs: ^7.0.0
   peerDependencies:
     react: ^18
     sanity: ^3
     styled-components: ^5.2
-  checksum: 1478c4ad2aefaab35b47493ae362e87306a85c3e31ecfca9a0de4989bb92f25b77ec6ba03970c5de1a72a56f58c82a35c08808bb0674d9fb18f65012d91a7e5b
+  checksum: 60c3c91f9b6d7f42c2a36fc07ba5e5bfe10cba9b6d2207f4740d123c3eeb63c6d20719e0e25ad64125cf07f75ae49f5e0ccc64c54279f6eae5cc67174eef1d29
   languageName: node
   linkType: hard
 
