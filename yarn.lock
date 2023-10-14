@@ -1524,7 +1524,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/ipx@npm:^1.4.3":
+"@netlify/ipx@npm:^1.4.5":
   version: 1.4.5
   resolution: "@netlify/ipx@npm:1.4.5"
   dependencies:
@@ -1561,13 +1561,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/plugin-nextjs@npm:4.40.1":
-  version: 4.40.1
-  resolution: "@netlify/plugin-nextjs@npm:4.40.1"
+"@netlify/plugin-nextjs@npm:4.40.2":
+  version: 4.40.2
+  resolution: "@netlify/plugin-nextjs@npm:4.40.2"
   dependencies:
     "@netlify/esbuild": 0.14.39
     "@netlify/functions": ^1.6.0
-    "@netlify/ipx": ^1.4.3
+    "@netlify/ipx": ^1.4.5
     "@vercel/node-bridge": ^2.1.0
     chalk: ^4.1.2
     chokidar: ^3.5.3
@@ -1588,7 +1588,7 @@ __metadata:
     semver: ^7.3.5
     slash: ^3.0.0
     tiny-glob: ^0.2.9
-  checksum: 31b334c905de11b6e50409e837c9c8642fbe1f07493ec240f61baac22dcb5129a6e5aba693e008e6a8f52eebb7219e6bf01bdbcf3242009c1fd5d71c927bf8d6
+  checksum: cd1b4302187253ab84c101a43174507208c8209605dc7b8ca05800f50ec5f299ba31b3c426b1cb9f1d876f7dcfc8deed8d0b1ad96b5c492e65bfd560039de103
   languageName: node
   linkType: hard
 
@@ -5168,7 +5168,7 @@ __metadata:
   dependencies:
     "@heroicons/react": 2.0.18
     "@netlify/plugin-emails": 1.0.3
-    "@netlify/plugin-nextjs": 4.40.1
+    "@netlify/plugin-nextjs": 4.40.2
     "@portabletext/react": 3.0.11
     "@sanity/code-input": 4.1.1
     "@sanity/icons": 2.5.0
