@@ -3570,12 +3570,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/icons@npm:2.4.1, @sanity/icons@npm:^2.0.0, @sanity/icons@npm:^2.4.0, @sanity/icons@npm:^2.4.1":
-  version: 2.4.1
-  resolution: "@sanity/icons@npm:2.4.1"
+"@sanity/icons@npm:2.5.0":
+  version: 2.5.0
+  resolution: "@sanity/icons@npm:2.5.0"
   peerDependencies:
     react: ^18
-  checksum: c0ed73a4e20cad771d306eb0198878d46d5db81de668a6bae779556d9fe6777ef95b63d5be1496b1fd2376f0a860da65396f2c423ea6a4aae945e486debf4780
+  checksum: 92c54fa2f621484daea3258fcca70a3222e73d9af1f472899b42c566bc058f4b125a2aa9de6bdefa43935635fad89108c8fd1f94b78d6a3825104fef50c4df89
   languageName: node
   linkType: hard
 
@@ -3585,6 +3585,15 @@ __metadata:
   peerDependencies:
     react: ^16.9 || ^17 || ^18
   checksum: 9c606bc60d4edd3873996b34871cb7480b2f8af4175a6828a9ec02b08d75bc9d38eff3678f969a4363c068bd35258b554fb340425eccbc41d1046490a2fadfa6
+  languageName: node
+  linkType: hard
+
+"@sanity/icons@npm:^2.0.0, @sanity/icons@npm:^2.4.0, @sanity/icons@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "@sanity/icons@npm:2.4.1"
+  peerDependencies:
+    react: ^18
+  checksum: c0ed73a4e20cad771d306eb0198878d46d5db81de668a6bae779556d9fe6777ef95b63d5be1496b1fd2376f0a860da65396f2c423ea6a4aae945e486debf4780
   languageName: node
   linkType: hard
 
@@ -6574,7 +6583,7 @@ __metadata:
     "@netlify/plugin-nextjs": 4.40.2
     "@portabletext/react": 3.0.11
     "@sanity/code-input": 4.1.1
-    "@sanity/icons": 2.4.1
+    "@sanity/icons": 2.5.0
     "@sanity/table": 1.0.1
     "@sanity/vision": 3.18.0
     "@sentry/nextjs": latest
