@@ -38,14 +38,14 @@ export const settingsStructure = (typeDef: DocumentDefinition): StructureResolve
     const settingsListItem = // A singleton not using `documentListItem`, eg no built-in preview
       S.listItem()
         .title(typeDef.title || '')
-        .icon(typeDef.icon)
+        // .icon(typeDef.icon)
         .child(
-          S.editor().id(typeDef.name).schemaType(typeDef.name).documentId(typeDef.name)
+          S.editor().id(typeDef.name).schemaType(typeDef.name).documentId(typeDef.name),
         );
 
     // The default root list items (except custom ones)
     const defaultListItems = S.documentTypeListItems().filter(
-      (listItem) => listItem.getId() !== typeDef.name
+      (listItem) => listItem.getId() !== typeDef.name,
     );
 
     return S.list()
@@ -62,7 +62,7 @@ export const singletonPlugin = (types: string[]) => {
       newDocumentOptions: (prev: any, { creationContext }: any) => {
         if (creationContext.type === 'global') {
           return prev.filter(
-            (templateItem: any) => !types.includes(templateItem.templateId)
+            (templateItem: any) => !types.includes(templateItem.templateId),
           );
         }
 
@@ -72,7 +72,7 @@ export const singletonPlugin = (types: string[]) => {
       actions: (prev: any, { schemaType }: any) => {
         if (types.includes(schemaType)) {
           return prev.filter(
-            ({ action }: any) => !['unpublish', 'delete', 'duplicate'].includes(action)
+            ({ action }: any) => !['unpublish', 'delete', 'duplicate'].includes(action),
           );
         }
 
@@ -89,24 +89,27 @@ export const pageStructure = (typeDefArray: DocumentDefinition[]): StructureReso
     // Goes through all of the singletons that were provided and translates them into something the
     // Desktool can understand
     const singletonItems = typeDefArray.map((typeDef) => {
-      return S.listItem()
-        .title(typeDef.title || '')
-        .icon(typeDef.icon)
-        .child(
-          S.editor()
-            .id(typeDef.name)
-            .schemaType(typeDef.name)
-            .documentId(typeDef.name)
-            .views([
-              // Default form view
-              S.view.form(),
-            ])
-        );
+      return (
+        S.listItem()
+          .title(typeDef.title || '')
+          // .icon(typeDef.icon)
+          .child(
+            S.editor()
+              .id(typeDef.name)
+              .schemaType(typeDef.name)
+              .documentId(typeDef.name)
+              .views([
+                // Default form view
+                S.view.form(),
+              ]),
+          )
+      );
     });
 
     // The default root list items (except custom ones)
     const defaultListItems = S.documentTypeListItems().filter(
-      (listItem) => !typeDefArray.find((singleton) => singleton.name === listItem.getId())
+      (listItem) =>
+        !typeDefArray.find((singleton) => singleton.name === listItem.getId()),
     );
 
     return S.list()
