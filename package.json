@@ -17,7 +17,7 @@
     "@sanity/table": "1.0.1",
     "@sanity/vision": "3.18.0",
     "@sentry/nextjs": "latest",
-    "eslint": "8.46.0",
+    "eslint": "8.51.0",
     "eslint-config-next": "13.5.4",
     "get-video-id": "3.6.5",
     "intl-segmenter-polyfill": "0.4.4",
