@@ -1646,9 +1646,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/plugin-nextjs@npm:4.41.0":
-  version: 4.41.0
-  resolution: "@netlify/plugin-nextjs@npm:4.41.0"
+"@netlify/plugin-nextjs@npm:4.41.1":
+  version: 4.41.1
+  resolution: "@netlify/plugin-nextjs@npm:4.41.1"
   dependencies:
     "@netlify/blobs": ^2.2.0
     "@netlify/esbuild": 0.14.39
@@ -1674,7 +1674,7 @@ __metadata:
     semver: ^7.3.5
     slash: ^3.0.0
     tiny-glob: ^0.2.9
-  checksum: 87106a2530959f51b3dd12d019795a17ddf12ab3ed18320e48866a57ed1b25f06baf61f588dc47d83287c932ffd9d417507e7d0058ea7b7c8e2f48b7bbb70fc3
+  checksum: 2afca0c52afe2093588a6ff6d9426a2e1f377346ba44a9ebdfcd2ec8c77f21c3d8251bd36b98c2acf1a3bed4f6879c530d4df2d0aee4e2409348d1c3840bb58a
   languageName: node
   linkType: hard
 
@@ -5255,7 +5255,7 @@ __metadata:
   dependencies:
     "@heroicons/react": 2.0.18
     "@netlify/plugin-emails": 1.0.3
-    "@netlify/plugin-nextjs": 4.41.0
+    "@netlify/plugin-nextjs": 4.41.1
     "@portabletext/react": 3.0.11
     "@sanity/code-input": 4.1.1
     "@sanity/icons": 2.6.0
