@@ -5288,7 +5288,7 @@ __metadata:
     react-recaptcha-component: ^1.0.2
     refractor: 4.8.1
     sanity: 3.18.1
-    sanity-plugin-asset-source-unsplash: 1.1.1
+    sanity-plugin-asset-source-unsplash: 1.1.2
     satori: 0.10.9
     styled-components: 6.1.0
     swr: 2.2.4
@@ -11286,9 +11286,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sanity-plugin-asset-source-unsplash@npm:1.1.1":
-  version: 1.1.1
-  resolution: "sanity-plugin-asset-source-unsplash@npm:1.1.1"
+"sanity-plugin-asset-source-unsplash@npm:1.1.2":
+  version: 1.1.2
+  resolution: "sanity-plugin-asset-source-unsplash@npm:1.1.2"
   dependencies:
     "@sanity/incompatible-plugin": ^1.0.0
     "@sanity/ui": ^1.0.0
@@ -11298,8 +11298,8 @@ __metadata:
   peerDependencies:
     react: ^18
     sanity: ^3
-    styled-components: ^5.2
-  checksum: 60c3c91f9b6d7f42c2a36fc07ba5e5bfe10cba9b6d2207f4740d123c3eeb63c6d20719e0e25ad64125cf07f75ae49f5e0ccc64c54279f6eae5cc67174eef1d29
+    styled-components: ^5.2 || ^6
+  checksum: a62e244952629cdc803b02a65542fb74e8a14b9239f2605d31737fc744b145f876d60b2074f25c062879b3359e23252a749749ab24342fbc38954113c28d6c96
   languageName: node
   linkType: hard
 
