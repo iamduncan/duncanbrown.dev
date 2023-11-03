@@ -2259,12 +2259,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/icons@npm:2.6.0":
-  version: 2.6.0
-  resolution: "@sanity/icons@npm:2.6.0"
+"@sanity/icons@npm:2.7.0":
+  version: 2.7.0
+  resolution: "@sanity/icons@npm:2.7.0"
   peerDependencies:
     react: ^18
-  checksum: 1f483e2199ecce917b51309c7dc1aebc9dab8bcc05357b8a95b74831601353fd76b79b531465c594cddcfd9016c29bfe05b05de125fa6f19bea3e8544b2a1348
+  checksum: 771e4cee07aa7cb0842f669d40bebd236a1745d161fa7c8e37af151e51a3dde75e3434e116c228c7766c60dbc0dd97fda75b2b161696b232c5a16514e7e11e34
   languageName: node
   linkType: hard
 
@@ -5255,7 +5255,7 @@ __metadata:
     "@netlify/plugin-nextjs": 4.41.1
     "@portabletext/react": 3.0.11
     "@sanity/code-input": 4.1.1
-    "@sanity/icons": 2.6.0
+    "@sanity/icons": 2.7.0
     "@sanity/table": 1.0.1
     "@sanity/ui": 1.8.3
     "@sanity/vision": 3.18.1
