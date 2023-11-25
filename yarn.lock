@@ -2514,9 +2514,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/ui@npm:1.8.3":
-  version: 1.8.3
-  resolution: "@sanity/ui@npm:1.8.3"
+"@sanity/ui@npm:1.9.3, @sanity/ui@npm:^1.9.3":
+  version: 1.9.3
+  resolution: "@sanity/ui@npm:1.9.3"
   dependencies:
     "@floating-ui/react-dom": 2.0.0
     "@sanity/color": ^2.2.5
@@ -2529,7 +2529,7 @@ __metadata:
     react-dom: ^18
     react-is: ^18
     styled-components: ^5.2 || ^6
-  checksum: b8784be2d54540ea9995f267b6b17dce60c2fb7d8938d94e08aadc32f0cf0a1d832f456940a7304d19d8fe0116163e08286ae05ef50464a18f98f561daa5e522
+  checksum: 34d5359dba49ae4440bb268d2a2a7119fa967dd0b2294226c34863a996d0711980e04ab2b2ee073ce4b294117181de5e417368fbc5d4511434bd52c325c2ea84
   languageName: node
   linkType: hard
 
@@ -2549,25 +2549,6 @@ __metadata:
     react-is: ^18
     styled-components: ^5.2
   checksum: 736f594d109a6886bab227957c4f2926a663efd1660f658c0bdea98c92d89be470647489af34187b3e7648a9c49226bbdcc2fbfa0526e8487887a8d399832f65
-  languageName: node
-  linkType: hard
-
-"@sanity/ui@npm:^1.9.3":
-  version: 1.9.3
-  resolution: "@sanity/ui@npm:1.9.3"
-  dependencies:
-    "@floating-ui/react-dom": 2.0.0
-    "@sanity/color": ^2.2.5
-    "@sanity/icons": ^2.4.1
-    csstype: ^3.1.2
-    framer-motion: ^10.16.2
-    react-refractor: ^2.1.7
-  peerDependencies:
-    react: ^18
-    react-dom: ^18
-    react-is: ^18
-    styled-components: ^5.2 || ^6
-  checksum: 34d5359dba49ae4440bb268d2a2a7119fa967dd0b2294226c34863a996d0711980e04ab2b2ee073ce4b294117181de5e417368fbc5d4511434bd52c325c2ea84
   languageName: node
   linkType: hard
 
@@ -5365,7 +5346,7 @@ __metadata:
     "@sanity/code-input": 4.1.1
     "@sanity/icons": 2.7.0
     "@sanity/table": 1.0.1
-    "@sanity/ui": 1.8.3
+    "@sanity/ui": 1.9.3
     "@sanity/vision": 3.20.1
     "@sentry/nextjs": 7.77.0
     "@tailwindcss/typography": 0.5.10
