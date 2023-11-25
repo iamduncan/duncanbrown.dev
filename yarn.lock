@@ -3102,14 +3102,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/styled-components@npm:5.1.29":
-  version: 5.1.29
-  resolution: "@types/styled-components@npm:5.1.29"
+"@types/styled-components@npm:5.1.32":
+  version: 5.1.32
+  resolution: "@types/styled-components@npm:5.1.32"
   dependencies:
     "@types/hoist-non-react-statics": "*"
     "@types/react": "*"
     csstype: ^3.0.2
-  checksum: 9447f26056d05268fb271024388f636c0cb27fc53181baf411c46332c76efa7bf130148ff6c4b1b5565e758ce7dbdc402027ec8ee0e7bdc17418e3d745d06eae
+  checksum: c08909348aed553a710809c55c0cd0b26b7f0e364c99c5b21c7eca66cf8446bb4a57fff7ad0484646affa692acc181ff51061c9cd7b26bab468960c29eae1901
   languageName: node
   linkType: hard
 
@@ -5352,7 +5352,7 @@ __metadata:
     "@types/node": 20.10.0
     "@types/react": 18.2.38
     "@types/react-dom": 18.2.17
-    "@types/styled-components": 5.1.29
+    "@types/styled-components": 5.1.32
     autoprefixer: 10.4.16
     cypress: 13.6.0
     eslint: 8.52.0
