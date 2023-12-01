@@ -2412,26 +2412,35 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/preview-kit@npm:3.2.6":
-  version: 3.2.6
-  resolution: "@sanity/preview-kit@npm:3.2.6"
+"@sanity/preview-kit-compat@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@sanity/preview-kit-compat@npm:1.0.1"
+  peerDependencies:
+    "@sanity/client": ^6.8.6
+    react: ^18.2.0
+  checksum: 90c200acc25152253e9bba3a4f46fc46d58c4d07bcb5a010948ab206b00cd3dc409fc1ff9fef4c38b285ac21ba8d386f8b543b35c1fd19b79d605a48713d700a
+  languageName: node
+  linkType: hard
+
+"@sanity/preview-kit@npm:3.2.12":
+  version: 3.2.12
+  resolution: "@sanity/preview-kit@npm:3.2.12"
   dependencies:
     "@sanity/eventsource": 5.0.1
     "@sanity/groq-store": 4.1.3
+    "@sanity/preview-kit-compat": 1.0.1
     "@vercel/stega": 0.1.0
-    lodash.get: 4.4.2
-    lodash.isplainobject: 4.0.6
-    lru-cache: 10.0.1
+    lru-cache: 10.0.2
     mendoza: 3.0.3
     react-fast-compare: 3.2.2
     use-sync-external-store: 1.2.0
   peerDependencies:
-    "@sanity/client": ^6.7.0
+    "@sanity/client": ^6.8.6
     react: ^18.0.0
   peerDependenciesMeta:
     react:
       optional: true
-  checksum: 592cc6c3d0e935e98a2475becd40b556140fec1e1fa8cbb3f52303009c02973134adda59ca98e4324f0f6c84ab03959aa0b9c0b6599641e20ba9ce9c14440afa
+  checksum: 89f50e86a4a5bdabfca0656a7c3871767f8e004db7625024125bd822e15b19bbbd6b41a6ae2d136b157613aa6579ca6a23574b9a624288014e89a9eaeeb14cd3
   languageName: node
   linkType: hard
 
@@ -5342,7 +5351,7 @@ __metadata:
     get-video-id: 3.6.5
     intl-segmenter-polyfill: 0.4.4
     next: 14.0.3
-    next-sanity: 5.5.10
+    next-sanity: 5.5.11
     next-themes: 0.2.1
     postcss: 8.4.31
     prettier: 3.0.3
@@ -8742,13 +8751,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.get@npm:4.4.2":
-  version: 4.4.2
-  resolution: "lodash.get@npm:4.4.2"
-  checksum: e403047ddb03181c9d0e92df9556570e2b67e0f0a930fcbbbd779370972368f5568e914f913e93f3b08f6d492abc71e14d4e9b7a18916c31fa04bd2306efe545
-  languageName: node
-  linkType: hard
-
 "lodash.isarguments@npm:^3.1.0":
   version: 3.1.0
   resolution: "lodash.isarguments@npm:3.1.0"
@@ -8763,7 +8765,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.isplainobject@npm:4.0.6, lodash.isplainobject@npm:^4.0.6":
+"lodash.isplainobject@npm:^4.0.6":
   version: 4.0.6
   resolution: "lodash.isplainobject@npm:4.0.6"
   checksum: 29c6351f281e0d9a1d58f1a4c8f4400924b4c79f18dfc4613624d7d54784df07efaff97c1ff2659f3e085ecf4fff493300adc4837553104cef2634110b0d5337
@@ -8849,10 +8851,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lru-cache@npm:10.0.1":
-  version: 10.0.1
-  resolution: "lru-cache@npm:10.0.1"
-  checksum: 06f8d0e1ceabd76bb6f644a26dbb0b4c471b79c7b514c13c6856113879b3bf369eb7b497dad4ff2b7e2636db202412394865b33c332100876d838ad1372f0181
+"lru-cache@npm:10.0.2":
+  version: 10.0.2
+  resolution: "lru-cache@npm:10.0.2"
+  dependencies:
+    semver: ^7.3.5
+  checksum: 83ad0e899d79f48574bdda131fe8157c6d65cbd073a6e78e0d1a3467a85dce1ef4d8dc9fd618a56c57a068271501c81d54471e13f84dd121e046b155ed061ed4
   languageName: node
   linkType: hard
 
@@ -9362,12 +9366,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-sanity@npm:5.5.10":
-  version: 5.5.10
-  resolution: "next-sanity@npm:5.5.10"
+"next-sanity@npm:5.5.11":
+  version: 5.5.11
+  resolution: "next-sanity@npm:5.5.11"
   dependencies:
     "@sanity/client": ^6.7.0
-    "@sanity/preview-kit": 3.2.6
+    "@sanity/preview-kit": 3.2.12
     "@sanity/webhook": 3.0.1
     groq: ^3.0.0
   peerDependencies:
@@ -9379,7 +9383,7 @@ __metadata:
     react: ^18.0.0
     sanity: ^3.0.0
     styled-components: ^5.2.0 || ^6.0.0
-  checksum: ca54cbaa97df98aecb214d715237a6c44f198efad29fe1eb0701f6b59569c6ef0f7b65a70273bcb264e7bf9db63659a59f617983c8e7cf4c58d77145d4bc1d71
+  checksum: 0e3f87927c13572632cae8cbbfddc5ecf0ad55c0ba76e643322f9c60f35846f76c020f1459d76d2c8986cd9c8d6f33c04e1deea260acb19a9aac42e24104d61a
   languageName: node
   linkType: hard
 
