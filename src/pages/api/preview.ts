@@ -19,6 +19,7 @@ export default function preview(
 ): void {
   // Enable Preview Mode by setting the cookies
   res.setPreviewData({});
+  console.log('previewSecretDocumentId', previewSecretDocumentId);
   // Redirect to a preview capable route
   res.writeHead(307, { Location: '/' });
   res.end();

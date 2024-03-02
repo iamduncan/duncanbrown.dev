@@ -10,12 +10,13 @@ import {
   paginatedquery,
 } from './sanity.queries';
 import { createClient } from 'next-sanity';
+import { sanityFetch } from './sanity.fetch';
 
 /**
  * Checks if it's safe to create a client instance, as `@sanity/client` will throw an error if `projectId` is false
  */
-const client = projectId
-  ? createClient({ projectId, dataset, apiVersion, useCdn })
+export const client = projectId
+  ? createClient({ projectId, dataset, apiVersion, useCdn, perspective: 'published' })
   : null;
 
 export const fetcher = async ([query, params]: any) => {
@@ -66,16 +67,4 @@ export async function getPostAndMoreStories(
     return await client.fetch(postAndMoreStoriesQuery, { slug });
   }
   return { post: null, morePosts: [] };
-}
-
-export async function getPaginatedPosts(limit: number) {
-  if (client) {
-    return (
-      (await client.fetch(paginatedquery, {
-        pageIndex: 0,
-        limit: limit,
-      })) || {}
-    );
-  }
-  return {};
 }
