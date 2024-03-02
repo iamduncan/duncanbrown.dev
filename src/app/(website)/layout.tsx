@@ -43,6 +43,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 export async function sharedMetaData(params: any) {
   const settings = await getSettings();
 
+  const metadataBase = new URL(process.env.NODE_ENV === 'production' && settings?.url ? settings?.url : 'http://localhost:3000');
+
   return {
     title: {
       default: settings?.title || 'DuncanBrown',
@@ -52,6 +54,7 @@ export async function sharedMetaData(params: any) {
     keywords: ['Next.js', 'Sanity', 'Tailwind CSS'],
     authors: [{ name: 'Duncan Brown' }],
     canonical: settings?.url,
+    metadataBase,
     openGraph: {
       images: [
         {
