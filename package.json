@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "prebuild": "node prebuild.js",
-    "build": "node prebuild.js && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },

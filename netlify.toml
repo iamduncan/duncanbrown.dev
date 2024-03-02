@@ -1,5 +1,5 @@
-[prebuild]
-  command = "yarn prebuild"
+# [prebuild]
+#   command = "yarn prebuild"
 
 [build]
   command = "yarn build"
