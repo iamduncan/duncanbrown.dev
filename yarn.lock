@@ -2990,13 +2990,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.17.5":
-  version: 18.18.5
-  resolution: "@types/node@npm:18.18.5"
-  checksum: fc8c9b2bf226270cf9085a7dac76ce09dd7c3519ec9b687ee2b50385954ab3709c45ca82d002d1536e24286803cd194d7ab7008acebdcd6681b8b19d4277fa5c
-  languageName: node
-  linkType: hard
-
 "@types/normalize-package-data@npm:^2.4.0":
   version: 2.4.1
   resolution: "@types/normalize-package-data@npm:2.4.1"
@@ -4088,7 +4081,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"buffer@npm:^5.5.0, buffer@npm:^5.6.0":
+"buffer@npm:^5.5.0, buffer@npm:^5.7.1":
   version: 5.7.1
   resolution: "buffer@npm:5.7.1"
   dependencies:
@@ -4858,19 +4851,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:13.6.0":
-  version: 13.6.0
-  resolution: "cypress@npm:13.6.0"
+"cypress@npm:13.6.6":
+  version: 13.6.6
+  resolution: "cypress@npm:13.6.6"
   dependencies:
     "@cypress/request": ^3.0.0
     "@cypress/xvfb": ^1.2.4
-    "@types/node": ^18.17.5
     "@types/sinonjs__fake-timers": 8.1.1
     "@types/sizzle": ^2.3.2
     arch: ^2.2.0
     blob-util: ^2.0.2
     bluebird: ^3.7.2
-    buffer: ^5.6.0
+    buffer: ^5.7.1
     cachedir: ^2.3.0
     chalk: ^4.1.0
     check-more-types: ^2.24.0
@@ -4888,7 +4880,7 @@ __metadata:
     figures: ^3.2.0
     fs-extra: ^9.1.0
     getos: ^3.2.1
-    is-ci: ^3.0.0
+    is-ci: ^3.0.1
     is-installed-globally: ~0.4.0
     lazy-ass: ^1.6.0
     listr2: ^3.8.3
@@ -4907,7 +4899,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: 2f80649e271075fd069567c4e53b89924e451021e003a9f1e1002f22ef26d844d59868ab2a9add106baf5b5ae7789c8d2c99dbd579423801185d8e0b9ebd09be
+  checksum: 8a7db7d2941ea9fd698b9311b4f23fb6491038fe57e4c19b29a1ee58a25f9d98646674f876c1068a97428c2e81548bb0dd8701cd08e84c6b17ed75f9c2266908
   languageName: node
   linkType: hard
 
@@ -5361,7 +5353,7 @@ __metadata:
     "@types/react-dom": 18.2.19
     "@types/styled-components": 5.1.32
     autoprefixer: 10.4.16
-    cypress: 13.6.0
+    cypress: 13.6.6
     eslint: 8.54.0
     eslint-config-next: 14.0.3
     get-video-id: 3.6.5
@@ -7931,7 +7923,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-ci@npm:^3.0.0":
+"is-ci@npm:^3.0.1":
   version: 3.0.1
   resolution: "is-ci@npm:3.0.1"
   dependencies:
