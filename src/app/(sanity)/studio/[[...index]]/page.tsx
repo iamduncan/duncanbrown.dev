@@ -14,6 +14,8 @@ import config from 'sanity.config';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
 import { ErrorInfo } from 'react';
+import Head from 'next/head';
+import { metadata } from 'next-sanity/studio'
 
 function Fallback({ error, resetErrorBoundary }: FallbackProps) {
   // Call resetErrorBoundary() to reset the error boundary and retry the render.
@@ -40,6 +42,12 @@ export default function StudioPage() {
       }}
       onError={logError}
     >
+      <Head>
+        {Object.entries(metadata).map(([key, value]) => (
+          <meta key={key} name={key} content={value} />
+        ))}
++        <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+      </Head>
       <NextStudio config={config} />
     </ErrorBoundary>
   );
