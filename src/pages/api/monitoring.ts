@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from "next";
   const SENTRY_HOST = "o476605.ingest.sentry.io"
   const SENTRY_PROJECT_IDS = ["4505652393934848"]
 
-  export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === "POST") {
       try {
         const { body } = req;
@@ -21,13 +21,23 @@ import { NextApiRequest, NextApiResponse } from "next";
         }
 
         const upstream_sentry_url = `https://${SENTRY_HOST}/api/${project_id}/envelope/`;
-        const response = await fetch(upstream_sentry_url, {
+        fetch(upstream_sentry_url, {
           method: "POST",
           body,
+        })
+        .then((response) => {
+          if (process.env.NODE_ENV === "development") {
+            console.log("Upstream response", response.status, response.statusText);
+          }
+          if (!response.ok) {
+            throw new Error("Upstream request failed");
+          }
+          return response;
+        })
+        .catch((error) => {
+          console.error("Error tunneling request to sentry", error);
+          throw new Error("Error tunneling request to sentry");
         });
-        if (process.env.NODE_ENV === "development") {
-          console.log("Upstream response", response.status, response.statusText);
-        }
         res.status(200).json({ success: true });
       }
       catch (error) {
