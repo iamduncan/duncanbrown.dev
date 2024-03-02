@@ -1,6 +1,3 @@
-# [prebuild]
-#   command = "yarn prebuild"
-
 [build]
   command = "yarn build"
   publish = ".next"
