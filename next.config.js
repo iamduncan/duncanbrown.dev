@@ -7,9 +7,9 @@ const nextConfig = {
 
 // Injected content via Sentry wizard below
 
-import { withSentryConfig } from '@sentry/nextjs';
+const { withSentryConfig } = require('@sentry/nextjs');
 
-export default withSentryConfig(
+module.exports = withSentryConfig(
   {...nextConfig, sentry: {tunnelRoute: '/monitoring'}},
   {
     // For all available options, see:
