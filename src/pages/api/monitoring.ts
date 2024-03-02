@@ -5,7 +5,6 @@ import { NextApiRequest, NextApiResponse } from "next";
 
   export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === "POST") {
-      try {
         const { body } = req;
         const piece = body.split("\n")[0];
         const header = JSON.parse(piece);
@@ -27,23 +26,23 @@ import { NextApiRequest, NextApiResponse } from "next";
         })
         .then((response) => {
           if (process.env.NODE_ENV === "development") {
-            console.log("Upstream response", response.status, response.statusText);
+            console.log("~~ Upstream response ~~", response.status, response.statusText);
           }
           if (!response.ok) {
-            throw new Error("Upstream request failed");
+            console.error("Upstream request failed", response.status, response.statusText);
+            if (response.status !== 429) {
+              throw new Error("Upstream request failed");
+            }
           }
           return response;
         })
         .catch((error) => {
           console.error("Error tunneling request to sentry", error);
-          throw new Error("Error tunneling request to sentry");
+          if ('status' in error) {
+            console.info("Upstream response", error.status, error.statusText);
+          }
         });
-        res.status(200).json({ success: true });
-      }
-      catch (error) {
-        console.error('Error processing request: ', error);
-        res.status(500).json({ error: 'error tunneling to sentry' });
-      }
+        return res.status(200).json({ success: true });
     }
     res.status(405).json({ error: "Method not allowed" });
   }
