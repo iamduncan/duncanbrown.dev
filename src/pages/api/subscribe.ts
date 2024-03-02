@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { addSubscriber } from '@/lib/convertkit/convertkit.client';
+import * as Sentry from "@sentry/nextjs";
 
 export default function subscribe(req: NextApiRequest, res: NextApiResponse) {
   const { name, email, botcheck } = req.body;
@@ -19,7 +20,7 @@ export default function subscribe(req: NextApiRequest, res: NextApiResponse) {
       })
     )
     .catch((error) => {
-      console.error(error);
+      Sentry.captureException(error);
       return res.status(500).json({ message: 'Something went wrong, please try again' });
     });
 }

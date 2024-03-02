@@ -5,14 +5,12 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
-
 // Injected content via Sentry wizard below
 
-const { withSentryConfig } = require('@sentry/nextjs');
+import { withSentryConfig } from '@sentry/nextjs';
 
-module.exports = withSentryConfig(
-  module.exports,
+export default withSentryConfig(
+  {...nextConfig, sentry: {tunnelRoute: '/monitoring'}},
   {
     // For all available options, see:
     // https://github.com/getsentry/sentry-webpack-plugin#options
