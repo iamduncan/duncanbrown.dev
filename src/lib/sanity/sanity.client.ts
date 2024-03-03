@@ -1,23 +1,19 @@
 import { apiVersion, dataset, projectId, useCdn } from '@/lib/sanity/env';
 import {
   indexQuery,
-  type Post,
   postAndMoreStoriesQuery,
   postBySlugQuery,
   postSlugsQuery,
-  type Settings,
   settingsQuery,
-  paginatedquery,
+  type Post,
+  type Settings,
 } from './sanity.queries';
 import { createClient } from 'next-sanity';
-import { sanityFetch } from './sanity.fetch';
 
 /**
  * Checks if it's safe to create a client instance, as `@sanity/client` will throw an error if `projectId` is false
  */
-export const client = projectId
-  ? createClient({ projectId, dataset, apiVersion, useCdn, perspective: 'published' })
-  : null;
+export const client = createClient({ projectId, dataset, apiVersion, useCdn, perspective: 'published' });
 
 export const fetcher = async ([query, params]: any) => {
   return client ? client.fetch(query, params) : [];

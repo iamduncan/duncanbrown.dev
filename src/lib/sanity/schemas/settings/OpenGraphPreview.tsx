@@ -1,7 +1,7 @@
 import { Card } from '@sanity/ui';
 import { height, OpenGraphImage, width } from '@/components/OpenGraphImage';
 import { createIntlSegmenterPolyfill } from 'intl-segmenter-polyfill';
-import type { Settings } from '../../lib/sanity.queries';
+import type { Settings } from '@/lib/sanity/sanity.queries';
 import satori, { type SatoriOptions } from 'satori';
 import styled from 'styled-components';
 import useSWR from 'swr/immutable';
@@ -44,7 +44,7 @@ const OpenGraphSvg = styled(Card).attrs({
   }
 `;
 
-export default function OpenGraphPreview(props: Settings['ogImage']) {
+export default function OpenGraphPreview(props: Settings['openGraphImage']) {
   // we wrap the segmenter setup and font loading in SWR to enable caching
   const { data: fonts } = useSWR('OpenGraphPreview.init', () => fontsPromise, {
     suspense: true,

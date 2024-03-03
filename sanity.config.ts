@@ -28,7 +28,7 @@ export default defineConfig({
       locate,
       previewUrl: {
         previewMode: {
-          enable: '/api/preview',
+          enable: '/api/draft',
         }
       }
     }),
