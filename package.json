@@ -41,7 +41,7 @@
     "@netlify/plugin-emails": "1.1.1",
     "@netlify/plugin-nextjs": "4.41.3",
     "@tailwindcss/typography": "0.5.10",
-    "@types/node": "20.11.24",
+    "@types/node": "20.11.27",
     "@types/react": "18.2.61",
     "@types/react-dom": "18.2.19",
     "@types/styled-components": "5.1.34",
