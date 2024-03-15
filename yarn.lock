@@ -2486,12 +2486,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:20.11.24":
+"@types/node@npm:*":
   version: 20.11.24
   resolution: "@types/node@npm:20.11.24"
   dependencies:
     undici-types: "npm:~5.26.4"
   checksum: 10/7f34bfae5f9b98b9910230af4b4c52dc7fb2d1e96fdebfbc3d7576f8ab3d100076f193f9469add9e7418b455294155e7e6a028498cc5e98f9d49349875a459cf
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:20.11.27":
+  version: 20.11.27
+  resolution: "@types/node@npm:20.11.27"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 10/4be53485d499dd7c7896190e76a0ce1f6c6917d1f4d0b4b240b3670160fcbc548daed32beaac0fc92429b37dbeaa2496fc56f460acaab969bddb77394318a89b
   languageName: node
   linkType: hard
 
@@ -4717,7 +4726,7 @@ __metadata:
     "@sanity/vision": "npm:3.33.0"
     "@sentry/nextjs": "npm:7.104.0"
     "@tailwindcss/typography": "npm:0.5.10"
-    "@types/node": "npm:20.11.24"
+    "@types/node": "npm:20.11.27"
     "@types/react": "npm:18.2.61"
     "@types/react-dom": "npm:18.2.19"
     "@types/styled-components": "npm:5.1.34"
