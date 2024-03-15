@@ -3,6 +3,9 @@ const nextConfig = {
   images: {
     domains: ['cdn.sanity.io'],
   },
+  experimental: {
+    taint: true,
+  },
 };
 
 // Injected content via Sentry wizard below

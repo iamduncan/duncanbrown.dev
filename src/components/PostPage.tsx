@@ -7,8 +7,8 @@ import PostHeader from './PostHeader';
 import PostPageHead from './PostPageHead';
 import PostTitle from './PostTitle';
 import SectionSeparator from './SectionSeparator';
-import * as demo from '@/lib/sanity/lib/demo.data';
-import type { Post, Settings } from '@/lib/sanity/lib/sanity.queries';
+import * as demo from '@/lib/sanity/demo.data';
+import type { Post, Settings } from '@/lib/sanity/sanity.queries';
 import Head from 'next/head';
 import { notFound } from 'next/navigation';
 

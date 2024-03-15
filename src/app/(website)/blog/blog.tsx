@@ -2,14 +2,12 @@
 
 import Container from '@/components/container';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { paginatedquery, Post } from '@/lib/sanity/sanity.queries';
+import { Post } from '@/lib/sanity/sanity.queries';
 import PostList from '@/components/postlist';
-import useSWR, { SWRConfig } from 'swr';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { useState, useEffect } from 'react';
-import { fetcher } from '@/lib/sanity/sanity.client';
 
-export default function Post({ posts: initialposts }: any) {
+export default function Post({ posts }: any) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const page = searchParams?.get('page');
@@ -26,20 +24,6 @@ export default function Post({ posts: initialposts }: any) {
     pageIndex: (pageIndex - 1) * POSTS_PER_PAGE,
     limit: pageIndex * POSTS_PER_PAGE,
   };
-
-  // const fetcher = (query, params) =>
-  //   client && client.fetch(query, params);
-
-  const {
-    data: posts,
-    error,
-    isValidating,
-  } = useSWR([paginatedquery, params], fetcher, {
-    fallbackData: initialposts,
-    onSuccess: () => {
-      setIsLoading(false);
-    },
-  });
 
   useEffect(() => {
     setIsFirstPage(pageIndex < 2);
@@ -72,16 +56,7 @@ export default function Post({ posts: initialposts }: any) {
           </div>
         )}
 
-        {isValidating && (
-          <div className="mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3">
-            {new Array(6).map((item, index) => (
-              <div key={index}>
-                <SkeletonImg />
-              </div>
-            ))}
-          </div>
-        )}
-        {posts && !isLoading && !isValidating && (
+        {posts && !isLoading && (
           <div className="mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3">
             {posts.map((post: Post) => (
               <PostList key={post._id} post={post} aspect="square" />
@@ -115,78 +90,3 @@ export default function Post({ posts: initialposts }: any) {
     </>
   );
 }
-
-const SkeletonImg = () => {
-  const style = `
-   .dark svg#skeleton #colorbase {
-      stop-color: #2d2d2d;
-    }
-    .dark svg#skeleton #colorhighlight {
-      stop-color: #3d3d3d;
-    }
-`;
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      role="img"
-      id="skeleton"
-      aria-labelledby="loading-aria"
-      viewBox="0 0 500 800"
-      preserveAspectRatio="none"
-    >
-      <title id="loading-aria">Loading...</title>
-      <style dangerouslySetInnerHTML={{ __html: style }} />
-      <rect
-        x="0"
-        y="0"
-        width="100%"
-        height="100%"
-        clipPath="url(#clip-path)"
-        style={{ fill: 'url("#fill")' }}
-      />
-      <defs>
-        <clipPath id="clip-path">
-          <rect x="0" y="0" rx="2" ry="2" width="505" height="505" />
-          <rect x="0" y="623" rx="0" ry="0" width="480" height="18" />
-          <rect x="0" y="568" rx="0" ry="0" width="154" height="21" />
-          <rect x="-10" y="433" rx="2" ry="2" width="365" height="1" />
-          <rect x="60" y="756" rx="0" ry="0" width="164" height="27" />
-          <rect x="277" y="763" rx="0" ry="0" width="179" height="14" />
-          <circle cx="20" cy="769" r="18" />
-          <circle cx="250" cy="770" r="4" />
-          <rect x="0" y="664" rx="0" ry="0" width="365" height="18" />
-          <rect x="0" y="705" rx="0" ry="0" width="193" height="18" />
-        </clipPath>
-        <linearGradient id="fill">
-          <stop offset="0.599964" stopColor="#f0f0f0" stopOpacity="1" id="colorbase">
-            <animate
-              attributeName="offset"
-              values="-2; -2; 1"
-              keyTimes="0; 0.25; 1"
-              dur="2s"
-              repeatCount="indefinite"
-            />
-          </stop>
-          <stop offset="1.59996" stopColor="#f7f7f7" stopOpacity="1" id="colorhighlight">
-            <animate
-              attributeName="offset"
-              values="-1; -1; 2"
-              keyTimes="0; 0.25; 1"
-              dur="2s"
-              repeatCount="indefinite"
-            />
-          </stop>
-          <stop offset="2.59996" stopColor="#f0f0f0" stopOpacity="1" id="colorbase">
-            <animate
-              attributeName="offset"
-              values="0; 0; 3"
-              keyTimes="0; 0.25; 1"
-              dur="2s"
-              repeatCount="indefinite"
-            />
-          </stop>
-        </linearGradient>
-      </defs>
-    </svg>
-  );
-};

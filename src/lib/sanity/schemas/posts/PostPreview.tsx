@@ -1,12 +1,8 @@
 import { Box, Text } from '@sanity/ui';
 import { ComponentProps, Suspense } from 'react';
-import { isRecord, isString, useClient } from 'sanity';
-import { UserViewComponent } from 'sanity/desk';
+import { isRecord, isString } from 'sanity';
+import { UserViewComponent } from 'sanity/structure';
 import styled from 'styled-components';
-
-import { apiVersion, previewSecretDocumentId } from '../../env';
-import { getSecret } from '../../lib/secret';
-// import { usePreview } from '../../preview';
 
 const FETCH_SECRET = Symbol('preview.secret');
 

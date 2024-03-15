@@ -1,54 +1,21 @@
-'use client';
+import type {Metadata, Viewport} from 'next'
+import {metadata as studioMetadata, viewport as studioViewport} from 'next-sanity/studio'
 
-/**
- * This route is responsible for the built-in authoring environment using Sanity Studio v3.
- * All routes under /studio will be handled by this file using Next.js' catch-all routes:
- * https://nextjs.org/docs/routing/dynamic-routes#catch-all-routes
- *
- * You can learn more about the next-sanity package here:
- * https://github.com/sanity-io/next-sanity
- */
+import {Studio} from './Studio'
 
-import { NextStudio } from 'next-sanity/studio';
-import config from 'sanity.config';
-import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
-import * as Sentry from '@sentry/nextjs';
-import { ErrorInfo } from 'react';
-import Head from 'next/head';
-import { metadata } from 'next-sanity/studio'
-
-function Fallback({ error, resetErrorBoundary }: FallbackProps) {
-  // Call resetErrorBoundary() to reset the error boundary and retry the render.
-
-  return (
-    <div role="alert">
-      <p>Something went wrong:</p>
-      <pre style={{ color: 'red' }}>{error.message}</pre>
-    </div>
-  );
+// Set the right `viewport`, `robots` and `referer` meta tags
+export const metadata: Metadata = {
+  ...studioMetadata,
+  // Overrides the title until the Studio is loaded
+  title: 'Loading Studio…',
 }
 
-const logError = (error: Error, info: ErrorInfo) => {
-  // Do something with the error, e.g. log to an external API
-  Sentry.captureException(error);
-};
+export const viewport: Viewport = {
+  ...studioViewport,
+  // Overrides the viewport to resize behavior
+  interactiveWidget: 'resizes-content',
+}
 
 export default function StudioPage() {
-  return (
-    <ErrorBoundary
-      FallbackComponent={Fallback}
-      onReset={(details) => {
-        // Reset the state of your app so the error doesn't happen again
-      }}
-      onError={logError}
-    >
-      <Head>
-        {Object.entries(metadata).map(([key, value]) => (
-          <meta key={key} name={key} content={value} />
-        ))}
-+        <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-      </Head>
-      <NextStudio config={config} />
-    </ErrorBoundary>
-  );
+  return <Studio />
 }
