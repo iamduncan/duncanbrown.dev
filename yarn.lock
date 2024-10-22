@@ -1035,6 +1035,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@floating-ui/core@npm:^1.6.0":
+  version: 1.6.8
+  resolution: "@floating-ui/core@npm:1.6.8"
+  dependencies:
+    "@floating-ui/utils": "npm:^0.2.8"
+  checksum: 10/87d52989c3d2cc80373bc153b7a40814db3206ce7d0b2a2bdfb63e2ff39ffb8b999b1b0ccf28e548000ebf863bf16e2bed45eab4c4d287a5dbe974ef22368d82
+  languageName: node
+  linkType: hard
+
+"@floating-ui/dom@npm:^1.0.0":
+  version: 1.6.11
+  resolution: "@floating-ui/dom@npm:1.6.11"
+  dependencies:
+    "@floating-ui/core": "npm:^1.6.0"
+    "@floating-ui/utils": "npm:^0.2.8"
+  checksum: 10/8579392ad10151474869e7640af169b0d7fc2df48d4da27b6dcb1a57202329147ed986b2972787d4b8cd550c87897271b2d9c4633c2ec7d0b3ad37ce1da636f1
+  languageName: node
+  linkType: hard
+
 "@floating-ui/dom@npm:^1.2.7, @floating-ui/dom@npm:^1.6.1":
   version: 1.6.3
   resolution: "@floating-ui/dom@npm:1.6.3"
@@ -1069,10 +1088,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@floating-ui/react-dom@npm:^2.1.1":
+  version: 2.1.2
+  resolution: "@floating-ui/react-dom@npm:2.1.2"
+  dependencies:
+    "@floating-ui/dom": "npm:^1.0.0"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 10/2a67dc8499674e42ff32c7246bded185bb0fdd492150067caf9568569557ac4756a67787421d8604b0f241e5337de10762aee270d9aeef106d078a0ff13596c4
+  languageName: node
+  linkType: hard
+
 "@floating-ui/utils@npm:^0.2.0, @floating-ui/utils@npm:^0.2.1":
   version: 0.2.1
   resolution: "@floating-ui/utils@npm:0.2.1"
   checksum: 10/33c9ab346e7b05c5a1e6a95bc902aafcfc2c9d513a147e2491468843bd5607531b06d0b9aa56aa491cbf22a6c2495c18ccfc4c0344baec54a689a7bb8e4898d6
+  languageName: node
+  linkType: hard
+
+"@floating-ui/utils@npm:^0.2.8":
+  version: 0.2.8
+  resolution: "@floating-ui/utils@npm:0.2.8"
+  checksum: 10/3e3ea3b2de06badc4baebdf358b3dbd77ccd9474a257a6ef237277895943db2acbae756477ec64de65a2a1436d94aea3107129a1feeef6370675bf2b161c1abc
   languageName: node
   linkType: hard
 
@@ -1658,6 +1696,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sanity/color@npm:^3.0.6":
+  version: 3.0.6
+  resolution: "@sanity/color@npm:3.0.6"
+  checksum: 10/687b88633d4d8e90dda1da4e5f4c2fda7335fb29cbf6926d962009390de7fa7263b98f72f618f678fd0ef5c5b1e4a04db323eee65dc05c3de0f7b13069a20274
+  languageName: node
+  linkType: hard
+
 "@sanity/diff-match-patch@npm:^3.0.0, @sanity/diff-match-patch@npm:^3.1.1":
   version: 3.1.1
   resolution: "@sanity/diff-match-patch@npm:3.1.1"
@@ -1710,7 +1755,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/icons@npm:2.10.3, @sanity/icons@npm:^2.0.0, @sanity/icons@npm:^2.10.2, @sanity/icons@npm:^2.4.1":
+"@sanity/icons@npm:2.10.3, @sanity/icons@npm:^2.0.0, @sanity/icons@npm:^2.4.1":
   version: 2.10.3
   resolution: "@sanity/icons@npm:2.10.3"
   peerDependencies:
@@ -1734,6 +1779,15 @@ __metadata:
   peerDependencies:
     react: ^18
   checksum: 10/32d152bc9f4a69b1677a1279371c0233775a2a56a67ac82b7874e332b6d165be1dbbb49a03469e15f5475a9a48daab99538d4ec28c222fa26ff1d58f9e624804
+  languageName: node
+  linkType: hard
+
+"@sanity/icons@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "@sanity/icons@npm:3.4.0"
+  peerDependencies:
+    react: ^18.3 || >=19.0.0-rc
+  checksum: 10/8f13ebe6fabb501779abfa46bae1aa387446efaa718db166e93d92b0c80655e817961d25cd35d93b366cb94ddcf9565565e1044028187e219471339ba7851015
   languageName: node
   linkType: hard
 
@@ -1960,22 +2014,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/ui@npm:2.0.7":
-  version: 2.0.7
-  resolution: "@sanity/ui@npm:2.0.7"
+"@sanity/ui@npm:2.8.10":
+  version: 2.8.10
+  resolution: "@sanity/ui@npm:2.8.10"
   dependencies:
-    "@floating-ui/react-dom": "npm:^2.0.8"
-    "@sanity/color": "npm:^3.0.0"
-    "@sanity/icons": "npm:^2.10.2"
+    "@floating-ui/react-dom": "npm:^2.1.1"
+    "@sanity/color": "npm:^3.0.6"
+    "@sanity/icons": "npm:^3.4.0"
     csstype: "npm:^3.1.3"
-    framer-motion: "npm:^11.0.5"
-    react-refractor: "npm:^2.1.7"
+    framer-motion: "npm:11.0.8"
+    react-refractor: "npm:^2.2.0"
+    use-effect-event: "npm:^1.0.2"
   peerDependencies:
     react: ^18
     react-dom: ^18
     react-is: ^18
     styled-components: ^5.2 || ^6
-  checksum: 10/118d1dbfa5e3457a685706d301fd6de1a56aa967ec70bf573bb44d1e5d5d5e19a279225e966a571527589bf71e1621b40d52d54b8d1bbc7152a29cb96bba0d55
+  checksum: 10/bbccef6f59b305ff99970567102cf6c73c8404cdeef9e580c55b7dda1667b032cc15b694c4b345101d485f8d302c726ce43dcd1d2eac57a40075d72c84808167
   languageName: node
   linkType: hard
 
@@ -4722,7 +4777,7 @@ __metadata:
     "@sanity/code-input": "npm:4.1.3"
     "@sanity/icons": "npm:2.10.3"
     "@sanity/table": "npm:1.1.2"
-    "@sanity/ui": "npm:2.0.7"
+    "@sanity/ui": "npm:2.8.10"
     "@sanity/vision": "npm:3.33.0"
     "@sentry/nextjs": "npm:7.107.0"
     "@tailwindcss/typography": "npm:0.5.10"
@@ -5908,7 +5963,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:11.0.8, framer-motion@npm:^11.0.0, framer-motion@npm:^11.0.5":
+"framer-motion@npm:11.0.8, framer-motion@npm:^11.0.0":
   version: 11.0.8
   resolution: "framer-motion@npm:11.0.8"
   dependencies:
@@ -9558,6 +9613,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-refractor@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "react-refractor@npm:2.2.0"
+  dependencies:
+    refractor: "npm:^3.6.0"
+    unist-util-filter: "npm:^2.0.2"
+    unist-util-visit-parents: "npm:^3.0.2"
+  peerDependencies:
+    react: ">=15.0.0"
+  checksum: 10/8ed2266e81317755f5b3eaa38741441e6a6221d584982817eaa9a814f2398679ed68ea23421ab7f65aef27d2c54ae9754d74089dc1f6b698a9300eec49670181
+  languageName: node
+  linkType: hard
+
 "react-refresh@npm:^0.14.0":
   version: 0.14.0
   resolution: "react-refresh@npm:0.14.0"
@@ -11574,6 +11642,15 @@ __metadata:
   peerDependencies:
     react: ">=16.8.0"
   checksum: 10/e54201d6cfa2b865413870b1dbd1944f8e4f3926b3b1417c234e103acb1cd5ac47b80e56e1b31dec66de3b14397e190c0243d4fc5f3e4b1d00c7f0229959bbeb
+  languageName: node
+  linkType: hard
+
+"use-effect-event@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "use-effect-event@npm:1.0.2"
+  peerDependencies:
+    react: ^18.3 || ^19.0.0-0
+  checksum: 10/b5df29d3c190c512ee0197f71b4bc9690b35e25114aebcb04a661a18cfd58d9f7331a82fa019ee90d7b055103c3cb8ae506d0f59ae7ab013d9a61a52a70e261b
   languageName: node
   linkType: hard
 
