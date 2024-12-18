@@ -2103,7 +2103,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.17.0":
+"@eslint/js@npm:9.17.0, @eslint/js@npm:^9.16.0":
   version: 9.17.0
   resolution: "@eslint/js@npm:9.17.0"
   checksum: 10/1a89e62f5c50e75d44565b7f3b91701455a999132c991e10bac59c118fbb54bdd54be22b9bda1ac730f78a2e64604403d65ce5dd7726d80b2632982cfc3d84ac
@@ -4533,6 +4533,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@steamer-academy/react-google-recaptcha@npm:4.1.2":
+  version: 4.1.2
+  resolution: "@steamer-academy/react-google-recaptcha@npm:4.1.2"
+  dependencies:
+    "@eslint/js": "npm:^9.16.0"
+    eslint-plugin-jest: "npm:^28.9.0"
+    prop-types: "npm:^15.8.1"
+    react-async-script: "npm:^1.2.0"
+  peerDependencies:
+    react: ">=19.0.0"
+  checksum: 10/ed39e3c7350ce927384cb3f8be62c6517a0f952ebaf06942000c26ac84c57d3d449f863eb83990e5c25515772502d3b9dbd36db3937e4539ff364c1bf2b079a0
+  languageName: node
+  linkType: hard
+
 "@swc/counter@npm:0.1.3":
   version: 0.1.3
   resolution: "@swc/counter@npm:0.1.3"
@@ -5090,7 +5104,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:8.18.1":
+"@typescript-eslint/utils@npm:8.18.1, @typescript-eslint/utils@npm:^6.0.0 || ^7.0.0 || ^8.0.0":
   version: 8.18.1
   resolution: "@typescript-eslint/utils@npm:8.18.1"
   dependencies:
@@ -7269,6 +7283,7 @@ __metadata:
     "@sanity/ui": "npm:2.10.11"
     "@sanity/vision": "npm:3.67.1"
     "@sentry/nextjs": "npm:8.46.0"
+    "@steamer-academy/react-google-recaptcha": "npm:4.1.2"
     "@tailwindcss/typography": "npm:0.5.15"
     "@types/node": "npm:22.10.2"
     "@types/react": "npm:19.0.1"
@@ -7291,7 +7306,6 @@ __metadata:
     react: "npm:19.0.0"
     react-dom: "npm:19.0.0"
     react-error-boundary: "npm:4.1.2"
-    react-google-recaptcha: "npm:3.1.0"
     react-hook-form: "npm:7.54.1"
     react-iframe: "npm:1.8.5"
     refractor: "npm:4.8.1"
@@ -7886,6 +7900,24 @@ __metadata:
   peerDependencies:
     eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8 || ^9
   checksum: 10/6b76bd009ac2db0615d9019699d18e2a51a86cb8c1d0855a35fb1b418be23b40239e6debdc6e8c92c59f1468ed0ea8d7b85c817117a113d5cc225be8a02ad31c
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-jest@npm:^28.9.0":
+  version: 28.9.0
+  resolution: "eslint-plugin-jest@npm:28.9.0"
+  dependencies:
+    "@typescript-eslint/utils": "npm:^6.0.0 || ^7.0.0 || ^8.0.0"
+  peerDependencies:
+    "@typescript-eslint/eslint-plugin": ^6.0.0 || ^7.0.0 || ^8.0.0
+    eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
+    jest: "*"
+  peerDependenciesMeta:
+    "@typescript-eslint/eslint-plugin":
+      optional: true
+    jest:
+      optional: true
+  checksum: 10/399dd882205da996c2d46b768b744093346ffe4f730972825c72a3f85cc2e26bc08ccd73a7b487f8da4c39fa0178c58b571d5d611a22ced5518b5dfccb48d906
   languageName: node
   linkType: hard
 
@@ -12677,18 +12709,6 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 10/cad626e1325ac9791f6c3e640bebf8d424f5d78a6d9a1042d1092c1fde1be051eef9335a38c162812aedf2bb0a319c3624d565413784f5ef605735b9967b6e07
-  languageName: node
-  linkType: hard
-
-"react-google-recaptcha@npm:3.1.0":
-  version: 3.1.0
-  resolution: "react-google-recaptcha@npm:3.1.0"
-  dependencies:
-    prop-types: "npm:^15.5.0"
-    react-async-script: "npm:^1.2.0"
-  peerDependencies:
-    react: ">=16.4.1"
-  checksum: 10/b06d87f842be43a5d1e32c3746b914746a85d5fa69ac93de567aa71022449c1567ee4c4ebc500b6b17ee94e5ee5ea2d4d39c27848e08537c285bc5499a213cc5
   languageName: node
   linkType: hard
 

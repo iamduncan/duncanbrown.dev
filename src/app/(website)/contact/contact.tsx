@@ -1,8 +1,8 @@
 'use client';
 
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
-import { createRef, ReactNode, useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+import { createRef, ReactNode, useRef, useState } from 'react';
+import ReCAPTCHA, { ReCAPTCHAHandle } from '@steamer-academy/react-google-recaptcha';
 import { useForm } from 'react-hook-form';
 
 import Container from '@/components/container';
@@ -18,20 +18,19 @@ export default function Contact({ settings }: any) {
   });
   const [isSuccess, setIsSuccess] = useState(false);
   const [message, setMessage] = useState(false);
-  const recaptchaClientId = process.env.NEXT_PUBLIC_RECAPTCHA_CLIENT_ID;
-  const recaptchaRef = createRef<ReCAPTCHA>();
+
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  function onReCAPTCHAChange(token: string | null) {
+    setRecaptchaToken(token);
+  }
 
   const onSubmit = async (data: any) => {
-    if (recaptchaRef.current) {
-      const token = await recaptchaRef.current.executeAsync();
-      data.recaptcha_token = token;
-    }
     const res = await fetch('/api/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify({ ...data, recaptcha_token: recaptchaToken }),
     });
 
     const json = await res.json();
@@ -156,8 +155,8 @@ export default function Contact({ settings }: any) {
             </div>
 
             <ReCAPTCHA
-              sitekey="6LdUUuwlAAAAAK3NVC1GmGzRjyaVw_Er_4hFWbC_"
-              ref={recaptchaRef}
+              sitekey="6LeUpp8qAAAAAPKRdpX1uwVgOQ_DY_JUzCRnDL4o"
+              onChange={onReCAPTCHAChange}
             />
 
             <button
