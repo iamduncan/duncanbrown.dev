@@ -1,7 +1,8 @@
+import Link from 'next/link';
+
 import { Header } from '@/components/ui';
 import { urlForImage } from '@/lib/sanity/image';
 import { getSettings } from '@/lib/sanity/sanity.client';
-import Link from 'next/link';
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const settings = await getSettings();

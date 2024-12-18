@@ -1,10 +1,11 @@
+import { draftMode } from 'next/headers';
+import LiveQuery from 'next-sanity/preview/live-query';
 import { Suspense } from 'react';
-import Blog from './blog';
 
 import { sanityFetch } from '@/lib/sanity/sanity.fetch';
 import { paginatedquery } from '@/lib/sanity/sanity.queries';
-import { draftMode } from 'next/headers';
-import LiveQuery from 'next-sanity/preview/live-query';
+
+import Blog from './blog';
 
 const POSTS_PER_PAGE = 6;
 

@@ -1,8 +1,8 @@
-import { sanityFetch } from '@/lib/sanity/sanity.fetch';
-import PostPage from './default';
-
 import { getAllPostsSlugs, getPostBySlug } from '@/lib/sanity/sanity.client';
+import { sanityFetch } from '@/lib/sanity/sanity.fetch';
 import { Post, postBySlugQuery } from '@/lib/sanity/sanity.queries';
+
+import PostPage from './default';
 
 type Props = {
   params: { slug: string };

@@ -1,7 +1,9 @@
+import Link from 'next/link';
+
+import type { Post } from '@/lib/sanity/sanity.queries';
+
 import CoverImage from './CoverImage';
 import Date from './PostDate';
-import type { Post } from '@/lib/sanity/sanity.queries';
-import Link from 'next/link';
 
 export default function PostPreview({
   title,
