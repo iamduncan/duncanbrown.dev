@@ -2510,12 +2510,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.2.19":
-  version: 18.2.19
-  resolution: "@types/react-dom@npm:18.2.19"
-  dependencies:
-    "@types/react": "npm:*"
-  checksum: 10/98eb760ce78f1016d97c70f605f0b1a53873a548d3c2192b40c897f694fd9c8bb12baeada16581a9c7b26f5022c1d2613547be98284d8f1b82d1611b1e3e7df0
+"@types/react-dom@npm:18.3.5":
+  version: 18.3.5
+  resolution: "@types/react-dom@npm:18.3.5"
+  peerDependencies:
+    "@types/react": ^18.0.0
+  checksum: 10/02095b326f373867498e0eb2b5ebb60f9bd9535db0d757ea13504c4b7d75e16605cf1d43ce7a2e67893d177b51db4357cabb2842fb4257c49427d02da1a14e09
   languageName: node
   linkType: hard
 
@@ -2537,7 +2537,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:18.2.61, @types/react@npm:^18.0.25":
+"@types/react@npm:*, @types/react@npm:^18.0.25":
   version: 18.2.61
   resolution: "@types/react@npm:18.2.61"
   dependencies:
@@ -2545,6 +2545,16 @@ __metadata:
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
   checksum: 10/74c2920ccca83fc51190ed4eda1066fa6a644197839dd37765fcce93cbd50b7a52b75815ce0083bb95195f886c80b57745314dd49ecbf235fa93d753ae2260bc
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:18.3.17":
+  version: 18.3.17
+  resolution: "@types/react@npm:18.3.17"
+  dependencies:
+    "@types/prop-types": "npm:*"
+    csstype: "npm:^3.0.2"
+  checksum: 10/5ee199d31077984f130c1b191c9498a0951e2c3e9129794ddf2555dca39d40d50b453a5768c5b466f39b8e52818c160e9869e930a78795636ed281f38327d32d
   languageName: node
   linkType: hard
 
@@ -4495,8 +4505,8 @@ __metadata:
     "@sentry/nextjs": "npm:7.107.0"
     "@tailwindcss/typography": "npm:0.5.10"
     "@types/node": "npm:20.17.10"
-    "@types/react": "npm:18.2.61"
-    "@types/react-dom": "npm:18.2.19"
+    "@types/react": "npm:18.3.17"
+    "@types/react-dom": "npm:18.3.5"
     "@types/react-google-recaptcha": "npm:2.1.9"
     "@types/styled-components": "npm:5.1.34"
     autoprefixer: "npm:10.4.18"
@@ -4512,8 +4522,8 @@ __metadata:
     postcss: "npm:8.4.35"
     prettier: "npm:3.2.5"
     prettier-plugin-tailwindcss: "npm:0.5.12"
-    react: "npm:18.2.0"
-    react-dom: "npm:18.2.0"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
     react-error-boundary: "npm:4.0.13"
     react-google-recaptcha: "npm:3.1.0"
     react-hook-form: "npm:7.51.0"
@@ -9105,7 +9115,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:18.2.0, react-dom@npm:^18.2.0":
+"react-dom@npm:18.3.1":
+  version: 18.3.1
+  resolution: "react-dom@npm:18.3.1"
+  dependencies:
+    loose-envify: "npm:^1.1.0"
+    scheduler: "npm:^0.23.2"
+  peerDependencies:
+    react: ^18.3.1
+  checksum: 10/3f4b73a3aa083091173b29812b10394dd06f4ac06aff410b74702cfb3aa29d7b0ced208aab92d5272919b612e5cda21aeb1d54191848cf6e46e9e354f3541f81
+  languageName: node
+  linkType: hard
+
+"react-dom@npm:^18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
   dependencies:
@@ -9289,7 +9311,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:18.2.0, react@npm:^18.2.0":
+"react@npm:18.3.1":
+  version: 18.3.1
+  resolution: "react@npm:18.3.1"
+  dependencies:
+    loose-envify: "npm:^1.1.0"
+  checksum: 10/261137d3f3993eaa2368a83110466fc0e558bc2c7f7ae7ca52d94f03aac945f45146bd85e5f481044db1758a1dbb57879e2fcdd33924e2dde1bdc550ce73f7bf
+  languageName: node
+  linkType: hard
+
+"react@npm:^18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
   dependencies:
@@ -9904,6 +9935,15 @@ __metadata:
   dependencies:
     loose-envify: "npm:^1.1.0"
   checksum: 10/0c4557aa37bafca44ff21dc0ea7c92e2dbcb298bc62eae92b29a39b029134f02fb23917d6ebc8b1fa536b4184934314c20d8864d156a9f6357f3398aaf7bfda8
+  languageName: node
+  linkType: hard
+
+"scheduler@npm:^0.23.2":
+  version: 0.23.2
+  resolution: "scheduler@npm:0.23.2"
+  dependencies:
+    loose-envify: "npm:^1.1.0"
+  checksum: 10/e8d68b89d18d5b028223edf090092846868a765a591944760942b77ea1f69b17235f7e956696efbb62c8130ab90af7e0949bfb8eba7896335507317236966bc9
   languageName: node
   linkType: hard
 
