@@ -1,10 +1,11 @@
 'use client';
 
-import Container from '@/components/container';
-import { ReactNode, useState } from 'react';
-import { useForm } from 'react-hook-form';
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
-import { ReCAPTCHA } from 'react-recaptcha-component';
+import { createRef, ReactNode, useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
+import { useForm } from 'react-hook-form';
+
+import Container from '@/components/container';
 
 export default function Contact({ settings }: any) {
   const {
@@ -18,10 +19,11 @@ export default function Contact({ settings }: any) {
   const [isSuccess, setIsSuccess] = useState(false);
   const [message, setMessage] = useState(false);
   const recaptchaClientId = process.env.NEXT_PUBLIC_RECAPTCHA_CLIENT_ID;
+  const recaptchaRef = createRef<ReCAPTCHA>();
 
   const onSubmit = async (data: any) => {
-    if (window.grecaptcha) {
-      const token = await window.grecaptcha.execute(recaptchaClientId);
+    if (recaptchaRef.current) {
+      const token = await recaptchaRef.current.executeAsync();
       data.recaptcha_token = token;
     }
     const res = await fetch('/api/contact', {
@@ -155,7 +157,7 @@ export default function Contact({ settings }: any) {
 
             <ReCAPTCHA
               sitekey="6LdUUuwlAAAAAK3NVC1GmGzRjyaVw_Er_4hFWbC_"
-              version={'v3'}
+              ref={recaptchaRef}
             />
 
             <button

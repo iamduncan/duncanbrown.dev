@@ -1,3 +1,9 @@
+import Head from 'next/head';
+import { notFound } from 'next/navigation';
+
+import * as demo from '@/lib/sanity/demo.data';
+import type { Post, Settings } from '@/lib/sanity/sanity.queries';
+
 import Container from './BlogContainer';
 import BlogHeader from './BlogHeader';
 import Layout from './BlogLayout';
@@ -7,10 +13,6 @@ import PostHeader from './PostHeader';
 import PostPageHead from './PostPageHead';
 import PostTitle from './PostTitle';
 import SectionSeparator from './SectionSeparator';
-import * as demo from '@/lib/sanity/demo.data';
-import type { Post, Settings } from '@/lib/sanity/sanity.queries';
-import Head from 'next/head';
-import { notFound } from 'next/navigation';
 
 export interface PostPageProps {
   preview?: boolean;

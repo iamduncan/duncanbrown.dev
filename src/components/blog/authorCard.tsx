@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { PortableText } from "@/lib/sanity/plugins/portabletext";
-import { urlForImage } from "@/lib/sanity/image";
 import Link from "next/link";
+
+import { urlForImage } from "@/lib/sanity/image";
+import { PortableText } from "@/lib/sanity/plugins/portabletext";
 
 export default function AuthorCard({ author }: any) {
   const imageProps = author?.image ? urlForImage(author.image) : null;

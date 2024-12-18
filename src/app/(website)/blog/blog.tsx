@@ -1,11 +1,12 @@
 'use client';
 
-import Container from '@/components/container';
-import { useRouter, useSearchParams } from 'next/navigation';
-import { Post } from '@/lib/sanity/sanity.queries';
-import PostList from '@/components/postlist';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
-import { useState, useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { useEffect,useState } from 'react';
+
+import Container from '@/components/container';
+import PostList from '@/components/postlist';
+import { Post } from '@/lib/sanity/sanity.queries';
 
 export default function Post({ posts }: any) {
   const router = useRouter();

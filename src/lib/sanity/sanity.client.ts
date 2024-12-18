@@ -1,14 +1,16 @@
+import { createClient } from 'next-sanity';
+
 import { apiVersion, dataset, projectId, useCdn } from '@/lib/sanity/env';
+
 import {
   indexQuery,
+  type Post,
   postAndMoreStoriesQuery,
   postBySlugQuery,
   postSlugsQuery,
-  settingsQuery,
-  type Post,
   type Settings,
+  settingsQuery,
 } from './sanity.queries';
-import { createClient } from 'next-sanity';
 
 /**
  * Checks if it's safe to create a client instance, as `@sanity/client` will throw an error if `projectId` is false

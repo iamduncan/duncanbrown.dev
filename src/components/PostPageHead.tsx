@@ -1,7 +1,8 @@
-import BlogMeta from './BlogMeta';
 import * as demo from '@/lib/sanity/demo.data';
 import { urlForImage } from '@/lib/sanity/sanity.image';
 import { Post, Settings } from '@/lib/sanity/sanity.queries';
+
+import BlogMeta from './BlogMeta';
 
 export interface PostPageHeadProps {
   settings: Settings;

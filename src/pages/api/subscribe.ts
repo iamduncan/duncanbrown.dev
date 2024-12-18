@@ -1,6 +1,7 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { addSubscriber } from '@/lib/convertkit/convertkit.client';
 import * as Sentry from "@sentry/nextjs";
+import { NextApiRequest, NextApiResponse } from 'next';
+
+import { addSubscriber } from '@/lib/convertkit/convertkit.client';
 
 export default function subscribe(req: NextApiRequest, res: NextApiResponse) {
   const { name, email, botcheck } = req.body;

@@ -1,6 +1,7 @@
+import Link from 'next/link';
+
 import Container from '@/components/container';
 import SocialLinks from '@/components/ui/SocialLinks';
-import Link from 'next/link';
 
 export default function About({ settings }: any) {
   return (

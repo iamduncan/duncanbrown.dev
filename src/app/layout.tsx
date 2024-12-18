@@ -1,10 +1,13 @@
-import dynamic from 'next/dynamic';
 import './globals.css';
-import { Providers } from './providers';
-import { cx } from '@/utils/all';
+
+import dynamic from 'next/dynamic';
 import { Inter, Lora } from "next/font/google";
 import { draftMode } from 'next/headers';
+
 import { token } from '@/lib/sanity/sanity.fetch';
+import { cx } from '@/utils/all';
+
+import { Providers } from './providers';
 
 const inter = Inter({
   subsets: ['latin'],
