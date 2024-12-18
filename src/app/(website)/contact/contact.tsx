@@ -1,8 +1,8 @@
 'use client';
 
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
-import { createRef, ReactNode, useRef, useState } from 'react';
-import ReCAPTCHA, { ReCAPTCHAHandle } from '@steamer-academy/react-google-recaptcha';
+import ReCAPTCHA from '@steamer-academy/react-google-recaptcha';
+import { ReactNode, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 import Container from '@/components/container';

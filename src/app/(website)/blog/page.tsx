@@ -15,10 +15,11 @@ export default async function ArchivePage() {
     params: { limit: POSTS_PER_PAGE, pageIndex: 0 },
     tags: ['archive'],
   });
+  const draft = await draftMode();
   return (
     <Suspense>
       <LiveQuery
-        enabled={draftMode().isEnabled}
+        enabled={draft.isEnabled}
         query={paginatedquery}
         params={{ limit: POSTS_PER_PAGE, pageIndex: 0 }}
         initialData={posts}
