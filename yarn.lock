@@ -4480,9 +4480,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"duncanbrown@workspace:.":
+"duncanbrown.dev@workspace:.":
   version: 0.0.0-use.local
-  resolution: "duncanbrown@workspace:."
+  resolution: "duncanbrown.dev@workspace:."
   dependencies:
     "@heroicons/react": "npm:2.1.1"
     "@netlify/plugin-emails": "npm:1.1.1"
