@@ -4777,7 +4777,7 @@ __metadata:
     eslint: "npm:8.57.1"
     eslint-config-next: "npm:14.2.20"
     eslint-plugin-simple-import-sort: "npm:12.0.0"
-    get-video-id: "npm:4.1.5"
+    get-video-id: "npm:4.1.7"
     intl-segmenter-polyfill: "npm:0.4.4"
     next: "npm:14.2.15"
     next-sanity: "npm:8.5.5"
@@ -6316,12 +6316,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-video-id@npm:4.1.5":
-  version: 4.1.5
-  resolution: "get-video-id@npm:4.1.5"
+"get-video-id@npm:4.1.7":
+  version: 4.1.7
+  resolution: "get-video-id@npm:4.1.7"
   dependencies:
     "@babel/runtime": "npm:^7.23.9"
-  checksum: 10/e2a04f6244b8fdc79b74baf074261d8e4a0089c5e806aad0609faf63630031b0130c25b8b603449d867687c379427f997a8431f8e562d90f15907229e46fd381
+  checksum: 10/200de4e80a733a8197e2920ee8dfc515aca99931ddf491c1c0b6d9a384006228cf0a39ef10d65c9cd3102ee08290abc4596fe93ccddf46ea81a982f26584f737
   languageName: node
   linkType: hard
 
