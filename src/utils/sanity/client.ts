@@ -1,7 +1,7 @@
 import 'server-only';
 
-import {draftMode} from 'next/headers';
-import {createClient, type QueryOptions, type QueryParams} from 'next-sanity';
+import { draftMode } from 'next/headers';
+import { createClient, type QueryOptions, type QueryParams } from 'next-sanity';
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
@@ -16,18 +16,17 @@ const client = createClient({
 
 export const token = process.env.SANITY_API_READ_TOKEN;
 
-
 export async function sanityFetch<QueryResponse>({
   query,
   params = {},
-  tags
+  tags,
 }: {
   query: string;
   params?: QueryParams;
   tags: string[];
 }) {
-  const isDraftMode = draftMode().isEnabled;
-  if (isDraftMode && !token) {
+  const draft = await draftMode();
+  if (draft.isEnabled && !token) {
     throw new Error('Missing token');
   }
 
@@ -35,14 +34,14 @@ export async function sanityFetch<QueryResponse>({
   const REVALIDATE_CACHE_FOREVER = false;
 
   return client.fetch<QueryResponse>(query, params, {
-    ...(isDraftMode &&
+    ...(draft.isEnabled &&
       ({
         token: token,
         perspective: 'previewDrafts',
       } satisfies QueryOptions)),
     next: {
-      revalidate: isDraftMode ? REVALIDATE_SKIP_CACHE : REVALIDATE_CACHE_FOREVER,
+      revalidate: draft.isEnabled ? REVALIDATE_SKIP_CACHE : REVALIDATE_CACHE_FOREVER,
       tags,
     },
-  })
+  });
 }

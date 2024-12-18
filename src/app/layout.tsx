@@ -1,7 +1,7 @@
 import './globals.css';
 
 import dynamic from 'next/dynamic';
-import { Inter, Lora } from "next/font/google";
+import { Inter, Lora } from 'next/font/google';
 import { draftMode } from 'next/headers';
 
 import { token } from '@/lib/sanity/sanity.fetch';
@@ -23,16 +23,20 @@ const lora = Lora({
 
 const PreviewProvider = dynamic(() => import('../components/PreviewProvider'));
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const draft = await draftMode();
   return (
     <html
       lang="en"
       suppressHydrationWarning
       className={cx(inter.variable, lora.variable)}
     >
-      <body className="bg-slate-900 text-slate-300 antialiased">
+      <body
+        className="bg-slate-900 text-slate-300 antialiased"
+        suppressHydrationWarning={true}
+      >
         <Providers>
-          {draftMode().isEnabled ? (
+          {draft.isEnabled ? (
             <PreviewProvider token={token}>{children}</PreviewProvider>
           ) : (
             children

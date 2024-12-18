@@ -17,12 +17,14 @@ export default async function contact(req: NextApiRequest, res: NextApiResponse)
     `https://www.google.com/recaptcha/api/siteverify?secret=${recaptcha_secret}&response=${recaptcha_token}`,
     {
       method: 'POST',
-    }
+    },
   );
 
   const recaptchaData = await recaptchaResponse.json();
 
   if (!recaptchaData.success || recaptchaData.score < 0.5) {
+    console.error('Recaptcha failed', recaptchaData);
+    console.debug('Recaptcha token', recaptcha_token);
     return res.status(400).json({ message: 'No bots allowed', status: 'error' });
   }
 

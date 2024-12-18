@@ -1,39 +1,39 @@
-import 'server-only'
+import 'server-only';
 
-import {draftMode} from 'next/headers'
-import type {QueryOptions, QueryParams} from 'next-sanity'
+import { draftMode } from 'next/headers';
+import type { QueryOptions, QueryParams } from 'next-sanity';
 
-import { client } from './sanity.client'
+import { client } from './sanity.client';
 
-export const token = process.env.SANITY_API_READ_TOKEN
+export const token = process.env.SANITY_API_READ_TOKEN;
 
 export async function sanityFetch<QueryResponse>({
   query,
   params = {},
   tags,
 }: {
-  query: string
-  params?: QueryParams
-  tags?: string[]
+  query: string;
+  params?: QueryParams;
+  tags?: string[];
 }) {
-  const isDraftMode = draftMode().isEnabled
-  if (isDraftMode && !token) {
-    throw new Error('The `SANITY_API_READ_TOKEN` environment variable is required.')
+  const draft = await draftMode();
+  if (draft.isEnabled && !token) {
+    throw new Error('The `SANITY_API_READ_TOKEN` environment variable is required.');
   }
 
   if (!client) {
-    throw new Error('The Sanity client is not configured.')
+    throw new Error('The Sanity client is not configured.');
   }
 
   return client.fetch<QueryResponse>(query, params, {
-    ...(isDraftMode &&
+    ...(draft.isEnabled &&
       ({
         token: token,
         perspective: 'previewDrafts',
       } satisfies QueryOptions)),
     next: {
-      revalidate: isDraftMode ? 0 : false,
+      revalidate: draft.isEnabled ? 0 : false,
       tags,
     },
-  })
+  });
 }

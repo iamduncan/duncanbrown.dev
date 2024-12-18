@@ -2,11 +2,11 @@
 
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Container from '@/components/container';
 import PostList from '@/components/postlist';
-import { Post } from '@/lib/sanity/sanity.queries';
+import { type Post } from '@/lib/sanity/sanity.queries';
 
 export default function Post({ posts }: any) {
   const router = useRouter();
@@ -49,7 +49,7 @@ export default function Post({ posts }: any) {
           Archive
         </h1>
         <div className="text-center">
-          <p className="mt-2 text-lg">See all posts we have ever written.</p>
+          <p className="mt-2 text-lg">See all posts I have ever written.</p>
         </div>
         {posts && posts?.length === 0 && (
           <div className="flex h-40 items-center justify-center">
