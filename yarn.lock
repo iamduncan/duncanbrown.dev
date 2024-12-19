@@ -3423,12 +3423,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/icons@npm:^2.11.8":
-  version: 2.11.8
-  resolution: "@sanity/icons@npm:2.11.8"
+"@sanity/icons@npm:^3.0.0":
+  version: 3.5.5
+  resolution: "@sanity/icons@npm:3.5.5"
+  dependencies:
+    react-compiler-runtime: "npm:19.0.0-beta-201e55d-20241215"
   peerDependencies:
-    react: ^18
-  checksum: 10/42a27c08f46608917897087441074e6af862bece2dd61bc8417f29e203f66b6954145174dd9af6ada86391990726054558ce394af775e988bd5002baefe02549
+    react: ^18.3 || ^19.0.0-0
+  checksum: 10/12bc00428ab63a302e10eccad9f47536ff3bb1daa1654a85cf79b936d93de29ad538f25819a0e84ed9bf36d69e026ef34de5e0281c02ad95e51047cb83f8d650
   languageName: node
   linkType: hard
 
@@ -6849,7 +6851,7 @@ __metadata:
     react-iframe: "npm:1.8.5"
     refractor: "npm:4.8.1"
     sanity: "npm:3.67.1"
-    sanity-plugin-asset-source-unsplash: "npm:3.0.1"
+    sanity-plugin-asset-source-unsplash: "npm:3.0.2"
     satori: "npm:0.12.0"
     server-only: "npm:0.0.1"
     styled-components: "npm:6.1.13"
@@ -11901,12 +11903,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-photo-album@npm:2.3.1":
-  version: 2.3.1
-  resolution: "react-photo-album@npm:2.3.1"
+"react-photo-album@npm:2.4.1":
+  version: 2.4.1
+  resolution: "react-photo-album@npm:2.4.1"
   peerDependencies:
     react: ">=16.8.0"
-  checksum: 10/788b13dd97f50f6d5d83ab151433521659815f40d685304301219861a0c7c094ce0729669e4e98ff7ac77ba29365a2f323bc966be3291df8e41bbc5b97978d3b
+  checksum: 10/4e0440e1ac54b1a261ef195ed4152c119c4c05217bd52c5081a66086e3ac7db0318ccc522b8209f4dd62f3778b58b03c34591339d4123f774ce048561067046a
   languageName: node
   linkType: hard
 
@@ -12568,21 +12570,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sanity-plugin-asset-source-unsplash@npm:3.0.1":
-  version: 3.0.1
-  resolution: "sanity-plugin-asset-source-unsplash@npm:3.0.1"
+"sanity-plugin-asset-source-unsplash@npm:3.0.2":
+  version: 3.0.2
+  resolution: "sanity-plugin-asset-source-unsplash@npm:3.0.2"
   dependencies:
-    "@sanity/icons": "npm:^2.11.8"
+    "@sanity/icons": "npm:^3.0.0"
     "@sanity/incompatible-plugin": "npm:^1.0.4"
     "@sanity/ui": "npm:^2.1.2"
     react-infinite-scroll-component: "npm:6.1.0"
-    react-photo-album: "npm:2.3.1"
+    react-photo-album: "npm:2.4.1"
     rxjs: "npm:^7.8.1"
   peerDependencies:
-    react: ^18
+    react: ^18 || ^19
     sanity: ^3
     styled-components: ^6.1
-  checksum: 10/b1c47a3856adc20ad57ba4441bc548dddf11ba7da8cca6fed99f6b41f270a0eb59d546a78b4aa4dad9f8bff1ae7018f200a85101a562d8324377c3f308645f18
+  checksum: 10/5950b2b4348d6ac3bbcb92b3de995a90bf7ae575c28a371a0aab2b3b66dcaff88fe49447080888edcb0126b80f2b5cc29deac8c7541bae704596b2ce283d228f
   languageName: node
   linkType: hard
 
