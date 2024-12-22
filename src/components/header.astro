@@ -1,9 +1,20 @@
 ---
-import { SITE_TITLE } from "../config";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
+import HeaderLink from "./header-link.astro";
 ---
 
 <header>
   <div class="header-wrapper">
     <h1>{SITE_TITLE}</h1>
+    <h2>{SITE_DESCRIPTION}</h2>
   </div>
 </header>
+<nav>
+  <HeaderLink href="/">Home</HeaderLink>
+  <HeaderLink href="/posts">Posts</HeaderLink>
+  <HeaderLink href="/about">About</HeaderLink>
+  <HeaderLink href="/newsletter">Newsletter</HeaderLink>
+  <HeaderLink href="https://bsky.app/profile/duncanbrown.dev">
+    Blue Sky
+  </HeaderLink>
+</nav>

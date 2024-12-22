@@ -1,10 +1,50 @@
 ---
-import '../styles/global.css'
+import "../styles/global.css";
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+
+const { title, description, image = "/home-og-image.png" } = Astro.props;
 ---
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <title>DuncanBrown.dev</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/favicon.ico" />
+  <title>{title ? `${title} | ${SITE_TITLE}` : SITE_TITLE}</title>
+  <meta
+    name="title"
+    content={title ? `${title} | ${SITE_TITLE}` : SITE_TITLE}
+  />
+  <meta name="description" content=`${description}` />
+  <meta name="author" content="Duncan Brown" />
+  <meta name="canonical" content={Astro.url} />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.url} />
+  <meta
+    property="og:title"
+    content={title ? `${title} | ${SITE_TITLE}` : SITE_TITLE}
+  />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={new URL(image, Astro.url)} />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={Astro.url} />
+  <meta
+    property="twitter:title"
+    content={title ? `${title} | ${SITE_TITLE}` : SITE_TITLE}
+  />
+  <meta property="twitter:description" content={description} />
+  <meta property="twitter:image" content={new URL(image, Astro.url)} />
+  <meta property="twitter:creator" content="@iamduncanbrown" />
+
+  <!-- RSS Link -->
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title={SITE_TITLE}
+    href="/feed.xml"
+  />
 </head>

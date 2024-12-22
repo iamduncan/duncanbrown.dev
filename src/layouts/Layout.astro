@@ -1,14 +1,18 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/header.astro";
+
+let {
+  content: { title, description, added, updated, tags, heroImage },
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<BaseHead />
+<html lang="en-gb">
+  <BaseHead title={title} description={description} />
 
-	<body class="bg-slate-900 text-slate-300 antialiased">
-		<Header />
-		<slot />
-	</body>
+  <body class="bg-slate-900 text-slate-300 antialiased">
+    <Header />
+    <slot />
+  </body>
 </html>

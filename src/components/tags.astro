@@ -1,0 +1,16 @@
+---
+const { tags, all } = Astro.props;
+---
+
+{all ? <h3 class="tag-title">View posts by tag</h3> : null}
+<div class=`${all ? "tags" : null}`>
+  {
+    tags
+      ? tags.map((tag) => (
+          <a href={`/tag/${tag}`} class="tag">
+            #{tag}
+          </a>
+        ))
+      : null
+  }
+</div>

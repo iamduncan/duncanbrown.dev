@@ -1,0 +1,43 @@
+---
+import { getCollection } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+import Post from "../components/Post.astro";
+
+let posts = await getCollection("posts");
+
+posts = posts.sort(
+  (a, b) =>
+    new Date(b.data.updated || b.data.added).valueOf() -
+    new Date(a.data.updated || a.data.added).valueOf()
+);
+---
+
+<!doctype html>
+<html lang="en-gb">
+  <BaseHead title="Posts" />
+  <body>
+    <Header />
+    <main>
+      <div
+        class="mx-auto my-10 grid max-w-screen-md auto-cols-fr gap-2 md:grid-cols-3"
+      >
+        {
+          posts.map(
+            ({ data: { description, slug, title, tags, added: date } }) => (
+              <Post
+                description={description}
+                slug={slug}
+                title={title}
+                tags={tags}
+                date={date}
+              />
+            )
+          )
+        }
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
