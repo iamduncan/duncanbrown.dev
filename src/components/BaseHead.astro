@@ -15,7 +15,10 @@ const { title, description, image = "/home-og-image.png" } = Astro.props;
     name="title"
     content={title ? `${title} | ${SITE_TITLE}` : SITE_TITLE}
   />
-  <meta name="description" content=`${description}` />
+  <meta
+    name="description"
+    content=`${description ? description : SITE_DESCRIPTION}`
+  />
   <meta name="author" content="Duncan Brown" />
   <meta name="canonical" content={Astro.url} />
 

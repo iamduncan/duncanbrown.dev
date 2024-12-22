@@ -1,4 +1,4 @@
-Sitemap: https://duncanbrown.dev/sitemap.xml
+Sitemap: https://duncanbrown.dev/sitemap-index.xml
 
 User-agent: *
 Disallow:

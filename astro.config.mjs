@@ -9,15 +9,14 @@ export default defineConfig({
   output: "server",
   site: "https://duncanbrown.dev",
   base: "/",
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      xslURL: "/rss-styles.xsl",
+    }),
+  ],
   adapter: cloudflare({
     platformProxy: {
       enabled: true,
     },
   }),
-  vite: {
-    build: {
-      minify: false,
-    },
-  },
 });
