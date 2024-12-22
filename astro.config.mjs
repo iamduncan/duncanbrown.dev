@@ -6,6 +6,7 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
+  output: "server",
   site: "https://duncanbrown.dev",
   base: "/",
   integrations: [sitemap()],
@@ -14,4 +15,9 @@ export default defineConfig({
       enabled: true,
     },
   }),
+  vite: {
+    build: {
+      minify: false,
+    },
+  },
 });
