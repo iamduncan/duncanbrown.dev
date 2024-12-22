@@ -1,0 +1,14 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/header.astro";
+---
+
+<!doctype html>
+<html lang="en">
+	<BaseHead />
+
+	<body class="bg-slate-900 text-slate-300 antialiased">
+		<Header />
+		<slot />
+	</body>
+</html>
