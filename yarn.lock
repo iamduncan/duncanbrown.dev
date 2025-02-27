@@ -4013,7 +4013,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/icons@npm:3.5.5, @sanity/icons@npm:^3.0.0, @sanity/icons@npm:^3.5.5":
+"@sanity/icons@npm:3.7.0":
+  version: 3.7.0
+  resolution: "@sanity/icons@npm:3.7.0"
+  peerDependencies:
+    react: ^18.3 || ^19.0.0-0
+  checksum: 10/953adc0ccc7483bab83da8c7df6713026a7639695855330e09192f5856b44fb3b45b6b16799f20750c41a40f34ed062c0511aa6ecc67ae8d1485a581f464593c
+  languageName: node
+  linkType: hard
+
+"@sanity/icons@npm:^3.0.0, @sanity/icons@npm:^3.5.5":
   version: 3.5.5
   resolution: "@sanity/icons@npm:3.5.5"
   dependencies:
@@ -7569,7 +7578,7 @@ __metadata:
     "@netlify/plugin-emails": "npm:1.1.1"
     "@portabletext/react": "npm:3.2.0"
     "@sanity/code-input": "npm:5.1.2"
-    "@sanity/icons": "npm:3.5.5"
+    "@sanity/icons": "npm:3.7.0"
     "@sanity/table": "npm:1.1.3"
     "@sanity/ui": "npm:2.10.12"
     "@sanity/vision": "npm:3.68.3"
