@@ -35,7 +35,7 @@
     "server-only": "0.0.1",
     "styled-components": "6.1.13",
     "suspend-react": "0.1.3",
-    "swr": "2.2.5"
+    "swr": "2.3.3"
   },
   "devDependencies": {
     "@netlify/plugin-emails": "1.1.1",
