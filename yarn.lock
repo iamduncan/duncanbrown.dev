@@ -3393,19 +3393,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@portabletext/react@npm:3.2.0, @portabletext/react@npm:^3.0.0":
-  version: 3.2.0
-  resolution: "@portabletext/react@npm:3.2.0"
-  dependencies:
-    "@portabletext/toolkit": "npm:^2.0.16"
-    "@portabletext/types": "npm:^2.0.13"
-  peerDependencies:
-    react: ^17 || ^18 || >=19.0.0-0
-  checksum: 10/0402d47dad3b7797529ab0c2cd16912d9ca90f1a08749a8fa1d00f89949f349c562762c302ea14a4b0799962d6bf5c9919076f49363693d0162b2d05d444cd56
-  languageName: node
-  linkType: hard
-
-"@portabletext/react@npm:^3.2.1":
+"@portabletext/react@npm:3.2.1, @portabletext/react@npm:^3.2.1":
   version: 3.2.1
   resolution: "@portabletext/react@npm:3.2.1"
   dependencies:
@@ -3414,6 +3402,18 @@ __metadata:
   peerDependencies:
     react: ^17 || ^18 || >=19.0.0-0
   checksum: 10/1086886be20c30b15881fce7563243f295057bd115e3e9183d53e6c9af5e01dcc0fc22f1dd6c915647dadbb913166803d773eab2300c677caec92bf4c6986f49
+  languageName: node
+  linkType: hard
+
+"@portabletext/react@npm:^3.0.0":
+  version: 3.2.0
+  resolution: "@portabletext/react@npm:3.2.0"
+  dependencies:
+    "@portabletext/toolkit": "npm:^2.0.16"
+    "@portabletext/types": "npm:^2.0.13"
+  peerDependencies:
+    react: ^17 || ^18 || >=19.0.0-0
+  checksum: 10/0402d47dad3b7797529ab0c2cd16912d9ca90f1a08749a8fa1d00f89949f349c562762c302ea14a4b0799962d6bf5c9919076f49363693d0162b2d05d444cd56
   languageName: node
   linkType: hard
 
@@ -4057,7 +4057,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/icons@npm:3.7.0":
+"@sanity/icons@npm:3.7.0, @sanity/icons@npm:^3.7.0":
   version: 3.7.0
   resolution: "@sanity/icons@npm:3.7.0"
   peerDependencies:
@@ -4085,15 +4085,6 @@ __metadata:
   peerDependencies:
     react: ^18.3 || ^19.0.0-0
   checksum: 10/52927719e037ec08f90000e69555237eac65a392e5f13d0a8577d8adc4c061c036cba06877674d71d98b08b8b4dc8c2f2c52f42ddcb733f24c096ae5bb7f0961
-  languageName: node
-  linkType: hard
-
-"@sanity/icons@npm:^3.7.0":
-  version: 3.7.0
-  resolution: "@sanity/icons@npm:3.7.0"
-  peerDependencies:
-    react: ^18.3 || ^19.0.0-0
-  checksum: 10/953adc0ccc7483bab83da8c7df6713026a7639695855330e09192f5856b44fb3b45b6b16799f20750c41a40f34ed062c0511aa6ecc67ae8d1485a581f464593c
   languageName: node
   linkType: hard
 
@@ -7720,7 +7711,7 @@ __metadata:
   dependencies:
     "@heroicons/react": "npm:2.2.0"
     "@netlify/plugin-emails": "npm:1.1.1"
-    "@portabletext/react": "npm:3.2.0"
+    "@portabletext/react": "npm:3.2.1"
     "@sanity/code-input": "npm:5.1.2"
     "@sanity/icons": "npm:3.7.0"
     "@sanity/table": "npm:1.1.3"
