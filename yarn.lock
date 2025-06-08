@@ -7940,7 +7940,7 @@ __metadata:
     next-sanity: "npm:9.12.0"
     next-themes: "npm:0.4.6"
     postcss: "npm:8.5.4"
-    prettier: "npm:3.4.2"
+    prettier: "npm:3.5.3"
     prettier-plugin-tailwindcss: "npm:0.6.12"
     react: "npm:19.0.0"
     react-dom: "npm:19.0.0"
@@ -13010,7 +13010,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.4.2, prettier@npm:^3.3.0, prettier@npm:^3.4.2":
+"prettier@npm:3.5.3":
+  version: 3.5.3
+  resolution: "prettier@npm:3.5.3"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 10/7050c08f674d9e49fbd9a4c008291d0715471f64e94cc5e4b01729affce221dfc6875c8de7e66b728c64abc9352eefb7eaae071b5f79d30081be207b53774b78
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^3.3.0, prettier@npm:^3.4.2":
   version: 3.4.2
   resolution: "prettier@npm:3.4.2"
   bin:
