@@ -4112,23 +4112,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/icons@npm:3.7.0, @sanity/icons@npm:^3.7.0":
+"@sanity/icons@npm:3.7.0, @sanity/icons@npm:^3.5.7, @sanity/icons@npm:^3.7.0":
   version: 3.7.0
   resolution: "@sanity/icons@npm:3.7.0"
   peerDependencies:
     react: ^18.3 || ^19.0.0-0
   checksum: 10/953adc0ccc7483bab83da8c7df6713026a7639695855330e09192f5856b44fb3b45b6b16799f20750c41a40f34ed062c0511aa6ecc67ae8d1485a581f464593c
-  languageName: node
-  linkType: hard
-
-"@sanity/icons@npm:^3.0.0":
-  version: 3.5.5
-  resolution: "@sanity/icons@npm:3.5.5"
-  dependencies:
-    react-compiler-runtime: "npm:19.0.0-beta-201e55d-20241215"
-  peerDependencies:
-    react: ^18.3 || ^19.0.0-0
-  checksum: 10/12bc00428ab63a302e10eccad9f47536ff3bb1daa1654a85cf79b936d93de29ad538f25819a0e84ed9bf36d69e026ef34de5e0281c02ad95e51047cb83f8d650
   languageName: node
   linkType: hard
 
@@ -4549,7 +4538,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/ui@npm:2.15.18, @sanity/ui@npm:^2.15.14, @sanity/ui@npm:^2.15.17":
+"@sanity/ui@npm:2.15.18, @sanity/ui@npm:^2.11.6, @sanity/ui@npm:^2.15.14, @sanity/ui@npm:^2.15.17":
   version: 2.15.18
   resolution: "@sanity/ui@npm:2.15.18"
   dependencies:
@@ -4571,7 +4560,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/ui@npm:^2.1.2, @sanity/ui@npm:^2.10.11, @sanity/ui@npm:^2.10.9, @sanity/ui@npm:^2.9.0":
+"@sanity/ui@npm:^2.10.11, @sanity/ui@npm:^2.10.9, @sanity/ui@npm:^2.9.0":
   version: 2.10.11
   resolution: "@sanity/ui@npm:2.10.11"
   dependencies:
@@ -7880,7 +7869,7 @@ __metadata:
     react-iframe: "npm:1.8.5"
     refractor: "npm:4.8.1"
     sanity: "npm:3.68.3"
-    sanity-plugin-asset-source-unsplash: "npm:3.0.2"
+    sanity-plugin-asset-source-unsplash: "npm:3.0.3"
     satori: "npm:0.12.0"
     server-only: "npm:0.0.1"
     styled-components: "npm:6.1.18"
@@ -14083,13 +14072,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sanity-plugin-asset-source-unsplash@npm:3.0.2":
-  version: 3.0.2
-  resolution: "sanity-plugin-asset-source-unsplash@npm:3.0.2"
+"sanity-plugin-asset-source-unsplash@npm:3.0.3":
+  version: 3.0.3
+  resolution: "sanity-plugin-asset-source-unsplash@npm:3.0.3"
   dependencies:
-    "@sanity/icons": "npm:^3.0.0"
-    "@sanity/incompatible-plugin": "npm:^1.0.4"
-    "@sanity/ui": "npm:^2.1.2"
+    "@sanity/icons": "npm:^3.5.7"
+    "@sanity/incompatible-plugin": "npm:^1.0.5"
+    "@sanity/ui": "npm:^2.11.6"
     react-infinite-scroll-component: "npm:6.1.0"
     react-photo-album: "npm:2.4.1"
     rxjs: "npm:^7.8.1"
@@ -14097,7 +14086,7 @@ __metadata:
     react: ^18 || ^19
     sanity: ^3
     styled-components: ^6.1
-  checksum: 10/5950b2b4348d6ac3bbcb92b3de995a90bf7ae575c28a371a0aab2b3b66dcaff88fe49447080888edcb0126b80f2b5cc29deac8c7541bae704596b2ce283d228f
+  checksum: 10/4fa01294dcb2cd7d8b5f7d072fa49115505d36fa9973c8e5161dda482ade3dcaf6d424ae6eb57e309f04fb44ca1a6d228ef7d59987ea69553a9fabed53ca8b47
   languageName: node
   linkType: hard
 
