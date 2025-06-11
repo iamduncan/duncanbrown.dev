@@ -41,7 +41,7 @@
     "@netlify/plugin-emails": "1.1.1",
     "@tailwindcss/typography": "0.5.16",
     "@types/node": "22.15.30",
-    "@types/react": "19.1.6",
+    "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "@types/react-google-recaptcha": "2.1.9",
     "@types/styled-components": "5.1.34",
