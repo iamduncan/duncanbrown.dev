@@ -4076,9 +4076,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/code-input@npm:5.1.2":
-  version: 5.1.2
-  resolution: "@sanity/code-input@npm:5.1.2"
+"@sanity/code-input@npm:5.1.3":
+  version: 5.1.3
+  resolution: "@sanity/code-input@npm:5.1.3"
   dependencies:
     "@codemirror/autocomplete": "npm:^6.18.3"
     "@codemirror/commands": "npm:^6.7.1"
@@ -4104,9 +4104,9 @@ __metadata:
   peerDependencies:
     react: ^18 || >=19.0.0-0
     react-dom: ^18 || >=19.0.0-0
-    sanity: ^3
+    sanity: ^3 || ^4.0.0-0
     styled-components: ^5.2 || ^6
-  checksum: 10/69e0eac4b6c121a6c41e091daf0cc243ca6c31592dfb9613a22965c93bdb14e010b6bcdc7560cb9bce3ba94adbec9ca976d19623e44b41841587e3a69e8b77d1
+  checksum: 10/ffd1e8e9cc22779f250445b4415e0205e75ee4bf6f9de96273a1d373cb08354188ca9bda1629fba31b02eb8de6ab5d3df9b4ec93faf430f228d2addd2f2295e1
   languageName: node
   linkType: hard
 
@@ -7975,7 +7975,7 @@ __metadata:
     "@heroicons/react": "npm:2.2.0"
     "@netlify/plugin-emails": "npm:1.1.1"
     "@portabletext/react": "npm:3.2.1"
-    "@sanity/code-input": "npm:5.1.2"
+    "@sanity/code-input": "npm:5.1.3"
     "@sanity/icons": "npm:3.7.4"
     "@sanity/table": "npm:1.1.3"
     "@sanity/ui": "npm:2.15.18"
