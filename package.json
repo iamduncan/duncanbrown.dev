@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@netlify/plugin-emails": "1.1.1",
-    "@tailwindcss/typography": "0.5.16",
+    "@tailwindcss/typography": "0.5.19",
     "@types/node": "22.16.0",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
