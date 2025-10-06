@@ -28,7 +28,7 @@
     "react-error-boundary": "6.0.0",
     "react-hook-form": "7.60.0",
     "react-iframe": "1.8.5",
-    "refractor": "4.9.0",
+    "refractor": "5.0.0",
     "sanity": "3.68.3",
     "sanity-plugin-asset-source-unsplash": "3.0.3",
     "satori": "0.15.2",
