@@ -4638,17 +4638,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/table@npm:1.1.3":
-  version: 1.1.3
-  resolution: "@sanity/table@npm:1.1.3"
+"@sanity/table@npm:1.1.4":
+  version: 1.1.4
+  resolution: "@sanity/table@npm:1.1.4"
   dependencies:
     "@sanity/icons": "npm:^3.5.3"
     "@sanity/incompatible-plugin": "npm:^1.0.5"
     "@sanity/ui": "npm:^2.10.11"
   peerDependencies:
     react: ^18 || ^19
-    sanity: ^3.0.0
-  checksum: 10/154c2f87bbc328905cce374a11aec614488d77ac59ac53a81005f2ae6149f15fd91c12e6ad6e412b02a1b69256d08e09902606b33fa8d67fede9222f575ff00e
+    sanity: ^3.0.0 || ^4.0.0
+  checksum: 10/ffaf06b3c65ef26d6a1e55e4d17c74049523ac5809e5822c7a4bfa9530ddfee6f1b5c64a5ebffa5013acd735b963332562fe8c45d8bdbfaace8d0b6fba597b49
   languageName: node
   linkType: hard
 
@@ -8021,7 +8021,7 @@ __metadata:
     "@portabletext/react": "npm:3.2.1"
     "@sanity/code-input": "npm:5.1.2"
     "@sanity/icons": "npm:3.7.4"
-    "@sanity/table": "npm:1.1.3"
+    "@sanity/table": "npm:1.1.4"
     "@sanity/ui": "npm:2.16.19"
     "@sanity/vision": "npm:3.68.3"
     "@sentry/nextjs": "npm:9.35.0"
