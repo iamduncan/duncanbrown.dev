@@ -16,7 +16,7 @@
     "@sanity/table": "1.1.4",
     "@sanity/ui": "2.16.19",
     "@sanity/vision": "3.68.3",
-    "@sentry/nextjs": "9.35.0",
+    "@sentry/nextjs": "9.47.1",
     "@steamer-academy/react-google-recaptcha": "4.1.2",
     "get-video-id": "4.1.7",
     "intl-segmenter-polyfill": "0.4.4",
