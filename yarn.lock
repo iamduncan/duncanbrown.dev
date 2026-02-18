@@ -4737,17 +4737,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/ui@npm:2.16.19":
-  version: 2.16.19
-  resolution: "@sanity/ui@npm:2.16.19"
+"@sanity/ui@npm:2.16.22":
+  version: 2.16.22
+  resolution: "@sanity/ui@npm:2.16.22"
   dependencies:
     "@floating-ui/react-dom": "npm:^2.1.6"
     "@juggle/resize-observer": "npm:^3.4.0"
     "@sanity/color": "npm:^3.0.6"
     "@sanity/icons": "npm:^3.7.4"
     csstype: "npm:^3.1.3"
-    framer-motion: "npm:^12.23.22"
-    react-compiler-runtime: "npm:19.1.0-rc.3"
+    motion: "npm:^12.23.24"
+    react-compiler-runtime: "npm:1.0.0"
     react-refractor: "npm:^2.2.0"
     use-effect-event: "npm:^2.0.3"
   peerDependencies:
@@ -4755,7 +4755,7 @@ __metadata:
     react-dom: ^18 || >=19.0.0-0
     react-is: ^18 || >=19.0.0-0
     styled-components: ^5.2 || ^6
-  checksum: 10/31ac12abe9aa051a9b50c15428b700eb7fefe14cff0990d0ae1db4787bd92db219b1a3bfbc3822982981f0b8445415240f23a218d33e05ffd2edf6feba28f9a8
+  checksum: 10/42c8944aae62d678037eb4f9e0f87f582278b01b973809e8946331bf71a37d3fcad6d1356ecd97e188b9d4aa7a00d43ffab0efc6dfde4b8809b49b6afe7a821a
   languageName: node
   linkType: hard
 
@@ -8050,7 +8050,7 @@ __metadata:
     "@sanity/code-input": "npm:5.1.2"
     "@sanity/icons": "npm:3.7.4"
     "@sanity/table": "npm:1.1.4"
-    "@sanity/ui": "npm:2.16.19"
+    "@sanity/ui": "npm:2.16.22"
     "@sanity/vision": "npm:3.68.3"
     "@sentry/nextjs": "npm:9.35.0"
     "@steamer-academy/react-google-recaptcha": "npm:4.1.2"
@@ -9409,12 +9409,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:^12.23.22":
-  version: 12.23.22
-  resolution: "framer-motion@npm:12.23.22"
+"framer-motion@npm:^12.34.1":
+  version: 12.34.1
+  resolution: "framer-motion@npm:12.34.1"
   dependencies:
-    motion-dom: "npm:^12.23.21"
-    motion-utils: "npm:^12.23.6"
+    motion-dom: "npm:^12.34.1"
+    motion-utils: "npm:^12.29.2"
     tslib: "npm:^2.4.0"
   peerDependencies:
     "@emotion/is-prop-valid": "*"
@@ -9427,7 +9427,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10/ea16b23a7587634e42a5fd0ac0fafaaee34ec720947f9cd4c7f80d7e8a68c3371df43309c1216302387b7d3682d132c27d376b2b63628df56270539046c3acda
+  checksum: 10/406ba84c1b6ecb33e9a14793039f2c71fabea7327bd3c3c772dcd468dadbae9ae1c37750cfdbe6cd604dce8d0537de37014f541490203d4711ef6b35dc82b3c4
   languageName: node
   linkType: hard
 
@@ -11969,12 +11969,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"motion-dom@npm:^12.23.21":
-  version: 12.23.21
-  resolution: "motion-dom@npm:12.23.21"
+"motion-dom@npm:^12.34.1":
+  version: 12.34.1
+  resolution: "motion-dom@npm:12.34.1"
   dependencies:
-    motion-utils: "npm:^12.23.6"
-  checksum: 10/567b9926f28cc1e3cd2df27384fe39a86b51f557362f7b9c00f478d2abb64a0866a6cfadc6d4d546c767ad749029251ef076fa492de88637099b3d7ed82bc307
+    motion-utils: "npm:^12.29.2"
+  checksum: 10/776ee4350307894a7f4328a0a0436f4e117fd10972bc2c50baf384c4a93030c80eacbd122f93a63b840b162786291c49895521a75e69835733e9c067f02e881f
   languageName: node
   linkType: hard
 
@@ -11992,10 +11992,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"motion-utils@npm:^12.23.6":
-  version: 12.23.6
-  resolution: "motion-utils@npm:12.23.6"
-  checksum: 10/fae741319e72389eca8f3e73e644ffe6501409d00c7febb2f9b836629ae86ef735e73d670d0591706ca5e93ce10228ddbcff0ecdeb09b4cd8df14df7007aedd9
+"motion-utils@npm:^12.29.2":
+  version: 12.29.2
+  resolution: "motion-utils@npm:12.29.2"
+  checksum: 10/ae5f9be58c07939af72334894ed1a18653d724946182a718dc3d11268ef26e63804c3f16dee5a6110596d4406b539c4513822b74f86adebef9488601c34b18b7
+  languageName: node
+  linkType: hard
+
+"motion@npm:^12.23.24":
+  version: 12.34.1
+  resolution: "motion@npm:12.34.1"
+  dependencies:
+    framer-motion: "npm:^12.34.1"
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    "@emotion/is-prop-valid": "*"
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 10/3d2232a937125e7ab348ac2318c6f7e0bc9baf951a48a1257485043282c427776f059276cfb6c1ea0727c15ed1ac564ec52f6b681d9bf6b090e4ba9febc2e9e7
   languageName: node
   linkType: hard
 
@@ -13524,6 +13545,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-compiler-runtime@npm:1.0.0":
+  version: 1.0.0
+  resolution: "react-compiler-runtime@npm:1.0.0"
+  peerDependencies:
+    react: ^17.0.0 || ^18.0.0 || ^19.0.0 || ^0.0.0-experimental
+  checksum: 10/7d85297de255c39f1aca3dd4942fbf59253e127db8abef1ad7fe3eb329e39aab4c30656ff77751165e2b21263d96836f44699777ca40c9a717ffe42c6c355543
+  languageName: node
+  linkType: hard
+
 "react-compiler-runtime@npm:19.0.0-beta-201e55d-20241215":
   version: 19.0.0-beta-201e55d-20241215
   resolution: "react-compiler-runtime@npm:19.0.0-beta-201e55d-20241215"
@@ -13548,15 +13578,6 @@ __metadata:
   peerDependencies:
     react: ^17.0.0 || ^18.0.0 || ^19.0.0 || ^0.0.0-experimental
   checksum: 10/81ded46aa183512698dccb2f272d3ed278a865c7b40c3644281e06a9d67a8967dff5f3da2a8e93db485193dd62e1764eec3e67872780b67660ecda7a1d6f3960
-  languageName: node
-  linkType: hard
-
-"react-compiler-runtime@npm:19.1.0-rc.3":
-  version: 19.1.0-rc.3
-  resolution: "react-compiler-runtime@npm:19.1.0-rc.3"
-  peerDependencies:
-    react: ^17.0.0 || ^18.0.0 || ^19.0.0 || ^0.0.0-experimental
-  checksum: 10/ee9085e070eec4135bad982f47a82a4fc28c0c6d7111b3ec93354dab61bd56f9da0bde18af2ab0ee84f5ff9e71026cbfa58513ce8ac7c0290979a84199970ab6
   languageName: node
   linkType: hard
 
