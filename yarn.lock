@@ -2757,12 +2757,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:15.5.12":
-  version: 15.5.12
-  resolution: "@next/eslint-plugin-next@npm:15.5.12"
+"@next/eslint-plugin-next@npm:15.5.15":
+  version: 15.5.15
+  resolution: "@next/eslint-plugin-next@npm:15.5.15"
   dependencies:
     fast-glob: "npm:3.3.1"
-  checksum: 10/bae967dbceb4ef567929ec9a2b0cd6f310024a80e6b5e0e86575e0ac88ab848360f31476b32c2a7f05eb22aeae9548dc44f0baf6c9a8c41fd435827f336d95c3
+  checksum: 10/35ac4a63f7591c968ac3668a592a17055cb3e7352de08bba637a18e5f0a4d2fb319facfda16945c3ee629b2280cbb7708b36c6cdfda96149aea3b1524910f9cf
   languageName: node
   linkType: hard
 
@@ -8165,7 +8165,7 @@ __metadata:
     autoprefixer: "npm:10.4.24"
     cypress: "npm:14.5.4"
     eslint: "npm:9.39.4"
-    eslint-config-next: "npm:15.5.12"
+    eslint-config-next: "npm:15.5.15"
     eslint-plugin-simple-import-sort: "npm:12.1.1"
     get-video-id: "npm:4.1.7"
     intl-segmenter-polyfill: "npm:0.4.4"
@@ -8702,11 +8702,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:15.5.12":
-  version: 15.5.12
-  resolution: "eslint-config-next@npm:15.5.12"
+"eslint-config-next@npm:15.5.15":
+  version: 15.5.15
+  resolution: "eslint-config-next@npm:15.5.15"
   dependencies:
-    "@next/eslint-plugin-next": "npm:15.5.12"
+    "@next/eslint-plugin-next": "npm:15.5.15"
     "@rushstack/eslint-patch": "npm:^1.10.3"
     "@typescript-eslint/eslint-plugin": "npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0"
     "@typescript-eslint/parser": "npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0"
@@ -8722,7 +8722,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10/4f939f1d6f16efb9fd0655ad1d57fe4d93de9e9b461d47c8f0b1e4212e0e260abcbbeaa4c182d35b1da169af9f5428dfa0c63ae588f51e60338d614b76ee5845
+  checksum: 10/ecda327455fea1c0a5e546d358a95c01698c688179a139d70c38b81e352cc85a70719f241d02369d3ac9526d3cb4b92c358308298b2524d63f1f1a93e8ce8530
   languageName: node
   linkType: hard
 
