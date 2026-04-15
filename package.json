@@ -45,7 +45,7 @@
     "@types/react-dom": "19.1.6",
     "@types/react-google-recaptcha": "2.1.9",
     "@types/styled-components": "5.1.36",
-    "autoprefixer": "10.4.24",
+    "autoprefixer": "10.5.0",
     "cypress": "14.5.4",
     "eslint": "9.39.4",
     "eslint-config-next": "15.5.15",
