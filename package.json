@@ -11,7 +11,7 @@
   "dependencies": {
     "@heroicons/react": "2.2.0",
     "@portabletext/react": "6.0.3",
-    "@sanity/code-input": "5.2.1",
+    "@sanity/code-input": "7.1.0",
     "@sanity/icons": "3.7.4",
     "@sanity/table": "2.0.1",
     "@sanity/ui": "2.16.22",
