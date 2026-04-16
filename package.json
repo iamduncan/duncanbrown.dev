@@ -14,7 +14,7 @@
     "@sanity/code-input": "7.1.0",
     "@sanity/icons": "3.7.4",
     "@sanity/table": "2.0.1",
-    "@sanity/ui": "2.16.22",
+    "@sanity/ui": "3.1.14",
     "@sanity/vision": "3.68.3",
     "@sentry/nextjs": "9.47.1",
     "@steamer-academy/react-google-recaptcha": "4.1.2",
