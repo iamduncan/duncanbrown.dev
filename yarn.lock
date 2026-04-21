@@ -5018,7 +5018,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/ui@npm:3.1.14, @sanity/ui@npm:^3.0.3, @sanity/ui@npm:^3.1.0, @sanity/ui@npm:^3.1.14":
+"@sanity/ui@npm:3.1.14, @sanity/ui@npm:^3.1.0, @sanity/ui@npm:^3.1.13, @sanity/ui@npm:^3.1.14":
   version: 3.1.14
   resolution: "@sanity/ui@npm:3.1.14"
   dependencies:
@@ -8787,7 +8787,7 @@ __metadata:
     react-iframe: "npm:1.8.5"
     refractor: "npm:4.9.0"
     sanity: "npm:3.68.3"
-    sanity-plugin-asset-source-unsplash: "npm:3.1.0"
+    sanity-plugin-asset-source-unsplash: "npm:7.0.5"
     satori: "npm:0.26.0"
     server-only: "npm:0.0.1"
     styled-components: "npm:6.4.0"
@@ -12396,7 +12396,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash-es@npm:^4.17.21":
+"lodash-es@npm:^4.17.21, lodash-es@npm:^4.17.23":
   version: 4.18.1
   resolution: "lodash-es@npm:4.18.1"
   checksum: 10/8bfad225ef09ef42b04283cdaf7830efcc2ba29ae41b56501c74422155ee1ccaa1f0f6e8319def3451a1fe54dec501c8e4bee622bae2b2d98ac993731e0a5cce
@@ -14628,17 +14628,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-infinite-scroll-component@npm:6.1.0":
-  version: 6.1.0
-  resolution: "react-infinite-scroll-component@npm:6.1.0"
-  dependencies:
-    throttle-debounce: "npm:^2.1.0"
-  peerDependencies:
-    react: ">=16.0.0"
-  checksum: 10/78e27e46c38353c2cf3f6838255f48a0a1333155d6c551e78778366e6b162c86991cc38b1c756760ca1f9f276118f6611e5f8a942371c6780c67861dc8561173
-  languageName: node
-  linkType: hard
-
 "react-is@npm:^16.13.1, react-is@npm:^16.7.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -14653,12 +14642,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-photo-album@npm:2.4.1":
-  version: 2.4.1
-  resolution: "react-photo-album@npm:2.4.1"
+"react-photo-album@npm:^3.5.1":
+  version: 3.6.0
+  resolution: "react-photo-album@npm:3.6.0"
   peerDependencies:
-    react: ">=16.8.0"
-  checksum: 10/4e0440e1ac54b1a261ef195ed4152c119c4c05217bd52c5081a66086e3ac7db0318ccc522b8209f4dd62f3778b58b03c34591339d4123f774ce048561067046a
+    "@types/react": ^18 || ^19
+    react: ^18 || ^19
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10/70bf3ae8bf06efcae3344779f98eca8d54681a93c0acd6f0daef2b5af1170115052cdb97897439055b35dc257ca76514433429efc9dbe78aac3a97a036039421
   languageName: node
   linkType: hard
 
@@ -15410,21 +15403,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sanity-plugin-asset-source-unsplash@npm:3.1.0":
-  version: 3.1.0
-  resolution: "sanity-plugin-asset-source-unsplash@npm:3.1.0"
+"sanity-plugin-asset-source-unsplash@npm:7.0.5":
+  version: 7.0.5
+  resolution: "sanity-plugin-asset-source-unsplash@npm:7.0.5"
   dependencies:
     "@sanity/icons": "npm:^3.7.4"
-    "@sanity/incompatible-plugin": "npm:^1.0.5"
-    "@sanity/ui": "npm:^3.0.3"
-    react-infinite-scroll-component: "npm:6.1.0"
-    react-photo-album: "npm:2.4.1"
-    rxjs: "npm:^7.8.2"
+    "@sanity/ui": "npm:^3.1.13"
+    lodash-es: "npm:^4.17.23"
+    react-photo-album: "npm:^3.5.1"
   peerDependencies:
-    react: ^18 || ^19
-    sanity: ^3 || ^4.0.0-0
+    react: ^19.2
+    sanity: ^5
     styled-components: ^6.1
-  checksum: 10/c941d915801a50c536403fe9a60df35a7cdfd091fc063a436751b5557ef78c161a7c0a51270bc01e982241b57d89a8e9237fae7f372748530c5690a6dc3adc39
+  checksum: 10/8b9362693285e6acc9a061588b3d5f99953078d4ac3a0d570055f1cf52e58f86aadd3f9a80cd834677b765f51405c597b4f28d964e471105f83dfc12ce045cfe
   languageName: node
   linkType: hard
 
@@ -16648,13 +16639,6 @@ __metadata:
   dependencies:
     b4a: "npm:^1.6.4"
   checksum: 10/bcdec33c0f070aeac38e46e4cafdcd567a58473ed308bdf75260bfbd8f7dc76acbc0b13226afaec4a169d0cb44cec2ab89c57b6395ccf02e941eaebbe19e124a
-  languageName: node
-  linkType: hard
-
-"throttle-debounce@npm:^2.1.0":
-  version: 2.3.0
-  resolution: "throttle-debounce@npm:2.3.0"
-  checksum: 10/efed4a2d0528ece05d95cb7b4d1e11e501bfd55853746ab6eae02df38ea3220fc1be9746621db46b733edd61a12774684c137f5b40d71728bf0ea553d6a7e693
   languageName: node
   linkType: hard
 
