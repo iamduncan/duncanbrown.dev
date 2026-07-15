@@ -8765,7 +8765,7 @@ __metadata:
     next-themes: "npm:0.4.6"
     postcss: "npm:8.5.10"
     prettier: "npm:3.8.3"
-    prettier-plugin-tailwindcss: "npm:0.7.3"
+    prettier-plugin-tailwindcss: "npm:0.8.1"
     react: "npm:19.2.5"
     react-dom: "npm:19.2.5"
     react-error-boundary: "npm:6.1.1"
@@ -14137,9 +14137,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwindcss@npm:0.7.3":
-  version: 0.7.3
-  resolution: "prettier-plugin-tailwindcss@npm:0.7.3"
+"prettier-plugin-tailwindcss@npm:0.8.1":
+  version: 0.8.1
+  resolution: "prettier-plugin-tailwindcss@npm:0.8.1"
   peerDependencies:
     "@ianvs/prettier-plugin-sort-imports": "*"
     "@prettier/plugin-hermes": "*"
@@ -14191,7 +14191,7 @@ __metadata:
       optional: true
     prettier-plugin-svelte:
       optional: true
-  checksum: 10/cad84a4cdb18dccd2d1e82ca58ecb1b32012d7da402451f6b2c7c6488bd9865c39482cff61e898648a4c9453131688cf2ade2a85e967f7698dacfe89ff43393a
+  checksum: 10/231fe70c43c2442abdc0b7b455fb3bd14660d5aafc882bb0441f636ef3a6f3e2ce7ea5c5e6620b0b7ba603ad7ccf4a4abefd713a4c4f3ef6ffedc3e5383ff711
   languageName: node
   linkType: hard
 
