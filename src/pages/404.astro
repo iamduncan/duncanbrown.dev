@@ -1,26 +1,33 @@
 ---
-import { getCollection } from "astro:content";
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/header.astro";
-import Footer from "../components/footer.astro";
-import Tags from "../components/tags.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-import getTags from "../scripts/getTags";
-
-const posts = await getCollection("posts");
-const tags = getTags(posts);
+import Base from "../layouts/Base.astro";
 ---
 
-<!doctype html>
-<html lang="en-us">
-  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  <body>
-    <Header title={SITE_TITLE} />
-    <main>
-      404: Page not found
+<Base title="Page not found">
+	<div class="not-found">
+		<h1>404</h1>
+		<p>The page you're looking for doesn't exist.</p>
+		<a href="/">Go back home</a>
+	</div>
+</Base>
 
-      <Tags tags={tags} all />
-    </main>
-    <Footer />
-  </body>
-</html>
+<style>
+	.not-found {
+		text-align: center;
+		padding: var(--spacing-24) var(--spacing-6);
+	}
+
+	.not-found h1 {
+		font-size: var(--font-size-5xl);
+		margin-bottom: var(--spacing-2);
+		color: var(--color-border);
+	}
+
+	.not-found p {
+		color: var(--color-muted);
+		margin-bottom: var(--spacing-6);
+	}
+
+	.not-found a {
+		color: var(--color-text);
+	}
+</style>
